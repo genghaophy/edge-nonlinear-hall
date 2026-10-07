@@ -1,0 +1,147 @@
+{
+  "clean": {
+    "kH": -0.20910017442943232,
+    "derivative_step_error": 2.2490570517064157e-10,
+    "kernel_absolute_error": 5.670399297677542e-10,
+    "trs_h_error": 0.0,
+    "equilibrium": {
+      "current_conservation": 1.249000902703301e-16,
+      "gauge": 1.2226331058684536e-14,
+      "effective_conservation": 1.249000902703301e-16,
+      "effective_gauge": 1.2226331058684536e-14,
+      "occupation_partition": 0.0,
+      "virtual_probe_residual": 0.0,
+      "zero_bias_current": 1.2226331058684536e-14,
+      "injectivity_partition": 0.0,
+      "reciprocity": 1.176836406102666e-14
+    },
+    "virtual_spin_channels": 0,
+    "zero_voltage_current": 0.0,
+    "finite_bias_kH": -0.20910017473854187,
+    "finite_bias_error": 3.091095435170388e-10,
+    "probe_current_error": 9.069502272889764e-25,
+    "finite_bias_current_sum_error": 5.421017735217351e-20,
+    "bias_amplitude": 5e-05,
+    "terminal_voltages": [
+      [
+        5e-05,
+        -5e-05,
+        1.1238161607189989e-10,
+        6.35132052930586e-10
+      ],
+      [
+        -5e-05,
+        5e-05,
+        1.1238161608666729e-10,
+        6.351320529206904e-10
+      ]
+    ]
+  },
+  "existing_kwant_matrix_error": 2.731148640577885e-14,
+  "existing_kH_error": 2.828103029539619e-10,
+  "gamma_zero_matrix_error": 0.0,
+  "disorder": {
+    "kH": -0.19992074794762235,
+    "derivative_step_error": 1.7682155739606742e-10,
+    "kernel_absolute_error": 7.325082406958727e-10,
+    "trs_h_error": 0.0,
+    "equilibrium": {
+      "current_conservation": 9.71445146547012e-17,
+      "gauge": 7.549516567451064e-15,
+      "effective_conservation": 9.71445146547012e-17,
+      "effective_gauge": 7.549516567451064e-15,
+      "occupation_partition": 0.0,
+      "virtual_probe_residual": 0.0,
+      "zero_bias_current": 7.549516567451064e-15,
+      "injectivity_partition": 0.0,
+      "reciprocity": 7.105427357601002e-15
+    },
+    "virtual_spin_channels": 0,
+    "zero_voltage_current": 0.0,
+    "finite_bias_kH": -0.1999207480833797,
+    "finite_bias_error": 1.3575734980619814e-10,
+    "probe_current_error": 9.632938285834819e-26,
+    "finite_bias_current_sum_error": 2.439454925764963e-19,
+    "bias_amplitude": 5e-05,
+    "terminal_voltages": [
+      [
+        5e-05,
+        -5e-05,
+        5.278498020559739e-11,
+        5.527476024405607e-10
+      ],
+      [
+        -5e-05,
+        5e-05,
+        5.171881684510397e-11,
+        5.513599350270391e-10
+      ]
+    ]
+  },
+  "elastic_probes": {
+    "kH": -0.2094931427833991,
+    "derivative_step_error": 4.577303536201782e-10,
+    "kernel_absolute_error": 7.054896259198196e-10,
+    "trs_h_error": 0.0,
+    "equilibrium": {
+      "current_conservation": 4.0245584642661925e-16,
+      "gauge": 8.808997691157226e-15,
+      "effective_conservation": 3.95516952522712e-16,
+      "effective_gauge": 7.716050021144838e-15,
+      "occupation_partition": 5.551115123125783e-15,
+      "virtual_probe_residual": 5.2974996479173006e-17,
+      "zero_bias_current": 7.716050021144838e-15,
+      "injectivity_partition": 3.885780586188048e-16,
+      "reciprocity": 5.551115123125783e-15
+    },
+    "virtual_spin_channels": 32,
+    "zero_voltage_current": 0.0,
+    "finite_bias_kH": -0.2094931429053308,
+    "finite_bias_error": 1.2193171472496545e-10,
+    "probe_current_error": 1.837730364802869e-26,
+    "finite_bias_current_sum_error": 5.421011960455751e-20,
+    "bias_amplitude": 5e-05,
+    "terminal_voltages": [
+      [
+        5e-05,
+        -5e-05,
+        1.1114064669144617e-10,
+        6.34873503963986e-10
+      ],
+      [
+        -5e-05,
+        5e-05,
+        1.1114064669099443e-10,
+        6.348735039451088e-10
+      ]
+    ]
+  },
+  "finite_temperature": {
+    "length": 9,
+    "width": 6,
+    "energy": 0.4,
+    "temperature": 0.02,
+    "kH": -0.21004575170342002,
+    "finite_bias_kH": [
+      -0.21004590746810714,
+      -0.2100457907002682
+    ],
+    "finite_bias_errors": [
+      1.557646871208629e-07,
+      3.8996848167327514e-08
+    ],
+    "biases": [
+      0.001,
+      0.0005
+    ],
+    "probe_current_error": 2.2139928027758215e-18,
+    "thermal_mass": 0.9999999695394428,
+    "window_ibp_error": 1.586600197056587e-08,
+    "nodes": 144
+  },
+  "code_sha256": {
+    "qsh_environment_response.py": "21046db0d7b463c1db764cdf5f0de09d81cef8fcc07a2e1dceaa61c6035c9f22",
+    "compute_qsh_figure3.py": "9eec65bbefb739bc013226ea636334fe5bb49b712e2f635d42b249b7ba3296ae",
+    "compute_letter_preview.py": "a159ab6d8659746b5c545f3e8de17ce4fd053dbf4280627a68c56609f0ccd080"
+  }
+}

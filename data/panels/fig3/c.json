@@ -1,0 +1,154 @@
+{
+  "schema_version": 1,
+  "figure": "fig3",
+  "panel": "c",
+  "arrays": {
+    "strengths": {
+      "shape": [
+        4
+      ],
+      "dtype": "float64"
+    },
+    "selected_energies": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64"
+    },
+    "kH_raw_mean": {
+      "shape": [
+        3,
+        4
+      ],
+      "dtype": "float64"
+    },
+    "kH_raw_sem": {
+      "shape": [
+        3,
+        4
+      ],
+      "dtype": "float64"
+    },
+    "kH_raw_sd": {
+      "shape": [
+        3,
+        4
+      ],
+      "dtype": "float64"
+    },
+    "kappa2_tilde_mean": {
+      "shape": [
+        3,
+        4
+      ],
+      "dtype": "float64"
+    },
+    "kappa2_tilde_sem": {
+      "shape": [
+        3,
+        4
+      ],
+      "dtype": "float64"
+    },
+    "kappa2_tilde_sd": {
+      "shape": [
+        3,
+        4
+      ],
+      "dtype": "float64"
+    },
+    "samples": {
+      "shape": [
+        4
+      ],
+      "dtype": "int64"
+    },
+    "seeds": {
+      "shape": [
+        8
+      ],
+      "dtype": "int64"
+    },
+    "Gxx_mean": {
+      "shape": [
+        3,
+        4
+      ],
+      "dtype": "float64"
+    },
+    "y_limits": {
+      "shape": [
+        2
+      ],
+      "dtype": "float64"
+    },
+    "y_ticks": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64"
+    }
+  },
+  "mode": "verified archive extraction",
+  "sources": [
+    {
+      "path": "data/raw/figure3_environment/environment_data.npz",
+      "sha256": "7e739422c42845383bc8a16a95991d1441483dd5c245e6863ce0d5fc69835c9a"
+    },
+    {
+      "path": "data/raw/figure3_ef05_extension/environment_data.npz",
+      "sha256": "7690c7b31803a4ba906e982d51bfb11265754bd5411574fe8afd68468e9880e1"
+    },
+    {
+      "path": "data/raw/figure3_ef05_extension/validation.json",
+      "sha256": "0bfa7fd83029254f6ee5e68b170b3fd4bb62ff858739ca5b1ff8f4d6d79267bc"
+    }
+  ],
+  "source_sha256": {
+    "data/raw/figure3_environment/environment_data.npz": "7e739422c42845383bc8a16a95991d1441483dd5c245e6863ce0d5fc69835c9a",
+    "data/raw/figure3_ef05_extension/environment_data.npz": "7690c7b31803a4ba906e982d51bfb11265754bd5411574fe8afd68468e9880e1",
+    "data/raw/figure3_ef05_extension/validation.json": "0bfa7fd83029254f6ee5e68b170b3fd4bb62ff858739ca5b1ff8f4d6d79267bc"
+  },
+  "response_convention": "dimensionless tilde kappa2=t*kappa2/e=-historical kH/4",
+  "bias": "V1=+V/2, V2=-V/2; identical floating probes 3(top),4(bottom)",
+  "time_reversal": true,
+  "magnetic_field": 0.0,
+  "checks": {
+    "approved_rows_preserved": true
+  },
+  "geometry": [
+    31,
+    12
+  ],
+  "contact_coupling": 0.15,
+  "temperature": 0.0,
+  "disorder": "sample-only IID scalar onsite W*uniform[-1/2,1/2]",
+  "disorder_seeds": [
+    1700,
+    1701,
+    1702,
+    1703,
+    1704,
+    1705,
+    1706,
+    1707
+  ],
+  "disorder_samples": [
+    1,
+    8,
+    8,
+    8
+  ],
+  "error_statistic": "SEM=sample SD(ddof=1)/sqrt(n); zero for one clean point",
+  "screening": "first-order local neutrality; no Poisson solver",
+  "axes_order": [
+    "Fermi energy",
+    "disorder strength"
+  ],
+  "calculation_mode": "reuse",
+  "calculation_script": {
+    "path": "code/panels/fig3/calc_c.py",
+    "sha256": "694b3bc53d4405fa242f1be76cfa82bcbdc28d125bcfbb26e1ced5fb0967c193"
+  },
+  "data_sha256": "270d2d3c73a2a1e2883117f1f149c0b6652e8b359647b22e5d5a1ed8f1e69866"
+}

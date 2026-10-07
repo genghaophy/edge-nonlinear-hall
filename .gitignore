@@ -1,0 +1,25 @@
+# Generated figures, recomputations, and verification reports
+/outputs/
+
+# Python bytecode and local environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+*.egg-info/
+/build/
+/dist/
+
+# Tool caches and temporary notebook state
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Local configuration and operating-system files
+.env
+.env.*
+.DS_Store
+Thumbs.db
+desktop.ini

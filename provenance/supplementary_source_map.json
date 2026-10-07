@@ -1,0 +1,241 @@
+{
+  "scope": "Supplementary numerical diagnostics; historical data stay read-only",
+  "records": [
+    {
+      "kind": "code",
+      "origin_relative": "QSH_Nonlinear_Transport/code/compute_qsh_figure3.py",
+      "origin_sha256": "9eec65bbefb739bc013226ea636334fe5bb49b712e2f635d42b249b7ba3296ae",
+      "package_path": "code/compute_qsh_figure3.py",
+      "package_sha256": "be282cfe8d8fc079da257c051947080d551c1bdd60b2309a2c8322ec06c3ffa7",
+      "changes": [
+        "Selected-point validator functions extracted unchanged; production driver omitted"
+      ]
+    },
+    {
+      "kind": "code",
+      "origin_relative": "RM_Edge_Nonlinear_Transport/code/compute_rm_spatial_diagnostic.py",
+      "origin_sha256": "ea9308504e722ae536e826da625cf96ce48bf035563e7f3c69b664b21b8e426e",
+      "package_path": "code/compute_rm_spatial_diagnostic.py",
+      "package_sha256": "45fae05ca1d473bbfc41f1df556d436ff28d864a9f313b3dde584fe20dc52ea3",
+      "changes": [
+        "Spatial diagnosis algorithm unchanged; original full scan main omitted; source-fingerprint list restricted to packaged helpers"
+      ]
+    },
+    {
+      "kind": "code",
+      "origin_relative": "QSH_Nonlinear_Transport/code/compute_rm_weak_probe_audit.py",
+      "origin_sha256": "b113fa9ab391219e6c12519d4392098ddf3ef7e86450cc7420dd08ea4e39d7cb",
+      "package_path": "code/compute_rm_weak_probe_audit.py",
+      "package_sha256": "a22b04a3ef5f768947e8455c3b024504dfa7bbb55947e57f3d78f93bd507961f",
+      "changes": [
+        "Flat package imports; protected scientific input only; fresh output in outputs/checks; numerical algorithms unchanged"
+      ]
+    },
+    {
+      "kind": "code",
+      "origin_relative": "QSH_Nonlinear_Transport/code/compute_bare_injectivity_weak_probe_audit.py",
+      "origin_sha256": "fbba8558062ad492dabf0905670a808dd7361b07608a6e444c2144b8fb10e168",
+      "package_path": "code/compute_bare_injectivity_weak_probe_audit.py",
+      "package_sha256": "a775c2449c00a804fba3d95286779809352a91374ae0bd2b853f353756a575eb",
+      "changes": [
+        "Flat package imports; protected scientific inputs only; selectable historical/fresh coupling report; numerical algorithms unchanged"
+      ]
+    },
+    {
+      "kind": "historical_data",
+      "origin_relative": "QSH_Nonlinear_Transport/results/floating_probe/representative.json",
+      "origin_sha256": "d02972de7248d5e6a15fd118ba008d26994805fca40f44739cf804f08176fdd0",
+      "package_path": "data/raw/supplementary/floating_probe_reference.json",
+      "package_sha256": "990316201bd50ce4a90ce7651cb497dccca6640b398b660ce9a23c38fe6de427",
+      "arrays_changed": false,
+      "json_changes": "Machine-specific absolute path strings/keys converted to origin-relative identifiers"
+    },
+    {
+      "kind": "historical_data",
+      "origin_relative": "RM_Edge_Nonlinear_Transport/results/figure2_mechanism/spatial_diagnostic.npz",
+      "origin_sha256": "aab90fc228713d77680c0490777e816c68bbd2692bef0df708dfa1f9932b2787",
+      "package_path": "data/raw/supplementary/rm_spatial/spatial_diagnostic.npz",
+      "package_sha256": "aab90fc228713d77680c0490777e816c68bbd2692bef0df708dfa1f9932b2787",
+      "arrays_changed": false,
+      "json_changes": null
+    },
+    {
+      "kind": "historical_data",
+      "origin_relative": "RM_Edge_Nonlinear_Transport/results/figure2_mechanism/spatial_diagnostic.json",
+      "origin_sha256": "cf2a68d5a4cf9c6bb8c4fe884dc25c388d76a34b0fe4bfbc022a61a3349b10b6",
+      "package_path": "data/raw/supplementary/rm_spatial/spatial_diagnostic.json",
+      "package_sha256": "518e7026f930d47c656c5b7fe49b7bf10539a770bb462a9d3dd0f2cd5f8f4bce",
+      "arrays_changed": false,
+      "json_changes": "Machine-specific absolute path strings/keys converted to origin-relative identifiers"
+    },
+    {
+      "kind": "historical_data",
+      "origin_relative": "QSH_Nonlinear_Transport/results/weak_probe_audit/rm_tc_scan.npz",
+      "origin_sha256": "b193cf7abe864cb673b7d6503778539ce866019e0a833525fbab6b8413dcb2d0",
+      "package_path": "data/raw/supplementary/weak_probe_audit/rm_tc_scan.npz",
+      "package_sha256": "b193cf7abe864cb673b7d6503778539ce866019e0a833525fbab6b8413dcb2d0",
+      "arrays_changed": false,
+      "json_changes": null
+    },
+    {
+      "kind": "historical_data",
+      "origin_relative": "QSH_Nonlinear_Transport/results/weak_probe_audit/rm_tc_scan.json",
+      "origin_sha256": "5be04cf8a957f40a036ff8459908d27ef02f27edb134afd59a543564c4340634",
+      "package_path": "data/raw/supplementary/weak_probe_audit/rm_tc_scan.json",
+      "package_sha256": "82abb1c323ac75ae98562d6f1937816e00edddfa1fc87838cce815681505e53f",
+      "arrays_changed": false,
+      "json_changes": "Machine-specific absolute path strings/keys converted to origin-relative identifiers"
+    },
+    {
+      "kind": "historical_data",
+      "origin_relative": "QSH_Nonlinear_Transport/results/weak_probe_audit/bare_injectivity_response.json",
+      "origin_sha256": "63e2269218ef63a4a8834ded405fd402ebd46b9973ecbbb2075b057a444c48c7",
+      "package_path": "data/raw/supplementary/weak_probe_audit/bare_injectivity_response.json",
+      "package_sha256": "9c11178add7d040ccdb84e778f88c87ffaaa88291edf25a3066fe59f3bc853b7",
+      "arrays_changed": false,
+      "json_changes": "Machine-specific absolute path strings/keys converted to origin-relative identifiers"
+    },
+    {
+      "kind": "historical_data",
+      "origin_relative": "QSH_Nonlinear_Transport/results/figure3_environment/thermal_convergence.json",
+      "origin_sha256": "9ac75ba16762b11b399737b05e6769cb2eb2aaec9fcd5fb59cecd8873d9b67c5",
+      "package_path": "data/raw/supplementary/thermal_convergence.json",
+      "package_sha256": "9ac75ba16762b11b399737b05e6769cb2eb2aaec9fcd5fb59cecd8873d9b67c5",
+      "arrays_changed": false,
+      "json_changes": "Machine-specific absolute path strings/keys converted to origin-relative identifiers"
+    },
+    {
+      "kind": "historical_data",
+      "origin_relative": "QSH_Nonlinear_Transport/results/figure3_environment/validation.json",
+      "origin_sha256": "928bc74078f292bb800a50988419c46dd7d6099c4282717f39edafd6e0489f56",
+      "package_path": "data/raw/supplementary/qsh_validation.json",
+      "package_sha256": "928bc74078f292bb800a50988419c46dd7d6099c4282717f39edafd6e0489f56",
+      "arrays_changed": false,
+      "json_changes": "Machine-specific absolute path strings/keys converted to origin-relative identifiers"
+    },
+    {
+      "kind": "historical_data",
+      "origin_relative": "QSH_Nonlinear_Transport/results/figure3_environment/spectra/clean_o4.npz",
+      "origin_sha256": "998372aeb6ca0ea99b295e60596b043a110a23abbd5829a42aba5d7b9de2c859",
+      "package_path": "data/raw/supplementary/thermal_spectra/clean_o4.npz",
+      "package_sha256": "998372aeb6ca0ea99b295e60596b043a110a23abbd5829a42aba5d7b9de2c859",
+      "arrays_changed": false,
+      "json_changes": null
+    },
+    {
+      "kind": "historical_data",
+      "origin_relative": "QSH_Nonlinear_Transport/results/figure3_environment/spectra/clean_o4.json",
+      "origin_sha256": "75b6a67740c5a34525c3c70f2ad5e7698e91b12a7f052d6c242739ac857c52c4",
+      "package_path": "data/raw/supplementary/thermal_spectra/clean_o4.json",
+      "package_sha256": "75b6a67740c5a34525c3c70f2ad5e7698e91b12a7f052d6c242739ac857c52c4",
+      "arrays_changed": false,
+      "json_changes": "Machine-specific absolute path strings/keys converted to origin-relative identifiers"
+    },
+    {
+      "kind": "historical_data",
+      "origin_relative": "QSH_Nonlinear_Transport/results/figure3_environment/spectra/clean_o8.npz",
+      "origin_sha256": "bf0e8c30f2c040ecca8f3b6c39be6ca689b40fe495e55c0d1895a42aed0f8968",
+      "package_path": "data/raw/supplementary/thermal_spectra/clean_o8.npz",
+      "package_sha256": "bf0e8c30f2c040ecca8f3b6c39be6ca689b40fe495e55c0d1895a42aed0f8968",
+      "arrays_changed": false,
+      "json_changes": null
+    },
+    {
+      "kind": "historical_data",
+      "origin_relative": "QSH_Nonlinear_Transport/results/figure3_environment/spectra/clean_o8.json",
+      "origin_sha256": "bfe8df26905aa28cb90c53968b76693a15dedc1a7f2a55363a247c1d7f0c2869",
+      "package_path": "data/raw/supplementary/thermal_spectra/clean_o8.json",
+      "package_sha256": "bfe8df26905aa28cb90c53968b76693a15dedc1a7f2a55363a247c1d7f0c2869",
+      "arrays_changed": false,
+      "json_changes": "Machine-specific absolute path strings/keys converted to origin-relative identifiers"
+    },
+    {
+      "kind": "historical_data",
+      "origin_relative": "QSH_Nonlinear_Transport/results/figure3_environment/spectra/clean_o16.npz",
+      "origin_sha256": "c37cc811883ce0e52083b328e893274d4a812cb85a1e5afeb087ad508f1f3c04",
+      "package_path": "data/raw/supplementary/thermal_spectra/clean_o16.npz",
+      "package_sha256": "c37cc811883ce0e52083b328e893274d4a812cb85a1e5afeb087ad508f1f3c04",
+      "arrays_changed": false,
+      "json_changes": null
+    },
+    {
+      "kind": "historical_data",
+      "origin_relative": "QSH_Nonlinear_Transport/results/figure3_environment/spectra/clean_o16.json",
+      "origin_sha256": "6b99b3d28d7f7259397ed38bfd1033a6443d50fc34b9708b3dc6ff5161a9170f",
+      "package_path": "data/raw/supplementary/thermal_spectra/clean_o16.json",
+      "package_sha256": "6b99b3d28d7f7259397ed38bfd1033a6443d50fc34b9708b3dc6ff5161a9170f",
+      "arrays_changed": false,
+      "json_changes": "Machine-specific absolute path strings/keys converted to origin-relative identifiers"
+    },
+    {
+      "kind": "code",
+      "origin_relative": "QSH_Nonlinear_Transport/code/audit_thermal_window.py",
+      "origin_sha256": "5c8bc19ed049dd78f221fcf03fe55fd089d330dd1b2b237664994620c5c036c5",
+      "package_path": "code/audit_thermal_window.py",
+      "package_sha256": "0c634d7d8d0fed88114d7aa1addbd769247dbcca290217b034864e519480bcc2",
+      "changes": [
+        "Original fixed-window integration algorithm retained",
+        "Explicit raw kH difference stored; full-paper-bias conversion corrected to -raw/4",
+        "Read-only package input and separate diagnostic output"
+      ]
+    }
+  ],
+  "fresh_outputs": "outputs/checks",
+  "checks_recomputed_during_packaging": [],
+  "portable_wrappers": [
+    {
+      "path": "code/checks/__init__.py",
+      "sha256": "15d9f1e76ddf01ce0ba82944ebc4301193af98238517a1ea4df7cf9e7aa23881"
+    },
+    {
+      "path": "code/checks/_common.py",
+      "sha256": "cd0ea0744faca29543dd097111873817ca79a6051fb5fa2ffc5ed853e74f984c"
+    },
+    {
+      "path": "code/checks/qsh_reference.py",
+      "sha256": "a1c74c1dbbeee06462ed39bd3235820d92fc55162289bcf2d42aa035ed8fe778"
+    },
+    {
+      "path": "code/checks/rm_bare_injectivity.py",
+      "sha256": "c78f5e8cbdb7d6db33cff75f29cf2dc6dce9128dffd7f620baafcbfde24ad7a3"
+    },
+    {
+      "path": "code/checks/rm_reference.py",
+      "sha256": "e54cfb5eeb310226d40bc235c702e7cfa358929a1a6f90697fa0bb39fa97ca42"
+    },
+    {
+      "path": "code/checks/rm_spatial.py",
+      "sha256": "675d5bbff8a93047065daa737dd16545d5ac3714dbede902c8e422c74cc7fcdb"
+    },
+    {
+      "path": "code/checks/rm_weak_probe.py",
+      "sha256": "2731adbe9385b0e9102385f6bbd3a0abbcff40f77b813ae51cf94006b94d60a5"
+    },
+    {
+      "path": "code/checks/thermal_quadrature.py",
+      "sha256": "ad0a6324ab090745b0d79b4077c4666b980c7a277fcbbfc9cd74fe0970af0231"
+    },
+    {
+      "path": "code/checks/thermal_window.py",
+      "sha256": "7593271e738718da2445797cb27227fc49e3bc481dd12551bd6a9b65c4598bdf"
+    }
+  ],
+  "packaging_checks": {
+    "syntax": "All owned Python files compiled without execution errors",
+    "help": "All seven diagnostic commands --help passed before heavy imports",
+    "fixed_window_cache_diagnostic": {
+      "cases": 39,
+      "maximum_paper_tilde_kappa2_difference": 7.498497158570024e-06
+    },
+    "cached_quadrature_reduction": {
+      "orders": [
+        4,
+        8,
+        16
+      ],
+      "final_8_to_16_max_paper_difference": 2.41111166567054e-07
+    },
+    "transport_scans_rerun": false,
+    "historical_npz_byte_hashes_verified": true
+  }
+}

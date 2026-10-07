@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "figure": "fig3",
+  "panel": "b",
+  "arrays": {
+    "temperatures": {
+      "shape": [
+        4
+      ],
+      "dtype": "float64"
+    },
+    "selected_energies": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64"
+    },
+    "kH_raw": {
+      "shape": [
+        3,
+        4
+      ],
+      "dtype": "float64"
+    },
+    "kappa2_tilde": {
+      "shape": [
+        3,
+        4
+      ],
+      "dtype": "float64"
+    },
+    "Gxx": {
+      "shape": [
+        3,
+        4
+      ],
+      "dtype": "float64"
+    }
+  },
+  "mode": "verified archive extraction",
+  "sources": [
+    {
+      "path": "data/raw/figure3_environment/environment_data.npz",
+      "sha256": "7e739422c42845383bc8a16a95991d1441483dd5c245e6863ce0d5fc69835c9a"
+    },
+    {
+      "path": "data/raw/figure3_environment/thermal_convergence.json",
+      "sha256": "9ac75ba16762b11b399737b05e6769cb2eb2aaec9fcd5fb59cecd8873d9b67c5"
+    }
+  ],
+  "source_sha256": {
+    "data/raw/figure3_environment/environment_data.npz": "7e739422c42845383bc8a16a95991d1441483dd5c245e6863ce0d5fc69835c9a",
+    "data/raw/figure3_environment/thermal_convergence.json": "9ac75ba16762b11b399737b05e6769cb2eb2aaec9fcd5fb59cecd8873d9b67c5"
+  },
+  "response_convention": "dimensionless tilde kappa2=t*kappa2/e=-historical kH/4",
+  "bias": "V1=+V/2, V2=-V/2; identical floating probes 3(top),4(bottom)",
+  "time_reversal": true,
+  "magnetic_field": 0.0,
+  "checks": {
+    "archive_energy_indices": [
+      2,
+      6,
+      10
+    ],
+    "interpolation": false
+  },
+  "axes_order": [
+    "Fermi energy",
+    "temperature"
+  ],
+  "geometry": [
+    31,
+    12
+  ],
+  "contact_coupling": 0.15,
+  "screening": "thermally averaged injectivities before the local-neutrality ratio",
+  "temperature_unit": "kBT/t",
+  "energy_unit": "t",
+  "calculated_points_only": true,
+  "calculation_mode": "reuse",
+  "calculation_script": {
+    "path": "code/panels/fig3/calc_b.py",
+    "sha256": "fe4b053a551555d669dd04d194e07185e57373d791d54fa469f63ecc4a90551c"
+  },
+  "data_sha256": "a7b82660e570360a7ef2db160d9771a7f29f721cf1daf81e8e42bd19c8d902c6"
+}

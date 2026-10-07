@@ -1,0 +1,162 @@
+{
+  "schema_version": 1,
+  "figure": "fig4",
+  "panel": "a",
+  "arrays": {
+    "energies": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64"
+    },
+    "tau": {
+      "shape": [
+        31
+      ],
+      "dtype": "float64"
+    },
+    "equal_kappa_full": {
+      "shape": [
+        3,
+        31
+      ],
+      "dtype": "float64"
+    },
+    "bare_kappa_predicted": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64"
+    }
+  },
+  "sources": [
+    {
+      "path": "data/raw/weak_probe_comparison/coupling_scan.npz",
+      "sha256": "4469d326b5267950ac4818e280567d34aabe74fa858a205c965b78d9d8ca9975"
+    },
+    {
+      "path": "data/raw/weak_probe_comparison/coupling_scan.json",
+      "sha256": "50555ee38fa4e807ca9161d7822d6e3af8afd1a04afae48e01d46202718e6e1d"
+    }
+  ],
+  "calculation_helper": {
+    "path": "code/panels/fig4/_calc.py",
+    "sha256": "e0e3a620b2e30614652c9383d10947f410f6abde627aaa6a791bbcccc05964df"
+  },
+  "parameters": {
+    "tx": 0.25,
+    "t1": 0.3,
+    "t2": 1.0,
+    "delta": 0.2,
+    "cells": 8,
+    "length": 31
+  },
+  "model": "rm",
+  "observable": "dimensionless kappa2",
+  "units": {
+    "energy": "t2",
+    "probe_hopping": "t2",
+    "ordinate": "dimensionless"
+  },
+  "conversion": "Already in paper units; copied without a sign or bias conversion",
+  "physical_convention": "mu=EF-eV,H=H0-eU,V1=+VSD/2,V2=-VSD/2,Vperp=V3-V4",
+  "electrostatics": "First-order local charge neutrality; coherent, T=0, B=0",
+  "probe_constraint": "Identical floating probes, t3=t4=tau, I3=I4=0",
+  "calculation": "validated_cache_reuse",
+  "validation": {
+    "dataset_checksum_verified": true,
+    "legacy_source_version_differences": [
+      {
+        "path": "historical_sources/code/compute_edge_probe_coupling_scan.py",
+        "recorded_sha256": "fcbee7b167f738eec0046b679cdeaa558889fa95410b96cac1a61d8b98f38eec",
+        "current_sha256": null
+      },
+      {
+        "path": "code/edge_probe_readout.py",
+        "recorded_sha256": "3e9f0fe4877701c2b356c190c6d9ad6b5014130b836f7c475602ab6bf80a4477",
+        "current_sha256": "68c648f39bcd97438161d018e2aaa017e415fd7d4c1af6a61b94937e76be1f6d"
+      },
+      {
+        "path": "code/compute_initial_study.py",
+        "recorded_sha256": "79f3ef2f17774a351de30e3e2bcd7ef040daf510928e866ef31377cb5f273599",
+        "current_sha256": "0748ad99c78ab6d0748e6fde9bd072021d15b3a81a1a0768338db7a7ba55cbd3"
+      },
+      {
+        "path": "code/compute_floating_study.py",
+        "recorded_sha256": "adccbd09d25fb79b42261917acabf0ad839cfbd6d06d21a62325a9fba0c90af1",
+        "current_sha256": "c37ea05b525129b9119d795f4f14985c25fc1f10a528626887d22eaecb0320f2"
+      }
+    ],
+    "calculation_validation": {
+      "max_unitarity_error": 1.176836406102666e-14,
+      "max_reciprocity_error": 2.220446049250313e-14,
+      "max_gauge_shift_error": 1.8207657603852567e-14,
+      "max_current_conservation_error": 2.775579766023384e-11,
+      "max_probe_quadratic_current_error": 1.1102230246251565e-16,
+      "max_probe_condition": 4.898536786166349,
+      "max_source_contact_rho_vs_F_over_gamma_error": 2.6645352591003757e-15,
+      "max_finite_contact_formula_error": 4.9620451331167104e-08,
+      "max_linear_transverse_coefficient": 7.503442902968274e-15,
+      "new_builder_vs_legacy_kappa_error": 0.0,
+      "derivative_checks": [
+        {
+          "energy": 0.05,
+          "tc3": 0.005,
+          "tc4": 0.005,
+          "errors": {
+            "kappa_full": 2.117036546067652e-10,
+            "kappa_frozen": 1.2231493595749043e-11,
+            "kappa_internal": 5.30733081706311e-11,
+            "kappa_electrodes": 2.357556927456983e-10,
+            "contact_dV_eta": 5.259493951470517e-10
+          }
+        },
+        {
+          "energy": 0.15,
+          "tc3": 1.0,
+          "tc4": 1.0,
+          "errors": {
+            "kappa_full": 1.906456814637636e-08,
+            "kappa_frozen": 1.3074305527105423e-10,
+            "kappa_internal": 1.910178634434434e-07,
+            "kappa_electrodes": 5.165571304033278e-10,
+            "contact_dV_eta": 1.5317802276593184e-08
+          }
+        },
+        {
+          "energy": 0.1,
+          "tc3": 1.0,
+          "tc4": 0.5,
+          "errors": {
+            "kappa_full": 3.936719733532712e-08,
+            "kappa_frozen": 6.25406948451257e-11,
+            "kappa_internal": 5.3167958924404957e-08,
+            "kappa_electrodes": 5.409066528017092e-10,
+            "contact_dV_eta": 2.0092607577737454e-08
+          }
+        }
+      ],
+      "direct_finite_bias": {
+        "energy": 0.1,
+        "tc3": 1.0,
+        "tc4": 0.5,
+        "code_source_amplitude": 5e-05,
+        "kappa_direct": -0.18989631735498644,
+        "kappa_derivative": -0.18989464634678882,
+        "absolute_kappa_error": 1.6710081976178959e-06,
+        "floating_probe_current_max_error": 2.3125837351965916e-20,
+        "current_conservation_max_error": 2.6929078586210254e-20
+      }
+    }
+  },
+  "statistics": {
+    "spread": "none",
+    "bare_prediction": "independent, not fitted"
+  },
+  "calculation_mode": "reuse",
+  "calculation_script": {
+    "path": "code/panels/fig4/calc_a.py",
+    "sha256": "fb491e803a835ab80bc4611f5cd8b29329582ff94aa294af7f5a18f37ab1977b"
+  },
+  "data_sha256": "fc7f4c625030671e4dead10bf42c30a2689a11815f44c7ae260706e14bc32251"
+}

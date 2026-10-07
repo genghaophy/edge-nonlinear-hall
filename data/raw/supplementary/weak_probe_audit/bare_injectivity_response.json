@@ -1,0 +1,151 @@
+{
+  "schema": "bare_injectivity_weak_probe_audit_v1",
+  "parameters": {
+    "tx": 0.25,
+    "t1": 0.3,
+    "t2": 1.0,
+    "delta": 0.2,
+    "EF": 0.1,
+    "length": 31,
+    "cells": 8
+  },
+  "geometry": "Only matched L/R sample leads; no side probes or probe buffer sites",
+  "physical_convention": "mu=EF-eV,H=H0-eU; V_L=+V_SD/2,V_R=-V_SD/2,V_perp=V3-V4; e=t2=1",
+  "formula": "kappa2=-d_E ln(rho_top/rho_bottom)/8 +(partial_V eta_top-partial_V eta_bottom)/2",
+  "eta_definition": "(nu_L-nu_R)/(nu_L+nu_R), bare sample scattering-state injectivities",
+  "contact_site_indices": [
+    255,
+    240
+  ],
+  "contact_positions": [
+    [
+      15,
+      15
+    ],
+    [
+      15,
+      0
+    ]
+  ],
+  "equilibrium_contact_injectivities_LR_by_top_bottom": [
+    [
+      0.3620775208180374,
+      0.2956350566255064
+    ],
+    [
+      0.3620775208180362,
+      0.29563505662550593
+    ]
+  ],
+  "equilibrium_eta_top_bottom": [
+    1.6864417933603409e-15,
+    7.510767074092466e-16
+  ],
+  "equilibrium_U_over_V_max": 1.1809236847936747e-12,
+  "equilibrium_U_over_V_at_contact": [
+    8.432208966801704e-16,
+    3.755383537046233e-16
+  ],
+  "builtin_ldos_vs_injectivity_sum_max_error": 2.220446049250313e-16,
+  "steps": [
+    {
+      "physical_voltage_step": 1e-05,
+      "eta_plus": [
+        1.3917872697512151e-05,
+        4.278924336572192e-07
+      ],
+      "eta_minus": [
+        -1.3917872687853499e-05,
+        -4.2789243300002757e-07
+      ],
+      "eta_voltage_derivative_top_bottom": [
+        1.3917872692682824,
+        0.04278924333286234
+      ],
+      "kappa_DOS": -0.28645834012912774,
+      "kappa_injectivity_feedback": 0.6744990129677101,
+      "kappa_predicted_full": 0.38804067283858235
+    },
+    {
+      "physical_voltage_step": 5e-06,
+      "eta_plus": [
+        6.95893634658969e-06,
+        2.1394621683742804e-07
+      ],
+      "eta_minus": [
+        -6.958936347202931e-06,
+        -2.1394621608635026e-07
+      ],
+      "eta_voltage_derivative_top_bottom": [
+        1.391787269379262,
+        0.04278924329237783
+      ],
+      "kappa_DOS": -0.28645834012912774,
+      "kappa_injectivity_feedback": 0.6744990130434421,
+      "kappa_predicted_full": 0.3880406729143143
+    }
+  ],
+  "derivative_refinement_error": 7.573197624566319e-11,
+  "comparison_to_finite_tc_full": [
+    {
+      "tc": 0.2,
+      "full": 0.32155812372281994,
+      "predicted_full": 0.3880406729143143,
+      "difference_full_minus_prediction": -0.06648254919149438,
+      "difference_over_tc_squared": -1.662063729787359
+    },
+    {
+      "tc": 0.15,
+      "full": 0.34960150920332256,
+      "predicted_full": 0.3880406729143143,
+      "difference_full_minus_prediction": -0.038439163710991764,
+      "difference_over_tc_squared": -1.7084072760440785
+    },
+    {
+      "tc": 0.1,
+      "full": 0.37063019767917904,
+      "predicted_full": 0.3880406729143143,
+      "difference_full_minus_prediction": -0.01741047523513528,
+      "difference_over_tc_squared": -1.7410475235135277
+    },
+    {
+      "tc": 0.05,
+      "full": 0.3836401395642138,
+      "predicted_full": 0.3880406729143143,
+      "difference_full_minus_prediction": -0.004400533350100544,
+      "difference_over_tc_squared": -1.7602133400402171
+    },
+    {
+      "tc": 0.02,
+      "full": 0.3873344717937684,
+      "predicted_full": 0.3880406729143143,
+      "difference_full_minus_prediction": -0.000706201120545924,
+      "difference_over_tc_squared": -1.76550280136481
+    },
+    {
+      "tc": 0.01,
+      "full": 0.3878640469011386,
+      "predicted_full": 0.3880406729143143,
+      "difference_full_minus_prediction": -0.00017662601317569582,
+      "difference_over_tc_squared": -1.7662601317569582
+    },
+    {
+      "tc": 0.005,
+      "full": 0.3879965109207274,
+      "predicted_full": 0.3880406729143143,
+      "difference_full_minus_prediction": -4.4161993586921966e-05,
+      "difference_over_tc_squared": -1.7664797434768786
+    }
+  ],
+  "production_unchanged": true,
+  "protected_sha256": {
+    "RM_Edge_Nonlinear_Transport/results/figure2_mechanism/figure2_data.npz": "ed2b934d3a7af0b4ed9257f316545886af5124df77ae8b87736d9231826352b2",
+    "QSH_Nonlinear_Transport/manuscript/main_article.tex": "07101775322a0bb5196bb442e83130ed7659bc34b63091989c9defb956341d23",
+    "QSH_Nonlinear_Transport/manuscript/figures/fig2_rm.pdf": "801580603646577e38b464f76e22874f6437fb9031724913b39ae3f2399ae26a"
+  },
+  "tc_audit_sha256": "5be04cf8a957f40a036ff8459908d27ef02f27edb134afd59a543564c4340634",
+  "source_sha256": "fbba8558062ad492dabf0905670a808dd7361b07608a6e444c2144b8fb10e168",
+  "kwant_version": "1.5.0",
+  "numpy_version": "2.1.3",
+  "runtime_seconds": 0.16230050000012852
+}

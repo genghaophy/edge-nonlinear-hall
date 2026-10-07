@@ -1,0 +1,70 @@
+{
+  "A": 1.0,
+  "t": 1.0,
+  "m": -1.0,
+  "width": 64,
+  "Nk": 481,
+  "edge_rows": 4,
+  "edge_weight_cutoff": 0.55,
+  "E_F": 0.4,
+  "edge_classification": "outer-row weight plus exclusion of the spin-resolved projected bulk continuum",
+  "energy_unit": "t",
+  "momentum_unit": "1/lattice_spacing",
+  "boundary": "periodic x; open y; top=y=W-1, bottom=y=0",
+  "hamiltonian": "A sin(kx) tau_x s_z + A sin(ky) tau_y + [m+t(cos(kx)+cos(ky))] tau_z + Delta tau_x",
+  "hopping_convention": "H[y,y+1]=(t*tau_z-i*A*tau_y)/2; Bloch exp(+i*ky*y)",
+  "eigenpair_residual_max": 3.649858193455202e-15,
+  "Bloch_hopping_reconstruction_error": 0.0,
+  "results": [
+    {
+      "delta": 0.0,
+      "TRS_spectrum_max_error": 8.43769498715119e-15,
+      "central_edge_formula_max_error": 7.66053886991358e-15,
+      "bulk_min_positive_energy": 0.9999999999999998,
+      "full_bulk_gap": 1.9999999999999996,
+      "kx_zero_crossings": [
+        {
+          "spin": 1,
+          "E_top": 1.1102230246251565e-15,
+          "E_bottom": 0.0,
+          "top_weight": 1.0,
+          "bottom_weight": 0.9999999999999998
+        },
+        {
+          "spin": -1,
+          "E_top": 1.1102230246251565e-15,
+          "E_bottom": 0.0,
+          "top_weight": 1.0,
+          "bottom_weight": 0.9999999999999998
+        }
+      ]
+    },
+    {
+      "delta": 0.2,
+      "TRS_spectrum_max_error": 7.549516567451064e-15,
+      "central_edge_formula_max_error": 6.938893903907228e-15,
+      "bulk_min_positive_energy": 0.8,
+      "full_bulk_gap": 1.6,
+      "kx_zero_crossings": [
+        {
+          "spin": 1,
+          "E_top": 0.2,
+          "E_bottom": -0.1999999999999993,
+          "top_weight": 1.0,
+          "bottom_weight": 1.0
+        },
+        {
+          "spin": -1,
+          "E_top": 0.2,
+          "E_bottom": -0.1999999999999993,
+          "top_weight": 1.0,
+          "bottom_weight": 1.0
+        }
+      ]
+    }
+  ],
+  "release_portability": {
+    "original_sidecar_sha256": "cd3577128460771c34dc1f86f65b459ab443a18f71c950f15c839ca87276ca34",
+    "note": "File paths relocated for the public package. Numeric datasets and historical numerical/source hashes are unchanged. historical_sources entries document unavailable prior generators, not runtime dependencies."
+  }
+}

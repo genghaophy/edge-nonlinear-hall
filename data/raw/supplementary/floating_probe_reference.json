@@ -1,0 +1,110 @@
+{
+  "report": {
+    "energy": 0.4,
+    "delta": 0.2,
+    "width": 12,
+    "length": 31,
+    "alpha": [
+      1.0,
+      -1.0,
+      -3.0001067843943824e-15,
+      9.760287248204396e-15
+    ],
+    "beta": [
+      0.0,
+      0.0,
+      0.044952646970729655,
+      0.25405282111735167
+    ],
+    "beta_frozen": [
+      0.0,
+      0.0,
+      0.04495264667466648,
+      0.2540528210870611
+    ],
+    "alpha_H": -1.2760394032598778e-14,
+    "kH": -0.20910017414662202,
+    "kH_frozen": -0.20910017441239465,
+    "kH_internal": -2.1972417040342592e-10,
+    "kH_electrodes": -1.2251136843027263e-09,
+    "current_linear": [
+      3.9045127161180666,
+      -3.904512716118067,
+      0.0,
+      0.0
+    ],
+    "current_quadratic": [
+      -2.5960137251673787e-09,
+      2.5998301150798042e-09,
+      0.0,
+      0.0
+    ],
+    "probe_linear_error": 0.0,
+    "probe_quadratic_error": 0.0,
+    "current_sum_error": 3.8163899124255e-12,
+    "characteristic_sum_error": 2.220446049250313e-16,
+    "reciprocity_error": 2.4424906541753444e-15,
+    "gauge_shift_error": 5.5289106626332796e-14,
+    "cpp_condition": 1.1728933481159163,
+    "cpp": [
+      [
+        0.08788952686030957,
+        -2.599972300386589e-10
+      ],
+      [
+        -2.5999723004095257e-10,
+        0.10308504142351226
+      ]
+    ]
+  },
+  "validation": {
+    "kH_direct": -0.20910017481816717,
+    "kH_finite_bias_error": 6.715451528194194e-10,
+    "kH_frozen_direct": -0.20910017442479276,
+    "kH_frozen_finite_bias_error": 1.2398110316169664e-11,
+    "derivative_step_error": 1.8521995048814688e-10,
+    "probe_current_error": 6.530683751067222e-22,
+    "current_conservation_error": 1.3552527025150186e-19,
+    "terminal_voltages_at_pm_v": [
+      [
+        5e-05,
+        -5e-05,
+        1.1238161597201886e-10,
+        6.351320529360256e-10
+      ],
+      [
+        -5e-05,
+        5e-05,
+        1.1238161589957839e-10,
+        6.351320530264077e-10
+      ],
+      [
+        5e-05,
+        -5e-05,
+        1.1238161643828588e-10,
+        6.351320524212501e-10
+      ],
+      [
+        -5e-05,
+        5e-05,
+        1.123816162145158e-10,
+        6.351320523555155e-10
+      ]
+    ],
+    "check_bias": 5e-05
+  },
+  "protocol": "VL=+V,VR=-V,IT=IB=0; VH=VT-VB; V_SD=2V",
+  "units": "v=eV/t, i=hI/(e*t), eVH/t=kH*v**2",
+  "parameters": {
+    "A": 1.0,
+    "t": 1.0,
+    "m": -1.0,
+    "delta": 0.2,
+    "EF": 0.4,
+    "tc": 0.15,
+    "length": 31,
+    "width": 12
+  },
+  "electrostatics": "Equilibrium injectivities, local neutrality, first-order potential",
+  "temperature": 0.0
+}

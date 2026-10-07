@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "figure": "fig2",
+  "panel": "a",
+  "arrays": {
+    "kx": {
+      "shape": [
+        801
+      ],
+      "dtype": "float64"
+    },
+    "strip_bands": {
+      "shape": [
+        801,
+        16
+      ],
+      "dtype": "float64"
+    },
+    "edge_labels": {
+      "shape": [
+        16
+      ],
+      "dtype": "int64"
+    },
+    "bulk_gap": {
+      "shape": [],
+      "dtype": "float64"
+    },
+    "EF": {
+      "shape": [],
+      "dtype": "float64"
+    },
+    "kstar": {
+      "shape": [],
+      "dtype": "float64"
+    },
+    "fermi_momenta": {
+      "shape": [
+        2
+      ],
+      "dtype": "float64"
+    },
+    "fermi_velocities": {
+      "shape": [
+        2
+      ],
+      "dtype": "float64"
+    },
+    "tx": {
+      "shape": [],
+      "dtype": "float64"
+    },
+    "t1": {
+      "shape": [],
+      "dtype": "float64"
+    },
+    "t2": {
+      "shape": [],
+      "dtype": "float64"
+    },
+    "delta": {
+      "shape": [],
+      "dtype": "float64"
+    },
+    "N": {
+      "shape": [],
+      "dtype": "int64"
+    }
+  },
+  "data_mode": "verified_cache_extraction",
+  "model": "stacked Rice-Mele",
+  "magnetic_field": 0.0,
+  "parameters": {
+    "tx": 0.25,
+    "t1": 0.3,
+    "t2": 1.0,
+    "delta": 0.2,
+    "tc": 0.15,
+    "EF": 0.1,
+    "N": 8,
+    "L": 31,
+    "kstar": 2.0,
+    "eta": 0.02,
+    "nk": 801
+  },
+  "units": "energies in t2, lengths in lattice cells",
+  "source_path": "data/raw/rm_figure2/figure2_data.npz",
+  "source_sha256": "ed2b934d3a7af0b4ed9257f316545886af5124df77ae8b87736d9231826352b2",
+  "sources": [
+    {
+      "path": "data/raw/rm_figure2/figure2_data.npz",
+      "sha256": "ed2b934d3a7af0b4ed9257f316545886af5124df77ae8b87736d9231826352b2"
+    }
+  ],
+  "helpers": [
+    {
+      "path": "code/panels/fig2/_data.py",
+      "sha256": "e4eddb0cb67667a0257f73977626e039ac3337172a332d32cb3993667ea04512"
+    }
+  ],
+  "input_sources_modified": false,
+  "observable": "exact ribbon eigenenergies; top/bottom edge branches",
+  "validation": {},
+  "normalization": "none",
+  "calculation_helpers": [
+    {
+      "path": "code/panels/fig2/_ribbon.py",
+      "sha256": "b9f130c24aa855fe12dfc8fb7be259755d51054da1a1f576afa48d38f16d8123"
+    }
+  ],
+  "calculation_mode": "reuse",
+  "calculation_script": {
+    "path": "code/panels/fig2/calc_a.py",
+    "sha256": "5d06645cc9dbf0c4abcc1f8d10373ace2509ab8109890905437c77c2e0059515"
+  },
+  "data_sha256": "8a95d3524dc0f9874a8686a2373d877048c86e533df7e8e074554519eebd80db"
+}

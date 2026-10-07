@@ -1,0 +1,346 @@
+{
+  "schema": "rm_weak_probe_dos_audit_v1",
+  "parameters": {
+    "tx": 0.25,
+    "t1": 0.3,
+    "t2": 1.0,
+    "delta": 0.2,
+    "EF": 0.1,
+    "length": 31,
+    "cells": 8
+  },
+  "probe_couplings": [
+    0.2,
+    0.15,
+    0.1,
+    0.05,
+    0.02,
+    0.01,
+    0.005
+  ],
+  "derivative_step": 1e-05,
+  "protocol": "Historical positive-energy solver source shifts +v,-v; probe energy shifts float. Paper mu=EF-eV, V1=+V_SD/2, V2=-V_SD/2, V_perp=V3-V4.",
+  "conversion": "kappa2_published=-kH_raw/4 exactly once",
+  "DOS_formula": "kappa2_DOS=-1/8*d_E ln(rho_bare_top/rho_bare_bottom)",
+  "units": "E in t2; published kappa2 in e/t2; DOS per t2 per contacted atomic site",
+  "frozen_definition": "Freeze all sample potentials and all reservoir Hamiltonian onsite shifts; vary reservoir distribution functions only.",
+  "full_definition": "Existing first-order local-neutrality sample potential plus reservoir Hamiltonian onsite shifts.",
+  "bare_definition": "Same finite sample and matched L/R leads, with both metallic probes entirely removed.",
+  "bare_check": {
+    "kwant_ldos": [
+      0.7241550416360735,
+      0.5912701132510123
+    ],
+    "analytic_ldos": [
+      0.7241550416360745,
+      0.5912701132510132
+    ],
+    "contact_ldos_max_error": 9.992007221626409e-16,
+    "kwant_finite_difference_log_slope": 2.2916667234210153,
+    "analytic_log_slope": 2.291666721033022,
+    "log_slope_error": 2.3879933586101743e-09,
+    "propagating_transverse_subbands": 2
+  },
+  "records": [
+    {
+      "tc": 0.2,
+      "kH_raw": -1.2862324948912798,
+      "kH_frozen_raw": 0.9619783296942112,
+      "kH_internal_raw": 0.44978513755038857,
+      "kH_electrodes_raw": -2.6979959669324995,
+      "kappa2_full": 0.32155812372281994,
+      "kappa2_frozen": -0.2404945824235528,
+      "kappa2_internal": -0.11244628438759714,
+      "kappa2_electrodes": 0.6744989917331249,
+      "electrode_frozen_firstorder_prediction": -0.35294086681114994,
+      "frozen_F_prediction": -0.24049458939249393,
+      "bare_DOS_prediction": -0.28645834012912774,
+      "frozen_F_error": 6.968941146379137e-09,
+      "frozen_DOS_error": 0.045963757705574954,
+      "split_sum_error": 1.1991549975221005e-09,
+      "probe_F": [
+        0.305492634849872,
+        0.2571988322497841
+      ],
+      "probe_F_over_tc_squared": [
+        7.637315871246798,
+        6.429970806244602
+      ],
+      "interprobe_transmission": 4.114629520672679e-09,
+      "alpha_H": 1.6465055170552967e-16,
+      "probe_condition": 1.1877683557310506,
+      "current_conservation_error": 8.326672684688674e-12,
+      "probe_quadratic_current_error": 0.0,
+      "zero_field_reciprocity_error": 1.0269562977782698e-15,
+      "gauge_shift_error": 4.218847493575595e-15
+    },
+    {
+      "tc": 0.15,
+      "kH_raw": -1.3984060368132902,
+      "kH_frozen_raw": 1.0386454670189407,
+      "kH_internal_raw": 0.26094449701782996,
+      "kH_electrodes_raw": -2.6979960024187855,
+      "kappa2_full": 0.34960150920332256,
+      "kappa2_frozen": -0.25966136675473517,
+      "kappa2_internal": -0.06523612425445749,
+      "kappa2_electrodes": 0.6744990006046964,
+      "electrode_frozen_firstorder_prediction": -0.32489749100919263,
+      "frozen_F_prediction": -0.25966137122516997,
+      "bare_DOS_prediction": -0.28645834012912774,
+      "frozen_F_error": 4.470434800118994e-09,
+      "frozen_DOS_error": 0.026796973374392574,
+      "split_sum_error": 3.9218117642292327e-10,
+      "probe_F": [
+        0.185087033744336,
+        0.1538424777656609
+      ],
+      "probe_F_over_tc_squared": [
+        8.226090388637155,
+        6.837443456251596
+      ],
+      "interprobe_transmission": 1.4911222896916117e-09,
+      "alpha_H": -3.52289018005061e-15,
+      "probe_condition": 1.2030944647383315,
+      "current_conservation_error": 1.73479980380975e-12,
+      "probe_quadratic_current_error": 6.938893903907228e-18,
+      "zero_field_reciprocity_error": 1.3322676295501878e-15,
+      "gauge_shift_error": 5.329070518200751e-15
+    },
+    {
+      "tc": 0.1,
+      "kH_raw": -1.4825207907167162,
+      "kH_frozen_raw": 1.0969208605129963,
+      "kH_internal_raw": 0.11855437734511799,
+      "kH_electrodes_raw": -2.697996028863107,
+      "kappa2_full": 0.37063019767917904,
+      "kappa2_frozen": -0.2742302151282491,
+      "kappa2_internal": -0.029638594336279498,
+      "kappa2_electrodes": 0.6744990072157767,
+      "electrode_frozen_firstorder_prediction": -0.3038688094645286,
+      "frozen_F_prediction": -0.2742302172446809,
+      "bare_DOS_prediction": -0.28645834012912774,
+      "frozen_F_error": 2.116431807586139e-09,
+      "frozen_DOS_error": 0.012228125000878665,
+      "split_sum_error": 7.206912844281987e-11,
+      "probe_F": [
+        0.0868930780697831,
+        0.07152677304659646
+      ],
+      "probe_F_over_tc_squared": [
+        8.689307806978308,
+        7.152677304659645
+      ],
+      "interprobe_transmission": 3.254728859215603e-10,
+      "alpha_H": -7.416555772159945e-15,
+      "probe_condition": 1.2148329121915409,
+      "current_conservation_error": 8.673478602005957e-13,
+      "probe_quadratic_current_error": 0.0,
+      "zero_field_reciprocity_error": 2.4424906541753444e-15,
+      "gauge_shift_error": 3.1086244689504383e-15
+    },
+    {
+      "tc": 0.05,
+      "kH_raw": -1.5345605582568551,
+      "kH_frozen_raw": 1.1334059164346884,
+      "kH_internal_raw": 0.030029570751923407,
+      "kH_electrodes_raw": -2.6979960454018563,
+      "kappa2_full": 0.3836401395642138,
+      "kappa2_frozen": -0.2833514791086721,
+      "kappa2_internal": -0.007507392687980852,
+      "kappa2_electrodes": 0.6744990113504641,
+      "electrode_frozen_firstorder_prediction": -0.29085887179665293,
+      "frozen_F_prediction": -0.28335147954309386,
+      "bare_DOS_prediction": -0.28645834012912774,
+      "frozen_F_error": 4.3442177632968537e-10,
+      "frozen_DOS_error": 0.0031068610204556535,
+      "split_sum_error": 1.0402678718435254e-11,
+      "probe_F": [
+        0.02246562860623321,
+        0.018380982126405633
+      ],
+      "probe_F_over_tc_squared": [
+        8.986251442493282,
+        7.352392850562252
+      ],
+      "interprobe_transmission": 2.1624610240530852e-11,
+      "alpha_H": 3.757882412272944e-15,
+      "probe_condition": 1.2222213398028539,
+      "current_conservation_error": 2.8449458067125732e-11,
+      "probe_quadratic_current_error": 0.0,
+      "zero_field_reciprocity_error": 5.10702591327572e-15,
+      "gauge_shift_error": 3.1086244689504383e-15
+    },
+    {
+      "tc": 0.02,
+      "kH_raw": -1.5493378871750736,
+      "kH_frozen_raw": 1.1438358542495868,
+      "kH_internal_raw": 0.004822308493914058,
+      "kH_electrodes_raw": -2.6979960502859166,
+      "kappa2_full": 0.3873344717937684,
+      "kappa2_frozen": -0.2859589635623967,
+      "kappa2_internal": -0.0012055771234785145,
+      "kappa2_electrodes": 0.6744990125714792,
+      "electrode_frozen_firstorder_prediction": -0.2871645406858752,
+      "frozen_F_prediction": -0.28595896348609234,
+      "bare_DOS_prediction": -0.28645834012912774,
+      "frozen_F_error": 7.630435172600869e-11,
+      "frozen_DOS_error": 0.0004993765667310468,
+      "split_sum_error": 9.183565019554862e-11,
+      "probe_F": [
+        0.0036288490853853446,
+        0.0029639250402232883
+      ],
+      "probe_F_over_tc_squared": [
+        9.072122713463362,
+        7.4098126005582206
+      ],
+      "interprobe_transmission": 5.6324471318426e-13,
+      "alpha_H": -2.8157381577663942e-15,
+      "probe_condition": 1.2243390220778332,
+      "current_conservation_error": 1.829049064983046e-11,
+      "probe_quadratic_current_error": 0.0,
+      "zero_field_reciprocity_error": 4.884981308350689e-15,
+      "gauge_shift_error": 9.325873406851315e-15
+    },
+    {
+      "tc": 0.01,
+      "kH_raw": -1.5514561876045545,
+      "kH_frozen_raw": 1.145333657840069,
+      "kH_internal_raw": 0.0012062055743422536,
+      "kH_electrodes_raw": -2.6979960512688788,
+      "kappa2_full": 0.3878640469011386,
+      "kappa2_frozen": -0.28633341446001725,
+      "kappa2_internal": -0.0003015513935855634,
+      "kappa2_electrodes": 0.6744990128172197,
+      "electrode_frozen_firstorder_prediction": -0.2866349658536028,
+      "frozen_F_prediction": -0.28633341430887166,
+      "bare_DOS_prediction": -0.28645834012912774,
+      "frozen_F_error": 1.5114559603901512e-10,
+      "frozen_DOS_error": 0.0001249256691104872,
+      "split_sum_error": 6.247824479999053e-11,
+      "probe_F": [
+        0.0009084490354196386,
+        0.0007418070286255879
+      ],
+      "probe_F_over_tc_squared": [
+        9.084490354196385,
+        7.418070286255879
+      ],
+      "interprobe_transmission": 3.529006943434941e-14,
+      "alpha_H": -1.7110666641113567e-15,
+      "probe_condition": 1.224643337627676,
+      "current_conservation_error": 4.624122374070894e-12,
+      "probe_quadratic_current_error": 0.0,
+      "zero_field_reciprocity_error": 6.661338147750939e-16,
+      "gauge_shift_error": 6.8833827526759706e-15
+    },
+    {
+      "tc": 0.005,
+      "kH_raw": -1.5519860436829096,
+      "kH_frozen_raw": 1.1457084159006719,
+      "kH_internal_raw": 0.00030159053651338067,
+      "kH_electrodes_raw": -2.6979960510496754,
+      "kappa2_full": 0.3879965109207274,
+      "kappa2_frozen": -0.28642710397516796,
+      "kappa2_internal": -7.539763412834517e-05,
+      "kappa2_electrodes": 0.6744990127624189,
+      "electrode_frozen_firstorder_prediction": -0.2865025016092963,
+      "frozen_F_prediction": -0.28642710380479,
+      "bare_DOS_prediction": -0.28645834012912774,
+      "frozen_F_error": 1.703779894945967e-10,
+      "frozen_DOS_error": 3.123615395977941e-05,
+      "split_sum_error": 2.3239521418361164e-10,
+      "probe_F": [
+        0.00022718965530808436,
+        0.00018550342159872035
+      ],
+      "probe_F_over_tc_squared": [
+        9.087586212323375,
+        7.420136863948813
+      ],
+      "interprobe_transmission": 2.2069956540425794e-15,
+      "alpha_H": -2.729959975025589e-15,
+      "probe_condition": 1.2247194868407496,
+      "current_conservation_error": 2.1789753181856216e-11,
+      "probe_quadratic_current_error": 6.776263578034403e-21,
+      "zero_field_reciprocity_error": 6.8833827526759706e-15,
+      "gauge_shift_error": 5.10702591327572e-15
+    }
+  ],
+  "step_refinement": [
+    {
+      "tc": 0.1,
+      "absolute_kappa2_errors": {
+        "kH": 4.575085310598581e-10,
+        "kH_frozen": 2.948974398009341e-10,
+        "kH_internal": 2.2919923250985796e-10,
+        "kH_electrodes": 8.430012243820784e-11
+      }
+    },
+    {
+      "tc": 0.02,
+      "absolute_kappa2_errors": {
+        "kH": 6.598868673712843e-10,
+        "kH_frozen": 3.0764685243767076e-10,
+        "kH_internal": 1.2917983132840205e-10,
+        "kH_electrodes": 1.0870282451946878e-10
+      }
+    }
+  ],
+  "weak_formula_reference": {
+    "tc": 0.005,
+    "F": [
+      0.00022718965530808436,
+      0.00018550342159872035
+    ],
+    "Fprime": [
+      0.0004202388414657016,
+      -8.193497352354485e-05
+    ],
+    "tprime_L_minus_tprime_R_code": [
+      -0.0006323490081184429,
+      -1.588995187463754e-05
+    ],
+    "tprime_internal_code": [
+      5.033144447009682e-08,
+      -1.4849772344942279e-08
+    ],
+    "tprime_electrodes_code": [
+      -0.0006323993397384182,
+      -1.5875102073154663e-05
+    ],
+    "bias_derivative_split_max_error": 1.7550522667109103e-13,
+    "beta_formula_code": [
+      -1.858489493339917,
+      -0.3065034496204796
+    ],
+    "beta_full_block_code": [
+      -1.8584894933218523,
+      -0.3065034496389426
+    ],
+    "beta_formula_vs_block_max_error": 1.8463008899516353e-11,
+    "kappa_formula": 0.3879965109298593,
+    "kappa_block": 0.3879965109207274,
+    "kappa_formula_vs_block_error": 9.1319174444493e-12,
+    "assumptions": "Mx implies alpha_P=0 and TL=TR; neglect T34. T34 was measured, not set to zero.",
+    "raw_formula": "beta_p = Fprime_p/(2 F_p) + (partial_v T_pL - partial_v T_pR)/F_p",
+    "published_formula": "kappa2=-[beta_top-beta_bottom]/4 in e/t2 units; first term is -d_E ln(Ftop/Fbottom)/8"
+  },
+  "electrode_frozen_control": "This uses the existing linear-response split: frozen occupation term plus internal-potential correction, excluding electrode Hamiltonian feedback; not a new nonlinear finite-bias calculation.",
+  "source_data_unchanged": true,
+  "protected_sha256": {
+    "RM_Edge_Nonlinear_Transport/results/figure2_mechanism/figure2_data.npz": "ed2b934d3a7af0b4ed9257f316545886af5124df77ae8b87736d9231826352b2",
+    "RM_Edge_Nonlinear_Transport/results/figure2_mechanism/validation.json": "bfe4c01a65bb3dd2b869ad4b43d070dfe71649f7496e0abf166170caa6aebae6",
+    "QSH_Nonlinear_Transport/manuscript/figures/fig2_rm.pdf": "801580603646577e38b464f76e22874f6437fb9031724913b39ae3f2399ae26a",
+    "QSH_Nonlinear_Transport/manuscript/main_article.tex": "07101775322a0bb5196bb442e83130ed7659bc34b63091989c9defb956341d23"
+  },
+  "output_sha256": "b193cf7abe864cb673b7d6503778539ce866019e0a833525fbab6b8413dcb2d0",
+  "source_files": {
+    "QSH_Nonlinear_Transport/code/compute_rm_weak_probe_audit.py": "b113fa9ab391219e6c12519d4392098ddf3ef7e86450cc7420dd08ea4e39d7cb",
+    "RM_Edge_Nonlinear_Transport/code/compute_initial_study.py": "79f3ef2f17774a351de30e3e2bcd7ef040daf510928e866ef31377cb5f273599",
+    "RM_Edge_Nonlinear_Transport/code/compute_floating_study.py": "adccbd09d25fb79b42261917acabf0ad839cfbd6d06d21a62325a9fba0c90af1"
+  },
+  "kwant_version": "1.5.0",
+  "numpy_version": "2.1.3",
+  "runtime_seconds": 2.454548199981218
+}

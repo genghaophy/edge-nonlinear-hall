@@ -1,0 +1,90 @@
+{
+  "date": "2026-10-08",
+  "status": "passed",
+  "license": "MIT",
+  "tested_environment": {
+    "python": "3.13.5",
+    "numpy": "2.1.3",
+    "scipy": "1.15.3",
+    "matplotlib": "3.10.0",
+    "kwant": "1.5.0",
+    "tinyarray": "1.2.5",
+    "threadpoolctl": "3.5.0"
+  },
+  "release_integrity": {
+    "original_source_files_unchanged": 112,
+    "copied_npz_datasets_compared": 27,
+    "physical_arrays_identical": 485,
+    "original_manuscript_files_unchanged": 6,
+    "reference_pdfs_byte_identical": 4,
+    "python_files_syntax_checked": 62
+  },
+  "main_figure_verification": {
+    "data_integrity": {
+      "panel_contracts_checked": [
+        "fig1a",
+        "fig2a",
+        "fig2b",
+        "fig2c",
+        "fig2d",
+        "fig3a",
+        "fig3b",
+        "fig3c",
+        "fig3d",
+        "fig4a",
+        "fig4b",
+        "fig4c",
+        "fig4d"
+      ],
+      "embedded_string_values_checked": 14
+    },
+    "relocation": {
+      "independent_directory": true,
+      "solver_imports_disabled": true,
+      "prepared_panel_arrays_identical": 13,
+      "panel_pdfs": 13,
+      "assembled_pdfs": 4
+    },
+    "representative_computation": {
+      "rm": {
+        "energy": 0.1,
+        "tau": 0.003,
+        "clean_kappa": 0.38802477386629775,
+        "production_difference": 0.0,
+        "weak_probe_prediction": 0.3880406725399097
+      },
+      "qsh": {
+        "energy": 0.4,
+        "tau": 0.003,
+        "clean_kappa": 0.05311445288567909,
+        "production_difference": 0.0,
+        "weak_probe_prediction": 0.05311479082613745
+      }
+    }
+  },
+  "supplemental_diagnostics": {
+    "rm_reference": {
+      "completed": true,
+      "mode": "selected numerical samples"
+    },
+    "qsh_reference": {
+      "completed": true,
+      "mode": "selected numerical samples",
+      "finite_temperature_check_run": false
+    },
+    "thermal_window": {
+      "completed": true,
+      "mode": "cached reduction"
+    },
+    "thermal_quadrature": {
+      "completed": true,
+      "mode": "cached reduction"
+    }
+  },
+  "visual_review": {
+    "assembled_figures_reviewed": 4,
+    "accepted_layout_preserved": true
+  },
+  "full_production_transport_scans_rerun": false,
+  "scope": "Packaging, exact cached-array preservation, independent cached data preparation and plotting, selected fresh RM/QSH checks. Historical full scans retain their source-version limits."
+}

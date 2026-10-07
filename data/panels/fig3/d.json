@@ -1,0 +1,164 @@
+{
+  "schema_version": 1,
+  "figure": "fig3",
+  "panel": "d",
+  "arrays": {
+    "gamma_phi": {
+      "shape": [
+        6
+      ],
+      "dtype": "float64"
+    },
+    "selected_energies": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64"
+    },
+    "kH_raw": {
+      "shape": [
+        3,
+        6
+      ],
+      "dtype": "float64"
+    },
+    "kappa2_tilde": {
+      "shape": [
+        3,
+        6
+      ],
+      "dtype": "float64"
+    },
+    "Gxx": {
+      "shape": [
+        3,
+        6
+      ],
+      "dtype": "float64"
+    },
+    "y_limits": {
+      "shape": [
+        2
+      ],
+      "dtype": "float64"
+    },
+    "y_ticks": {
+      "shape": [
+        2
+      ],
+      "dtype": "float64"
+    }
+  },
+  "mode": "verified archive extraction",
+  "sources": [
+    {
+      "path": "data/raw/figure3_environment/environment_data.npz",
+      "sha256": "7e739422c42845383bc8a16a95991d1441483dd5c245e6863ce0d5fc69835c9a"
+    },
+    {
+      "path": "data/raw/figure3_ef05_extension/environment_data.npz",
+      "sha256": "7690c7b31803a4ba906e982d51bfb11265754bd5411574fe8afd68468e9880e1"
+    },
+    {
+      "path": "data/raw/figure3_ef05_extension/validation.json",
+      "sha256": "0bfa7fd83029254f6ee5e68b170b3fd4bb62ff858739ca5b1ff8f4d6d79267bc"
+    }
+  ],
+  "source_sha256": {
+    "data/raw/figure3_environment/environment_data.npz": "7e739422c42845383bc8a16a95991d1441483dd5c245e6863ce0d5fc69835c9a",
+    "data/raw/figure3_ef05_extension/environment_data.npz": "7690c7b31803a4ba906e982d51bfb11265754bd5411574fe8afd68468e9880e1",
+    "data/raw/figure3_ef05_extension/validation.json": "0bfa7fd83029254f6ee5e68b170b3fd4bb62ff858739ca5b1ff8f4d6d79267bc"
+  },
+  "response_convention": "dimensionless tilde kappa2=t*kappa2/e=-historical kH/4",
+  "bias": "V1=+V/2, V2=-V/2; identical floating probes 3(top),4(bottom)",
+  "time_reversal": true,
+  "magnetic_field": 0.0,
+  "checks": {
+    "approved_rows_preserved": true
+  },
+  "geometry": [
+    31,
+    12
+  ],
+  "contact_coupling": 0.15,
+  "temperature": 0.0,
+  "disorder": 0.0,
+  "virtual_probe_model": "paired spin-preserving WBA elastic reservoirs; separate I_up(E)=I_down(E)=0",
+  "virtual_probe_positions": [
+    [
+      5,
+      0
+    ],
+    [
+      5,
+      1
+    ],
+    [
+      5,
+      10
+    ],
+    [
+      5,
+      11
+    ],
+    [
+      10,
+      0
+    ],
+    [
+      10,
+      1
+    ],
+    [
+      10,
+      10
+    ],
+    [
+      10,
+      11
+    ],
+    [
+      20,
+      0
+    ],
+    [
+      20,
+      1
+    ],
+    [
+      20,
+      10
+    ],
+    [
+      20,
+      11
+    ],
+    [
+      25,
+      0
+    ],
+    [
+      25,
+      1
+    ],
+    [
+      25,
+      10
+    ],
+    [
+      25,
+      11
+    ]
+  ],
+  "gamma_interpretation": "energy linewidth, not calibrated hbar/tau_phi",
+  "axes_order": [
+    "Fermi energy",
+    "elastic-probe linewidth"
+  ],
+  "calculation_mode": "reuse",
+  "calculation_script": {
+    "path": "code/panels/fig3/calc_d.py",
+    "sha256": "f15e910c7f11c5d773a81d1a3fde83730f7bdc72ceb84b628b1f2ae18501f77a"
+  },
+  "data_sha256": "6fce196990acc2c591d6a8f930312419d50af3a0fea3ff06eee8ee418f1550c9"
+}

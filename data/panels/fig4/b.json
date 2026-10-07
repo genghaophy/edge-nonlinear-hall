@@ -1,0 +1,263 @@
+{
+  "schema_version": 1,
+  "figure": "fig4",
+  "panel": "b",
+  "arrays": {
+    "energies": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64"
+    },
+    "tau": {
+      "shape": [
+        31
+      ],
+      "dtype": "float64"
+    },
+    "equal_kappa_full": {
+      "shape": [
+        3,
+        31
+      ],
+      "dtype": "float64"
+    },
+    "bare_kappa_predicted": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64"
+    }
+  },
+  "sources": [
+    {
+      "path": "data/raw/qsh_weak_probe_comparison/coupling_scan.npz",
+      "sha256": "f2981edaa3ba29529a8e86d3cb01073fd9717c29a8b7100386e7232e44d3a205"
+    },
+    {
+      "path": "data/raw/qsh_weak_probe_comparison/coupling_scan.json",
+      "sha256": "aab1f03c1a09d892d7adf72bde607c92fd06ade10e0ac1d74cdb42e426786705"
+    }
+  ],
+  "calculation_helper": {
+    "path": "code/panels/fig4/_calc.py",
+    "sha256": "e0e3a620b2e30614652c9383d10947f410f6abde627aaa6a791bbcccc05964df"
+  },
+  "parameters": {
+    "m": -1.0,
+    "delta": 0.2,
+    "t": 1.0,
+    "A": 1.0,
+    "length": 31,
+    "width": 12
+  },
+  "model": "qsh",
+  "observable": "dimensionless kappa2",
+  "units": {
+    "energy": "t",
+    "probe_hopping": "t",
+    "ordinate": "dimensionless"
+  },
+  "conversion": "Already in paper units; copied without a sign or bias conversion",
+  "physical_convention": "mu=EF-eV,H=H0-eU,V1=+VSD/2,V2=-VSD/2,Vperp=V3-V4",
+  "electrostatics": "First-order local charge neutrality; coherent, T=0, B=0",
+  "probe_constraint": "Identical floating probes, t3=t4=tau, I3=I4=0",
+  "calculation": "validated_cache_reuse",
+  "validation": {
+    "dataset_checksum_verified": true,
+    "legacy_source_version_differences": [
+      {
+        "path": "historical_sources/code/compute_qsh_edge_probe_coupling_scan.py",
+        "recorded_sha256": "0b2f2df7508267ea04993b158755847daeeb0cf3b602ca8700242af127db1903",
+        "current_sha256": null
+      },
+      {
+        "path": "code/compute_letter_preview.py",
+        "recorded_sha256": "a159ab6d8659746b5c545f3e8de17ce4fd053dbf4280627a68c56609f0ccd080",
+        "current_sha256": "6272d9c8ca4da052a7241210e43dd85eee2f9984700178dc2da1adf7ed6bbc93"
+      },
+      {
+        "path": "code/edge_probe_readout.py",
+        "recorded_sha256": "3e9f0fe4877701c2b356c190c6d9ad6b5014130b836f7c475602ab6bf80a4477",
+        "current_sha256": "68c648f39bcd97438161d018e2aaa017e415fd7d4c1af6a61b94937e76be1f6d"
+      },
+      {
+        "path": "code/compute_floating_study.py",
+        "recorded_sha256": "adccbd09d25fb79b42261917acabf0ad839cfbd6d06d21a62325a9fba0c90af1",
+        "current_sha256": "c37ea05b525129b9119d795f4f14985c25fc1f10a528626887d22eaecb0320f2"
+      }
+    ],
+    "calculation_validation": {
+      "max_unitarity_error": 1.0258460747536446e-13,
+      "max_reciprocity_error": 1.4499512701604544e-13,
+      "max_probe_quadratic_current_error": 5.551115123125783e-17,
+      "max_current_conservation_error": 3.426078865054194e-11,
+      "max_probe_condition": 1.229232686263006,
+      "max_source_contact_rho_vs_F_over_gamma_error": 1.9984014443252818e-15,
+      "max_finite_contact_formula_error": 1.447466112247664e-09,
+      "max_linear_transverse_coefficient": 3.1476434139359524e-14,
+      "legacy_baseline_energy": 0.4,
+      "legacy_baseline_tc": 0.15,
+      "legacy_baseline_paper_kappa": 0.05227504360735808,
+      "new_vs_legacy_kappa_error": 7.070257573849048e-11,
+      "delta_mirror_reversal_error": 8.014262864453059e-12,
+      "delta_zero_kappa_abs": 1.0091816965429601e-10,
+      "bare_checks": [
+        {
+          "energy": 0.3,
+          "predictor_step_error": 7.560010187313004e-10,
+          "dE_ln_rho_step_error": 9.43689570931383e-10,
+          "dV_eta_step_error": 1.1072846459467434e-09,
+          "scattering_checks": {
+            "transmission": [
+              [
+                8.057411157771012e-30,
+                2.0000000000000195
+              ],
+              [
+                1.999999999999972,
+                1.382424896004762e-29
+              ]
+            ],
+            "incoming_modes": [
+              2,
+              2
+            ],
+            "unitarity_error": 2.7977620220553945e-14,
+            "reciprocity_error": 4.75175454539567e-14,
+            "ldos_vs_sum_injectivities_error": 1.1102230246251565e-16,
+            "equilibrium_eta_contact_abs_max": 2.2384547858176327e-14,
+            "equilibrium_U_over_V_max": 3.6825035830094884e-08,
+            "equilibrium_rho_Mx_error": 1.815214645262131e-14
+          }
+        },
+        {
+          "energy": 0.4,
+          "predictor_step_error": 7.590143930036319e-10,
+          "dE_ln_rho_step_error": 1.0769163338864018e-09,
+          "dV_eta_step_error": 9.18801106746662e-10,
+          "scattering_checks": {
+            "transmission": [
+              [
+                3.6286676622747367e-29,
+                2.0000000000000155
+              ],
+              [
+                2.000000000000002,
+                3.7715434756156655e-29
+              ]
+            ],
+            "incoming_modes": [
+              2,
+              2
+            ],
+            "unitarity_error": 1.554312234475219e-14,
+            "reciprocity_error": 1.3322676295501878e-14,
+            "ldos_vs_sum_injectivities_error": 5.551115123125783e-17,
+            "equilibrium_eta_contact_abs_max": 1.5726456152687222e-14,
+            "equilibrium_U_over_V_max": 4.156293175064165e-10,
+            "equilibrium_rho_Mx_error": 5.88418203051333e-15
+          }
+        },
+        {
+          "energy": 0.5,
+          "predictor_step_error": 3.360468223134738e-10,
+          "dE_ln_rho_step_error": 2.298161660974074e-09,
+          "dV_eta_step_error": 1.0586366008709795e-09,
+          "scattering_checks": {
+            "transmission": [
+              [
+                3.0768032523861006e-29,
+                1.9999999999999782
+              ],
+              [
+                2.000000000000022,
+                1.2253988455506484e-29
+              ]
+            ],
+            "incoming_modes": [
+              2,
+              2
+            ],
+            "unitarity_error": 2.220446049250313e-14,
+            "reciprocity_error": 4.39648317751562e-14,
+            "ldos_vs_sum_injectivities_error": 1.1102230246251565e-16,
+            "equilibrium_eta_contact_abs_max": 6.585219800693696e-15,
+            "equilibrium_U_over_V_max": 2.8244182767732355e-11,
+            "equilibrium_rho_Mx_error": 8.271161533457416e-15
+          }
+        }
+      ],
+      "derivative_checks": [
+        {
+          "energy": 0.3,
+          "tau": 0.005,
+          "errors": {
+            "kappa_full": 6.967213611597245e-10,
+            "kappa_frozen": 1.8953204977689708e-10,
+            "kappa_internal": 1.2656811221174731e-09,
+            "kappa_electrodes": 6.899330521526433e-10,
+            "contact_dV_eta": 1.3995237969842452e-09
+          }
+        },
+        {
+          "energy": 0.5,
+          "tau": 1.0,
+          "errors": {
+            "kappa_full": 3.38411625111501e-11,
+            "kappa_frozen": 1.7217488892939947e-10,
+            "kappa_internal": 1.9897545627875773e-10,
+            "kappa_electrodes": 5.552380978064027e-11,
+            "contact_dV_eta": 1.5434186088894855e-09
+          }
+        },
+        {
+          "energy": 0.4,
+          "tau": 1.0,
+          "errors": {
+            "kappa_full": 2.4448623681117e-10,
+            "kappa_frozen": 4.936790039267169e-10,
+            "kappa_internal": 3.634794913743892e-10,
+            "kappa_electrodes": 1.2346980525267397e-10,
+            "contact_dV_eta": 1.27237813514741e-09
+          }
+        }
+      ],
+      "direct_finite_bias": {
+        "kappa_direct": 0.023076296131139186,
+        "kappa_derivative": 0.02307629613811186,
+        "absolute_error": 6.972672439431449e-12,
+        "relative_error": 3.021573478559963e-10,
+        "probe_current_error": 3.483868251397411e-21,
+        "current_sum_error": 1.0746664072668452e-19,
+        "voltage": 0.0001,
+        "physical_probe_voltages": [
+          [
+            5.703058542154478e-12,
+            -2.2505990286088538e-10
+          ],
+          [
+            5.703058355217873e-12,
+            -2.2505990286452599e-10
+          ]
+        ],
+        "physical_hall_voltages": [
+          2.3076296140303986e-10,
+          2.3076296121974385e-10
+        ],
+        "convention": "Full source-drain voltage; physical voltages=-onsite-positive solver shifts"
+      },
+      "max_gauge_shift_error": 8.326672684688674e-14
+    }
+  },
+  "statistics": {
+    "spread": "none",
+    "bare_prediction": "independent, not fitted"
+  },
+  "calculation_mode": "reuse",
+  "calculation_script": {
+    "path": "code/panels/fig4/calc_b.py",
+    "sha256": "19150aa89740da7789ba9cdb1e23c73c0f85dbbe391646dbeb866a594a00696c"
+  },
+  "data_sha256": "fbf77065ccb0a6f5bd7aabcf79eac7a6d72575c968e3eae914a7f442a8e6e45c"
+}

@@ -1,0 +1,148 @@
+{
+  "schema_version": 1,
+  "figure": "fig4",
+  "panel": "d",
+  "arrays": {
+    "strengths": {
+      "shape": [
+        4
+      ],
+      "dtype": "float64"
+    },
+    "sample_counts": {
+      "shape": [
+        4
+      ],
+      "dtype": "int64"
+    },
+    "four_kappa": {
+      "shape": [
+        4,
+        16
+      ],
+      "dtype": "float64"
+    },
+    "four_normalized": {
+      "shape": [
+        4,
+        16
+      ],
+      "dtype": "float64"
+    },
+    "four_normalized_mean": {
+      "shape": [
+        4
+      ],
+      "dtype": "float64"
+    },
+    "four_normalized_std": {
+      "shape": [
+        4
+      ],
+      "dtype": "float64"
+    },
+    "energy": {
+      "shape": [],
+      "dtype": "float64"
+    },
+    "clean_kappa": {
+      "shape": [],
+      "dtype": "float64"
+    },
+    "tau": {
+      "shape": [],
+      "dtype": "float64"
+    },
+    "seeds": {
+      "shape": [
+        16
+      ],
+      "dtype": "int64"
+    }
+  },
+  "sources": [
+    {
+      "path": "data/raw/fig4_disorder_asymmetric_ranges/ensemble.npz",
+      "sha256": "2beb79bc283367b7f41374ca44ca19cf68c6329a92bb8d00f4b5823fb1b60607"
+    },
+    {
+      "path": "data/raw/fig4_disorder_asymmetric_ranges/validation.json",
+      "sha256": "92f19e975fe35664fa42819ac673b2b4aec8bf1770bbb44d20b755339a775d70"
+    }
+  ],
+  "calculation_helper": {
+    "path": "code/panels/fig4/_calc.py",
+    "sha256": "e0e3a620b2e30614652c9383d10947f410f6abde627aaa6a791bbcccc05964df"
+  },
+  "parameters": {
+    "m": -1.0,
+    "delta": 0.2,
+    "t": 1.0,
+    "A": 1.0,
+    "length": 31,
+    "width": 12,
+    "energy": 0.4,
+    "tau": 0.003,
+    "strengths": [
+      0.0,
+      0.1,
+      0.25,
+      0.5
+    ],
+    "seeds": [
+      1700,
+      1701,
+      1702,
+      1703,
+      1704,
+      1705,
+      1706,
+      1707,
+      1708,
+      1709,
+      1710,
+      1711,
+      1712,
+      1713,
+      1714,
+      1715
+    ]
+  },
+  "model": "qsh",
+  "observable": "kappa2(W_dis)/kappa2(0)",
+  "units": {
+    "energy": "t",
+    "probe_hopping": "t",
+    "ordinate": "dimensionless",
+    "disorder": "t"
+  },
+  "conversion": "Already in paper units; copied without a sign or bias conversion",
+  "physical_convention": "mu=EF-eV,H=H0-eU,V1=+VSD/2,V2=-VSD/2,Vperp=V3-V4",
+  "electrostatics": "First-order local charge neutrality; coherent, T=0, B=0",
+  "probe_constraint": "Identical floating probes, t3=t4=tau, I3=I4=0",
+  "calculation": "validated_cache_reuse",
+  "validation": {
+    "dataset_checksum_verified": true,
+    "legacy_source_version_differences": [
+      {
+        "path": "historical_sources/code/assemble_fig4_asymmetric_disorder.py",
+        "recorded_sha256": "9467183db5cfa67c0790ede13b18ebf99bcfc6adc5a96e885d952073e9ae12c1",
+        "current_sha256": null
+      }
+    ],
+    "model_index": 1,
+    "original_status": "completed"
+  },
+  "statistics": {
+    "spread": "sample standard deviation, ddof=1; not SEM",
+    "nonzero_strength_samples": 16,
+    "clean_independent_samples": 1,
+    "normalization": "signed clean four-terminal kappa at the same tau"
+  },
+  "calculation_mode": "reuse",
+  "calculation_script": {
+    "path": "code/panels/fig4/calc_d.py",
+    "sha256": "1d781a90c5155309e3244237642ffe5d0989bddd9f8965e6d497d6d84d5acce0"
+  },
+  "data_sha256": "814b09f6c1bf4404c5e8e23151b87d762c47f1b97c48575a111dbb38ea728e88"
+}

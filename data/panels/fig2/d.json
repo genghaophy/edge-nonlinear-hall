@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "figure": "fig2",
+  "panel": "d",
+  "arrays": {
+    "energies": {
+      "shape": [
+        162
+      ],
+      "dtype": "float64"
+    },
+    "deltas": {
+      "shape": [
+        4
+      ],
+      "dtype": "float64"
+    },
+    "kappa_full": {
+      "shape": [
+        4,
+        162
+      ],
+      "dtype": "float64"
+    },
+    "kH_full_code": {
+      "shape": [
+        4,
+        162
+      ],
+      "dtype": "float64"
+    },
+    "tx": {
+      "shape": [],
+      "dtype": "float64"
+    },
+    "t1": {
+      "shape": [],
+      "dtype": "float64"
+    },
+    "t2": {
+      "shape": [],
+      "dtype": "float64"
+    },
+    "tc3": {
+      "shape": [],
+      "dtype": "float64"
+    },
+    "tc4": {
+      "shape": [],
+      "dtype": "float64"
+    },
+    "N": {
+      "shape": [],
+      "dtype": "int64"
+    },
+    "L": {
+      "shape": [],
+      "dtype": "int64"
+    }
+  },
+  "data_mode": "verified_cache_extraction",
+  "model": "stacked Rice-Mele",
+  "magnetic_field": 0.0,
+  "parameters": {
+    "tx": 0.25,
+    "t1": 0.3,
+    "t2": 1.0,
+    "delta": 0.2,
+    "tc": 0.15,
+    "EF": 0.1,
+    "N": 8,
+    "L": 31,
+    "kstar": 2.0,
+    "eta": 0.02,
+    "nk": 801
+  },
+  "units": "energies in t2, lengths in lattice cells",
+  "source_path": "data/raw/figure2_delta_scan/scan.npz",
+  "source_sha256": "5ad2c8b90d8c7deeb04db13016296db7d899024ecdce2eb406cda75f03f491db",
+  "sources": [
+    {
+      "path": "data/raw/figure2_delta_scan/scan.npz",
+      "sha256": "5ad2c8b90d8c7deeb04db13016296db7d899024ecdce2eb406cda75f03f491db"
+    }
+  ],
+  "helpers": [
+    {
+      "path": "code/panels/fig2/_data.py",
+      "sha256": "e4eddb0cb67667a0257f73977626e039ac3337172a332d32cb3993667ea04512"
+    }
+  ],
+  "input_sources_modified": false,
+  "observable": "tilde kappa2=t2*kappa2/e, full floating four-terminal voltage response",
+  "normalization": "tilde kappa2=-kH_full_code/4 exactly once",
+  "protocol": "V1=+V/2,V2=-V/2,I3=I4=0,Vperp=V3-V4",
+  "electrostatics": "first-order local neutrality with internal and electrode feedback",
+  "deltas_t2": [
+    -0.2,
+    0.0,
+    0.1,
+    0.2
+  ],
+  "energy_points": 162,
+  "derivative_step": 1e-05,
+  "validation": {},
+  "calculation_helpers": [
+    {
+      "path": "code/compute_floating_study.py",
+      "sha256": "c37ea05b525129b9119d795f4f14985c25fc1f10a528626887d22eaecb0320f2"
+    },
+    {
+      "path": "code/compute_initial_study.py",
+      "sha256": "0748ad99c78ab6d0748e6fde9bd072021d15b3a81a1a0768338db7a7ba55cbd3"
+    }
+  ],
+  "shared_solver_core": "code/compute_floating_study.py",
+  "calculation_mode": "reuse",
+  "calculation_script": {
+    "path": "code/panels/fig2/calc_d.py",
+    "sha256": "a2f6a2363484085cc6192ed149a4bfa77cd52d36d5c740a056d31b832addaf88"
+  },
+  "data_sha256": "5ad2c8b90d8c7deeb04db13016296db7d899024ecdce2eb406cda75f03f491db"
+}

@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use this code or the accompanying datasets, please cite this software using the author information below."
+type: software
+title: "Edge nonlinear Hall transport: code and data"
+authors:
+  - family-names: Geng
+    given-names: "H."
+    email: genghao@nuaa.edu.cn
+    affiliation: "College of Physics, Nanjing University of Aeronautics and Astronautics; Key Laboratory of Aerospace Information Perception and Physics, MIIT, Nanjing 211106, China"
+  - family-names: Zheng
+    given-names: "R. Y."
+    affiliation: "College of Physics, Nanjing University of Aeronautics and Astronautics, Nanjing 211106, China"
+  - family-names: Jia
+    given-names: "K. X."
+    affiliation: "Interdisciplinary Center for Theoretical Physics and Information Sciences (ICTPIS), Fudan University, Shanghai 200433, China"
+  - family-names: Sheng
+    given-names: "L."
+    email: shengli@nju.edu.cn
+    affiliation: "National Laboratory of Solid State Microstructures, School of Physics, and Collaborative Innovation Center of Advanced Microstructures, Nanjing University, Nanjing 210093, China"
+abstract: "Original Python calculation and plotting code, saved numerical data, and provenance for RM and QSH edge nonlinear Hall transport figures."
+keywords:
+  - nonlinear Hall effect
+  - edge transport
+  - Rice-Mele model
+  - quantum spin Hall model
+  - floating voltage probes
+license: MIT

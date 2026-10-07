@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "figure": "fig1",
+  "panel": "a",
+  "arrays": {
+    "body": {
+      "shape": [
+        4
+      ],
+      "dtype": "float64"
+    },
+    "edges": {
+      "shape": [
+        2,
+        4
+      ],
+      "dtype": "float64"
+    },
+    "terminals": {
+      "shape": [
+        4,
+        4
+      ],
+      "dtype": "float64"
+    },
+    "wire_x": {
+      "shape": [
+        2,
+        4
+      ],
+      "dtype": "float64"
+    },
+    "wire_y": {
+      "shape": [
+        2,
+        4
+      ],
+      "dtype": "float64"
+    },
+    "voltmeter": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64"
+    },
+    "annotation_xy": {
+      "shape": [
+        11,
+        2
+      ],
+      "dtype": "float64"
+    },
+    "annotation_text": {
+      "shape": [
+        11
+      ],
+      "dtype": "<U34"
+    },
+    "annotation_fontsize": {
+      "shape": [
+        11
+      ],
+      "dtype": "float64"
+    },
+    "x_limits": {
+      "shape": [
+        2
+      ],
+      "dtype": "float64"
+    },
+    "y_limits": {
+      "shape": [
+        2
+      ],
+      "dtype": "float64"
+    }
+  },
+  "kind": "qualitative device schematic",
+  "sources": [
+    {
+      "path": "code/panels/fig1/calc_a.py",
+      "sha256": "5870d963b2205d2bb392306aff7ae658287f4d74421f882b08348ba860548282"
+    }
+  ],
+  "parameters": {
+    "terminal_order": [
+      "L",
+      "R",
+      "T",
+      "B"
+    ],
+    "bias": "V1=+V/2; V2=-V/2; I3=I4=0"
+  },
+  "interpretation": "Equal edge widths; shade indicates qualitative equilibrium DOS inequality, not calculated DOS.",
+  "recompute_meaning": "Regenerate schematic coordinates; no transport solver is required.",
+  "calculation_mode": "reuse",
+  "calculation_script": {
+    "path": "code/panels/fig1/calc_a.py",
+    "sha256": "5870d963b2205d2bb392306aff7ae658287f4d74421f882b08348ba860548282"
+  },
+  "data_sha256": "129873c46349d2e21abf3088e322bbf0d5074524fdc6bd4d148d7e98fadae108"
+}

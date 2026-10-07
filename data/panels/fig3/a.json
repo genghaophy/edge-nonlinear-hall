@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "figure": "fig3",
+  "panel": "a",
+  "arrays": {
+    "energies": {
+      "shape": [
+        2,
+        481,
+        128
+      ],
+      "dtype": "float64"
+    },
+    "labels": {
+      "shape": [
+        2,
+        481,
+        128
+      ],
+      "dtype": "int8"
+    },
+    "top_weight": {
+      "shape": [
+        2,
+        481,
+        128
+      ],
+      "dtype": "float64"
+    },
+    "bottom_weight": {
+      "shape": [
+        2,
+        481,
+        128
+      ],
+      "dtype": "float64"
+    },
+    "kx": {
+      "shape": [
+        481
+      ],
+      "dtype": "float64"
+    },
+    "spins": {
+      "shape": [
+        2
+      ],
+      "dtype": "int64"
+    },
+    "bulk_curves": {
+      "shape": [
+        256,
+        481
+      ],
+      "dtype": "float64"
+    },
+    "top_curves": {
+      "shape": [
+        4,
+        481
+      ],
+      "dtype": "float64"
+    },
+    "bottom_curves": {
+      "shape": [
+        4,
+        481
+      ],
+      "dtype": "float64"
+    },
+    "curves": {
+      "shape": [
+        264,
+        481
+      ],
+      "dtype": "float64"
+    },
+    "curve_kinds": {
+      "shape": [
+        264
+      ],
+      "dtype": "int8"
+    },
+    "selected_energies": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64"
+    },
+    "delta": {
+      "shape": [],
+      "dtype": "float64"
+    }
+  },
+  "mode": "verified archive extraction",
+  "sources": [
+    {
+      "path": "data/raw/minimal_model_bands/ribbon_bands.npz",
+      "sha256": "3fb14b7c0a1e2689385122bf3ede196376f171c32f67c344922945f8a533cf5f"
+    },
+    {
+      "path": "data/raw/minimal_model_bands/validation.json",
+      "sha256": "b08ace1a2431aa96757cd5ef0809b67c5337434374816474138a1e5b160da916"
+    }
+  ],
+  "source_sha256": {
+    "data/raw/minimal_model_bands/ribbon_bands.npz": "3fb14b7c0a1e2689385122bf3ede196376f171c32f67c344922945f8a533cf5f",
+    "data/raw/minimal_model_bands/validation.json": "b08ace1a2431aa96757cd5ef0809b67c5337434374816474138a1e5b160da916"
+  },
+  "response_convention": "dimensionless tilde kappa2=t*kappa2/e=-historical kH/4",
+  "bias": "V1=+V/2, V2=-V/2; identical floating probes 3(top),4(bottom)",
+  "time_reversal": true,
+  "magnetic_field": 0.0,
+  "energy_unit": "t",
+  "momentum_unit": "1/a",
+  "width": 64,
+  "Nk": 481,
+  "edge_rows": 4,
+  "edge_weight_cutoff": 0.55,
+  "boundary": "periodic x, open y; top y=W-1, bottom y=0",
+  "checks": {},
+  "classification": "outer-four-row weight and exclusion of spin-resolved projected bulk continuum",
+  "calculation_mode": "reuse",
+  "calculation_script": {
+    "path": "code/panels/fig3/calc_a.py",
+    "sha256": "1dd5d135bad99919d112609f2ffbbffe3ac7589c536cd2182d021166df3741f0"
+  },
+  "data_sha256": "88fa165de57f0d1d00d574283c6cdb7ad06bb02d9a05e1e82a558595dd848da1"
+}

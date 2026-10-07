@@ -1,0 +1,3006 @@
+{
+  "schema": "qsh_figure3_ef05_environment_extension_v1",
+  "energy": 0.5,
+  "parameters": {
+    "length": 31,
+    "width": 12,
+    "A": 1.0,
+    "t": 1.0,
+    "m": -1.0,
+    "delta": 0.2,
+    "tc": 0.15,
+    "magnetic_field": 0.0
+  },
+  "seeds": [
+    1700,
+    1701,
+    1702,
+    1703,
+    1704,
+    1705,
+    1706,
+    1707
+  ],
+  "disorder_strengths": [
+    0.0,
+    0.2,
+    0.5,
+    1.0
+  ],
+  "gamma_phi": [
+    0.0,
+    0.01,
+    0.03,
+    0.1,
+    0.3,
+    1.0
+  ],
+  "coefficient_convention": "All kH coefficients, mean/SEM/SD are raw code values; no sign or full-bias conversion was applied",
+  "eventual_plot_conversion": "Convert mean/dephasing kH to paper kappa=-raw/4 once; SEM/SD to raw/4",
+  "source_data_sha256": "7e739422c42845383bc8a16a95991d1441483dd5c245e6863ce0d5fc69835c9a",
+  "source_metadata_sha256": "a4c181d605a14de281043cab408d0b0d985eb9879b099aec84514cfbd5654abb",
+  "source_files": {
+    "historical_sources/code/compute_fig3_ef05_extension.py": "0ed4dc829956ba3cae4f45757bd94b1d6cbadbc4b18b4d2c3a46f76d6d9f52b5",
+    "code/qsh_environment_response.py": "21046db0d7b463c1db764cdf5f0de09d81cef8fcc07a2e1dceaa61c6035c9f22",
+    "historical_sources/code/compute_qsh_figure3.py": "9eec65bbefb739bc013226ea636334fe5bb49b712e2f635d42b249b7ba3296ae",
+    "code/compute_letter_preview.py": "a159ab6d8659746b5c545f3e8de17ce4fd053dbf4280627a68c56609f0ccd080"
+  },
+  "scan_scope": "Only EF=.5 at T=0 disorder and elastic spin probes; original EF=.3/.4 production data not changed",
+  "electrostatics": "Thermal injectivities averaged before local-neutrality ratio; U^(1) only; no full Poisson",
+  "disorder_model": "iid scalar onsite in [-W/2,W/2] times I4; clean electrodes; Mx generally broken",
+  "dephasing_model": "Paired spin-resolved WBA elastic reservoirs; separate Ip_up(E)=Ip_down(E)=0; no spin relaxation",
+  "probe_configuration": {
+    "model": "spin-resolved elastic WBA",
+    "linewidth": "Sigma=-i gamma_phi/2",
+    "occupation": "Ip_up(E)=Ip_down(E)=0 separately",
+    "spin_orbitals": [
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        3
+      ]
+    ],
+    "positions": [
+      [
+        5,
+        0
+      ],
+      [
+        5,
+        1
+      ],
+      [
+        5,
+        10
+      ],
+      [
+        5,
+        11
+      ],
+      [
+        10,
+        0
+      ],
+      [
+        10,
+        1
+      ],
+      [
+        10,
+        10
+      ],
+      [
+        10,
+        11
+      ],
+      [
+        20,
+        0
+      ],
+      [
+        20,
+        1
+      ],
+      [
+        20,
+        10
+      ],
+      [
+        20,
+        11
+      ],
+      [
+        25,
+        0
+      ],
+      [
+        25,
+        1
+      ],
+      [
+        25,
+        10
+      ],
+      [
+        25,
+        11
+      ]
+    ],
+    "zero_coupling": "virtual terminals removed exactly"
+  },
+  "gamma_phi_interpretation": "energy linewidth of phenomenological probe coupling, not calibrated hbar/tau_phi",
+  "clean_bulk_gap_halfwidth": 0.8,
+  "clean_EF_inside_bulk_gap": true,
+  "clean_source_propagating_channels": [
+    2,
+    2,
+    4,
+    4
+  ],
+  "disordered_gap_scope": "The .8 gap statement applies only to the clean bulk Hamiltonian. No global gap is asserted for the disordered scattering region.",
+  "clean_vs_original_baseline_raw_error": 0.0,
+  "clean_green_function_C_vs_kwant_error": 6.8833827526759706e-15,
+  "clean_response_seconds": 0.10717569995904341,
+  "point_checks": [
+    {
+      "kind": "disorder",
+      "strength": 0.0,
+      "seed": 0,
+      "checks": {
+        "trs_h_error": 0.0,
+        "physical_probe_block_condition": 1.2249494964502032,
+        "current_sum_error": 3.645390413142824e-12,
+        "probe_linear_error": 4.930380657631324e-32,
+        "probe_quadratic_error": 8.673617379884035e-19,
+        "gauge_global_shift_error": 0.0,
+        "current_conservation": 1.5959455978986625e-16,
+        "gauge": 1.2108369862318114e-14,
+        "effective_conservation": 1.5959455978986625e-16,
+        "effective_gauge": 1.2108369862318114e-14,
+        "occupation_partition": 0.0,
+        "virtual_probe_residual": 0.0,
+        "zero_bias_current": 1.2101430968414206e-14,
+        "injectivity_partition": 0.0,
+        "reciprocity": 1.1546319456101628e-14
+      }
+    },
+    {
+      "kind": "disorder",
+      "strength": 0.2,
+      "seed": 1700,
+      "checks": {
+        "trs_h_error": 0.0,
+        "physical_probe_block_condition": 1.237078934300737,
+        "current_sum_error": 1.707427602082312e-13,
+        "probe_linear_error": 0.0,
+        "probe_quadratic_error": 3.469446951953614e-18,
+        "gauge_global_shift_error": 0.0,
+        "current_conservation": 1.1796119636642288e-16,
+        "gauge": 6.2450045135165055e-15,
+        "effective_conservation": 1.1796119636642288e-16,
+        "effective_gauge": 6.2450045135165055e-15,
+        "occupation_partition": 0.0,
+        "virtual_probe_residual": 0.0,
+        "zero_bias_current": 6.2450045135165055e-15,
+        "injectivity_partition": 0.0,
+        "reciprocity": 5.773159728050814e-15
+      }
+    },
+    {
+      "kind": "disorder",
+      "strength": 0.2,
+      "seed": 1701,
+      "checks": {
+        "trs_h_error": 0.0,
+        "physical_probe_block_condition": 1.2187490632880618,
+        "current_sum_error": 6.591210216511101e-12,
+        "probe_linear_error": 1.2924697071141057e-26,
+        "probe_quadratic_error": 0.0,
+        "gauge_global_shift_error": 0.0,
+        "current_conservation": 6.245004513516506e-17,
+        "gauge": 1.1102230246251565e-15,
+        "effective_conservation": 6.245004513516506e-17,
+        "effective_gauge": 1.1102230246251565e-15,
+        "occupation_partition": 0.0,
+        "virtual_probe_residual": 0.0,
+        "zero_bias_current": 1.1102230246251565e-15,
+        "injectivity_partition": 0.0,
+        "reciprocity": 8.881784197001252e-16
+      }
+    },
+    {
+      "kind": "disorder",
+      "strength": 0.2,
+      "seed": 1702,
+      "checks": {
+        "trs_h_error": 0.0,
+        "physical_probe_block_condition": 1.2427698777848903,
+        "current_sum_error": 5.900230824751329e-12,
+        "probe_linear_error": 1.6155871338926322e-27,
+        "probe_quadratic_error": 6.938893903907228e-18,
+        "gauge_global_shift_error": 0.0,
+        "current_conservation": 8.326672684688674e-17,
+        "gauge": 1.790234627208065e-15,
+        "effective_conservation": 8.326672684688674e-17,
+        "effective_gauge": 1.790234627208065e-15,
+        "occupation_partition": 0.0,
+        "virtual_probe_residual": 0.0,
+        "zero_bias_current": 1.790234627208065e-15,
+        "injectivity_partition": 0.0,
+        "reciprocity": 1.5543122344752192e-15
+      }
+    },
+    {
+      "kind": "disorder",
+      "strength": 0.2,
+      "seed": 1703,
+      "checks": {
+        "trs_h_error": 0.0,
+        "physical_probe_block_condition": 1.2442341785191218,
+        "current_sum_error": 1.0928587895753239e-11,
+        "probe_linear_error": 0.0,
+        "probe_quadratic_error": 0.0,
+        "gauge_global_shift_error": 0.0,
+        "current_conservation": 2.0816681711721685e-17,
+        "gauge": 1.0554057627842894e-14,
+        "effective_conservation": 2.0816681711721685e-17,
+        "effective_gauge": 1.0554057627842894e-14,
+        "occupation_partition": 0.0,
+        "virtual_probe_residual": 0.0,
+        "zero_bias_current": 1.0547118733938987e-14,
+        "injectivity_partition": 0.0,
+        "reciprocity": 1.021405182655144e-14
+      }
+    },
+    {
+      "kind": "disorder",
+      "strength": 0.2,
+      "seed": 1704,
+      "checks": {
+        "trs_h_error": 0.0,
+        "physical_probe_block_condition": 1.1963851570754984,
+        "current_sum_error": 5.031759731100038e-12,
+        "probe_linear_error": 5.169878828456423e-26,
+        "probe_quadratic_error": 6.938893903907228e-18,
+        "gauge_global_shift_error": 0.0,
+        "current_conservation": 1.1796119636642288e-16,
+        "gauge": 1.0200174038743626e-14,
+        "effective_conservation": 1.1796119636642288e-16,
+        "effective_gauge": 1.0200174038743626e-14,
+        "occupation_partition": 0.0,
+        "virtual_probe_residual": 0.0,
+        "zero_bias_current": 1.0200174038743626e-14,
+        "injectivity_partition": 0.0,
+        "reciprocity": 9.769962616701378e-15
+      }
+    },
+    {
+      "kind": "disorder",
+      "strength": 0.2,
+      "seed": 1705,
+      "checks": {
+        "trs_h_error": 0.0,
+        "physical_probe_block_condition": 1.2169640162286672,
+        "current_sum_error": 9.022498893840325e-12,
+        "probe_linear_error": 5.169878828456423e-26,
+        "probe_quadratic_error": 6.938893903907228e-18,
+        "gauge_global_shift_error": 0.0,
+        "current_conservation": 9.71445146547012e-17,
+        "gauge": 1.2545520178264269e-14,
+        "effective_conservation": 9.71445146547012e-17,
+        "effective_gauge": 1.2545520178264269e-14,
+        "occupation_partition": 0.0,
+        "virtual_probe_residual": 0.0,
+        "zero_bias_current": 1.2545520178264269e-14,
+        "injectivity_partition": 0.0,
+        "reciprocity": 1.2212453270876722e-14
+      }
+    },
+    {
+      "kind": "disorder",
+      "strength": 0.2,
+      "seed": 1706,
+      "checks": {
+        "trs_h_error": 0.0,
+        "physical_probe_block_condition": 1.1792927422460764,
+        "current_sum_error": 1.5611113096669627e-11,
+        "probe_linear_error": 0.0,
+        "probe_quadratic_error": 3.469446951953614e-18,
+        "gauge_global_shift_error": 0.0,
+        "current_conservation": 1.249000902703301e-16,
+        "gauge": 5.814793091474257e-15,
+        "effective_conservation": 1.249000902703301e-16,
+        "effective_gauge": 5.814793091474257e-15,
+        "occupation_partition": 0.0,
+        "virtual_probe_residual": 0.0,
+        "zero_bias_current": 5.814793091474257e-15,
+        "injectivity_partition": 0.0,
+        "reciprocity": 5.329070518200751e-15
+      }
+    },
+    {
+      "kind": "disorder",
+      "strength": 0.2,
+      "seed": 1707,
+      "checks": {
+        "trs_h_error": 0.0,
+        "physical_probe_block_condition": 1.231610164563414,
+        "current_sum_error": 2.983747623974686e-11,
+        "probe_linear_error": 0.0,
+        "probe_quadratic_error": 0.0,
+        "gauge_global_shift_error": 0.0,
+        "current_conservation": 1.3183898417423734e-16,
+        "gauge": 1.2746748101477579e-14,
+        "effective_conservation": 1.3183898417423734e-16,
+        "effective_gauge": 1.2746748101477579e-14,
+        "occupation_partition": 0.0,
+        "virtual_probe_residual": 0.0,
+        "zero_bias_current": 1.2739809207573671e-14,
+        "injectivity_partition": 0.0,
+        "reciprocity": 1.2212453270876722e-14
+      }
+    },
+    {
+      "kind": "disorder",
+      "strength": 0.5,
+      "seed": 1700,
+      "checks": {
+        "trs_h_error": 0.0,
+        "physical_probe_block_condition": 1.2571264165806535,
+        "current_sum_error": 2.773052620863581e-12,
+        "probe_linear_error": 0.0,
+        "probe_quadratic_error": 3.469446951953614e-18,
+        "gauge_global_shift_error": 0.0,
+        "current_conservation": 1.3183898417423734e-16,
+        "gauge": 1.1296519275560968e-14,
+        "effective_conservation": 1.3183898417423734e-16,
+        "effective_gauge": 1.1296519275560968e-14,
+        "occupation_partition": 0.0,
+        "virtual_probe_residual": 0.0,
+        "zero_bias_current": 1.1296519275560968e-14,
+        "injectivity_partition": 0.0,
+        "reciprocity": 1.1102230246251565e-14
+      }
+    },
+    {
+      "kind": "disorder",
+      "strength": 0.5,
+      "seed": 1701,
+      "checks": {
+        "trs_h_error": 0.0,
+        "physical_probe_block_condition": 1.20827285048402,
+        "current_sum_error": 1.006197902775341e-11,
+        "probe_linear_error": 1.0339757656912846e-25,
+        "probe_quadratic_error": 6.938893903907228e-18,
+        "gauge_global_shift_error": 0.0,
+        "current_conservation": 6.938893903907228e-17,
+        "gauge": 8.416878305439468e-15,
+        "effective_conservation": 6.938893903907228e-17,
+        "effective_gauge": 8.416878305439468e-15,
+        "occupation_partition": 0.0,
+        "virtual_probe_residual": 0.0,
+        "zero_bias_current": 8.409939411535561e-15,
+        "injectivity_partition": 0.0,
+        "reciprocity": 7.993605777301127e-15
+      }
+    },
+    {
+      "kind": "disorder",
+      "strength": 0.5,
+      "seed": 1702,
+      "checks": {
+        "trs_h_error": 0.0,
+        "physical_probe_block_condition": 1.2793132749900133,
+        "current_sum_error": 6.418410941622099e-12,
+        "probe_linear_error": 0.0,
+        "probe_quadratic_error": 0.0,
+        "gauge_global_shift_error": 0.0,
+        "current_conservation": 1.457167719820518e-16,
+        "gauge": 1.790234627208065e-14,
+        "effective_conservation": 1.457167719820518e-16,
+        "effective_gauge": 1.790234627208065e-14,
+        "occupation_partition": 0.0,
+        "virtual_probe_residual": 0.0,
+        "zero_bias_current": 1.790234627208065e-14,
+        "injectivity_partition": 0.0,
+        "reciprocity": 1.7319479184152442e-14
+      }
+    },
+    {
+      "kind": "disorder",
+      "strength": 0.5,
+      "seed": 1703,
+      "checks": {
+        "trs_h_error": 0.0,
+        "physical_probe_block_condition": 1.2719385780430779,
+        "current_sum_error": 9.194218303365531e-12,
+        "probe_linear_error": 4.1359030627651384e-25,
+        "probe_quadratic_error": 6.938893903907228e-18,
+        "gauge_global_shift_error": 0.0,
+        "current_conservation": 9.71445146547012e-17,
+        "gauge": 1.2156942119645464e-14,
+        "effective_conservation": 9.71445146547012e-17,
+        "effective_gauge": 1.2156942119645464e-14,
+        "occupation_partition": 0.0,
+        "virtual_probe_residual": 0.0,
+        "zero_bias_current": 1.2156942119645464e-14,
+        "injectivity_partition": 0.0,
+        "reciprocity": 1.176836406102666e-14
+      }
+    },
+    {
+      "kind": "disorder",
+      "strength": 0.5,
+      "seed": 1704,
+      "checks": {
+        "trs_h_error": 0.0,
+        "physical_probe_block_condition": 1.1457999856800758,
+        "current_sum_error": 2.9496786957405874e-12,
+        "probe_linear_error": 0.0,
+        "probe_quadratic_error": 6.938893903907228e-18,
+        "gauge_global_shift_error": 0.0,
+        "current_conservation": 1.1796119636642288e-16,
+        "gauge": 5.349887199912473e-15,
+        "effective_conservation": 1.1796119636642288e-16,
+        "effective_gauge": 5.349887199912473e-15,
+        "occupation_partition": 0.0,
+        "virtual_probe_residual": 0.0,
+        "zero_bias_current": 5.35682609381638e-15,
+        "injectivity_partition": 0.0,
+        "reciprocity": 5.10702591327572e-15
+      }
+    },
+    {
+      "kind": "disorder",
+      "strength": 0.5,
+      "seed": 1705,
+      "checks": {
+        "trs_h_error": 0.0,
+        "physical_probe_block_condition": 1.2077964508931511,
+        "current_sum_error": 1.526629170300886e-11,
+        "probe_linear_error": 0.0,
+        "probe_quadratic_error": 0.0,
+        "gauge_global_shift_error": 0.0,
+        "current_conservation": 7.632783294297951e-17,
+        "gauge": 5.35682609381638e-15,
+        "effective_conservation": 7.632783294297951e-17,
+        "effective_gauge": 5.35682609381638e-15,
+        "occupation_partition": 0.0,
+        "virtual_probe_residual": 0.0,
+        "zero_bias_current": 5.35682609381638e-15,
+        "injectivity_partition": 0.0,
+        "reciprocity": 5.10702591327572e-15
+      }
+    },
+    {
+      "kind": "disorder",
+      "strength": 0.5,
+      "seed": 1706,
+      "checks": {
+        "trs_h_error": 0.0,
+        "physical_probe_block_condition": 1.11492395522674,
+        "current_sum_error": 2.2538446803332945e-12,
+        "probe_linear_error": 0.0,
+        "probe_quadratic_error": 3.469446951953614e-18,
+        "gauge_global_shift_error": 0.0,
+        "current_conservation": 1.0408340855860843e-16,
+        "gauge": 1.1095291352347658e-14,
+        "effective_conservation": 1.0408340855860843e-16,
+        "effective_gauge": 1.1095291352347658e-14,
+        "occupation_partition": 0.0,
+        "virtual_probe_residual": 0.0,
+        "zero_bias_current": 1.1102230246251565e-14,
+        "injectivity_partition": 0.0,
+        "reciprocity": 1.0880185641326534e-14
+      }
+    },
+    {
+      "kind": "disorder",
+      "strength": 0.5,
+      "seed": 1707,
+      "checks": {
+        "trs_h_error": 0.0,
+        "physical_probe_block_condition": 1.2407458370798148,
+        "current_sum_error": 2.602518894834205e-12,
+        "probe_linear_error": 4.1359030627651384e-25,
+        "probe_quadratic_error": 0.0,
+        "gauge_global_shift_error": 0.0,
+        "current_conservation": 1.6653345369377348e-16,
+        "gauge": 8.194833700514437e-15,
+        "effective_conservation": 1.6653345369377348e-16,
+        "effective_gauge": 8.194833700514437e-15,
+        "occupation_partition": 0.0,
+        "virtual_probe_residual": 0.0,
+        "zero_bias_current": 8.18789480661053e-15,
+        "injectivity_partition": 0.0,
+        "reciprocity": 7.771561172376096e-15
+      }
+    },
+    {
+      "kind": "disorder",
+      "strength": 1.0,
+      "seed": 1700,
+      "checks": {
+        "trs_h_error": 0.0,
+        "physical_probe_block_condition": 1.297123877292741,
+        "current_sum_error": 1.387832557209201e-12,
+        "probe_linear_error": 0.0,
+        "probe_quadratic_error": 0.0,
+        "gauge_global_shift_error": 0.0,
+        "current_conservation": 3.469446951953614e-17,
+        "gauge": 1.6375789613221059e-15,
+        "effective_conservation": 3.469446951953614e-17,
+        "effective_gauge": 1.6375789613221059e-15,
+        "occupation_partition": 0.0,
+        "virtual_probe_residual": 0.0,
+        "zero_bias_current": 1.6375789613221059e-15,
+        "injectivity_partition": 0.0,
+        "reciprocity": 1.7763568394002505e-15
+      }
+    },
+    {
+      "kind": "disorder",
+      "strength": 1.0,
+      "seed": 1701,
+      "checks": {
+        "trs_h_error": 0.0,
+        "physical_probe_block_condition": 1.1900126905701853,
+        "current_sum_error": 6.9391801332807646e-12,
+        "probe_linear_error": 1.6543612251060553e-24,
+        "probe_quadratic_error": 0.0,
+        "gauge_global_shift_error": 0.0,
+        "current_conservation": 1.942890293094024e-16,
+        "gauge": 8.132383655379272e-15,
+        "effective_conservation": 1.942890293094024e-16,
+        "effective_gauge": 8.132383655379272e-15,
+        "occupation_partition": 0.0,
+        "virtual_probe_residual": 0.0,
+        "zero_bias_current": 8.132383655379272e-15,
+        "injectivity_partition": 0.0,
+        "reciprocity": 7.549516567451064e-15
+      }
+    },
+    {
+      "kind": "disorder",
+      "strength": 1.0,
+      "seed": 1702,
+      "checks": {
+        "trs_h_error": 0.0,
+        "physical_probe_block_condition": 1.3841653669518823,
+        "current_sum_error": 3.4685171401704906e-12,
+        "probe_linear_error": 0.0,
+        "probe_quadratic_error": 6.938893903907228e-18,
+        "gauge_global_shift_error": 0.0,
+        "current_conservation": 8.326672684688674e-17,
+        "gauge": 5.162537064506978e-15,
+        "effective_conservation": 8.326672684688674e-17,
+        "effective_gauge": 5.162537064506978e-15,
+        "occupation_partition": 0.0,
+        "virtual_probe_residual": 0.0,
+        "zero_bias_current": 5.162537064506978e-15,
+        "injectivity_partition": 0.0,
+        "reciprocity": 4.884981308350689e-15
+      }
+    },
+    {
+      "kind": "disorder",
+      "strength": 1.0,
+      "seed": 1703,
+      "checks": {
+        "trs_h_error": 0.0,
+        "physical_probe_block_condition": 1.3272397082980953,
+        "current_sum_error": 5.725371565734605e-12,
+        "probe_linear_error": 2.6469779601696886e-23,
+        "probe_quadratic_error": 0.0,
+        "gauge_global_shift_error": 0.0,
+        "current_conservation": 4.163336342344337e-17,
+        "gauge": 1.0672018824209317e-14,
+        "effective_conservation": 4.163336342344337e-17,
+        "effective_gauge": 1.0672018824209317e-14,
+        "occupation_partition": 0.0,
+        "virtual_probe_residual": 0.0,
+        "zero_bias_current": 1.0672018824209317e-14,
+        "injectivity_partition": 0.0,
+        "reciprocity": 1.021405182655144e-14
+      }
+    },
+    {
+      "kind": "disorder",
+      "strength": 1.0,
+      "seed": 1704,
+      "checks": {
+        "trs_h_error": 0.0,
+        "physical_probe_block_condition": 1.033274460825149,
+        "current_sum_error": 2.9488184463688505e-11,
+        "probe_linear_error": 2.0679515313825692e-25,
+        "probe_quadratic_error": 1.734723475976807e-18,
+        "gauge_global_shift_error": 0.0,
+        "current_conservation": 1.249000902703301e-16,
+        "gauge": 7.0013439490423934e-15,
+        "effective_conservation": 1.249000902703301e-16,
+        "effective_gauge": 7.0013439490423934e-15,
+        "occupation_partition": 0.0,
+        "virtual_probe_residual": 0.0,
+        "zero_bias_current": 6.994405055138486e-15,
+        "injectivity_partition": 0.0,
+        "reciprocity": 6.661338147750939e-15
+      }
+    },
+    {
+      "kind": "disorder",
+      "strength": 1.0,
+      "seed": 1705,
+      "checks": {
+        "trs_h_error": 0.0,
+        "physical_probe_block_condition": 1.1945012654119183,
+        "current_sum_error": 5.727834873070492e-12,
+        "probe_linear_error": 2.6469779601696886e-23,
+        "probe_quadratic_error": 3.469446951953614e-18,
+        "gauge_global_shift_error": 0.0,
+        "current_conservation": 1.942890293094024e-16,
+        "gauge": 1.3752887717544127e-14,
+        "effective_conservation": 1.942890293094024e-16,
+        "effective_gauge": 1.3752887717544127e-14,
+        "occupation_partition": 0.0,
+        "virtual_probe_residual": 0.0,
+        "zero_bias_current": 1.3752887717544127e-14,
+        "injectivity_partition": 0.0,
+        "reciprocity": 1.354472090042691e-14
+      }
+    },
+    {
+      "kind": "disorder",
+      "strength": 1.0,
+      "seed": 1706,
+      "checks": {
+        "trs_h_error": 0.0,
+        "physical_probe_block_condition": 1.018538452037518,
+        "current_sum_error": 2.2535411037249986e-12,
+        "probe_linear_error": 0.0,
+        "probe_quadratic_error": 0.0,
+        "gauge_global_shift_error": 0.0,
+        "current_conservation": 1.1796119636642288e-16,
+        "gauge": 1.5383527784962325e-14,
+        "effective_conservation": 1.1796119636642288e-16,
+        "effective_gauge": 1.5383527784962325e-14,
+        "occupation_partition": 0.0,
+        "virtual_probe_residual": 0.0,
+        "zero_bias_current": 1.5376588891058418e-14,
+        "injectivity_partition": 0.0,
+        "reciprocity": 1.4876988529977098e-14
+      }
+    },
+    {
+      "kind": "disorder",
+      "strength": 1.0,
+      "seed": 1707,
+      "checks": {
+        "trs_h_error": 0.0,
+        "physical_probe_block_condition": 1.2485699123915368,
+        "current_sum_error": 1.2665403448242074e-11,
+        "probe_linear_error": 0.0,
+        "probe_quadratic_error": 0.0,
+        "gauge_global_shift_error": 0.0,
+        "current_conservation": 1.1102230246251565e-16,
+        "gauge": 1.6077417175353048e-14,
+        "effective_conservation": 1.1102230246251565e-16,
+        "effective_gauge": 1.6077417175353048e-14,
+        "occupation_partition": 0.0,
+        "virtual_probe_residual": 0.0,
+        "zero_bias_current": 1.607047828144914e-14,
+        "injectivity_partition": 0.0,
+        "reciprocity": 1.554312234475219e-14
+      }
+    },
+    {
+      "kind": "elastic_spin_probes",
+      "gamma": 0.0,
+      "checks": {
+        "trs_h_error": 0.0,
+        "physical_probe_block_condition": 1.2249494964502032,
+        "current_sum_error": 3.645390413142824e-12,
+        "probe_linear_error": 4.930380657631324e-32,
+        "probe_quadratic_error": 8.673617379884035e-19,
+        "gauge_global_shift_error": 0.0,
+        "current_conservation": 1.5959455978986625e-16,
+        "gauge": 1.2108369862318114e-14,
+        "effective_conservation": 1.5959455978986625e-16,
+        "effective_gauge": 1.2108369862318114e-14,
+        "occupation_partition": 0.0,
+        "virtual_probe_residual": 0.0,
+        "zero_bias_current": 1.2101430968414206e-14,
+        "injectivity_partition": 0.0,
+        "reciprocity": 1.1546319456101628e-14
+      }
+    },
+    {
+      "kind": "elastic_spin_probes",
+      "gamma": 0.01,
+      "checks": {
+        "trs_h_error": 0.0,
+        "physical_probe_block_condition": 1.2249414360443185,
+        "current_sum_error": 5.7417199467169056e-11,
+        "probe_linear_error": 9.860761315262648e-32,
+        "probe_quadratic_error": 0.0,
+        "gauge_global_shift_error": 0.0,
+        "current_conservation": 8.815729014870053e-16,
+        "gauge": 7.694307735859226e-15,
+        "effective_conservation": 1.304512053934559e-15,
+        "effective_gauge": 8.396061623727746e-15,
+        "occupation_partition": 9.103828801926284e-15,
+        "virtual_probe_residual": 5.204170427930421e-18,
+        "zero_bias_current": 8.396061623727746e-15,
+        "injectivity_partition": 2.220446049250313e-16,
+        "reciprocity": 7.105427357601002e-15,
+        "virtual_probe_block_condition": 296.28367821272354
+      }
+    },
+    {
+      "kind": "elastic_spin_probes",
+      "gamma": 0.03,
+      "checks": {
+        "trs_h_error": 0.0,
+        "physical_probe_block_condition": 1.224925953180242,
+        "current_sum_error": 1.1622544680151004e-10,
+        "probe_linear_error": 0.0,
+        "probe_quadratic_error": 8.673617379884035e-19,
+        "gauge_global_shift_error": 0.0,
+        "current_conservation": 4.936921002731296e-16,
+        "gauge": 3.344546861683284e-15,
+        "effective_conservation": 1.457167719820518e-16,
+        "effective_gauge": 2.9629076969683865e-15,
+        "occupation_partition": 8.104628079763643e-15,
+        "virtual_probe_residual": 6.938893903907228e-18,
+        "zero_bias_current": 2.9698465908722937e-15,
+        "injectivity_partition": 4.440892098500626e-16,
+        "reciprocity": 1.7763568394002505e-15,
+        "virtual_probe_block_condition": 150.7139951465791
+      }
+    },
+    {
+      "kind": "elastic_spin_probes",
+      "gamma": 0.1,
+      "checks": {
+        "trs_h_error": 0.0,
+        "physical_probe_block_condition": 1.2248782244578327,
+        "current_sum_error": 1.275014122059659e-10,
+        "probe_linear_error": 7.703719777548943e-34,
+        "probe_quadratic_error": 6.938893903907228e-18,
+        "gauge_global_shift_error": 0.0,
+        "current_conservation": 4.718447854656915e-16,
+        "gauge": 1.2596355203279154e-14,
+        "effective_conservation": 6.938893903907228e-16,
+        "effective_gauge": 1.3281042932078435e-14,
+        "occupation_partition": 8.548717289613705e-15,
+        "virtual_probe_residual": 3.7454786172202696e-17,
+        "zero_bias_current": 1.3281042932078435e-14,
+        "injectivity_partition": 4.996003610813204e-16,
+        "reciprocity": 8.215650382226158e-15,
+        "virtual_probe_block_condition": 56.820891272525905
+      }
+    },
+    {
+      "kind": "elastic_spin_probes",
+      "gamma": 0.3,
+      "checks": {
+        "trs_h_error": 0.0,
+        "physical_probe_block_condition": 1.224792029469393,
+        "current_sum_error": 3.6255325130962746e-11,
+        "probe_linear_error": 0.0,
+        "probe_quadratic_error": 6.938893903907228e-18,
+        "gauge_global_shift_error": 0.0,
+        "current_conservation": 2.220446049250313e-16,
+        "gauge": 8.965050923848139e-15,
+        "effective_conservation": 9.020562075079397e-16,
+        "effective_gauge": 7.556455461354972e-15,
+        "occupation_partition": 5.773159728050814e-15,
+        "virtual_probe_residual": 1.3877787807814457e-16,
+        "zero_bias_current": 7.549516567451064e-15,
+        "injectivity_partition": 5.551115123125783e-16,
+        "reciprocity": 2.7200464103316335e-15,
+        "virtual_probe_block_condition": 22.446574978888783
+      }
+    },
+    {
+      "kind": "elastic_spin_probes",
+      "gamma": 1.0,
+      "checks": {
+        "trs_h_error": 0.0,
+        "physical_probe_block_condition": 1.2248731709251328,
+        "current_sum_error": 4.682616273898876e-12,
+        "probe_linear_error": 4.930380657631324e-32,
+        "probe_quadratic_error": 8.673617379884035e-19,
+        "gauge_global_shift_error": 0.0,
+        "current_conservation": 3.3306690738754696e-16,
+        "gauge": 6.39324975825545e-15,
+        "effective_conservation": 9.020562075079397e-16,
+        "effective_gauge": 7.181755190543981e-15,
+        "occupation_partition": 7.105427357601002e-15,
+        "virtual_probe_residual": 2.636779683484747e-16,
+        "zero_bias_current": 7.188694084447889e-15,
+        "injectivity_partition": 1.3322676295501878e-15,
+        "reciprocity": 5.218048215738236e-15,
+        "virtual_probe_block_condition": 12.089311860011916
+      }
+    }
+  ],
+  "maxima": {
+    "trs_h_error": 0.0,
+    "physical_probe_block_condition": 1.3841653669518823,
+    "current_sum_error": 1.275014122059659e-10,
+    "probe_linear_error": 2.6469779601696886e-23,
+    "probe_quadratic_error": 6.938893903907228e-18,
+    "gauge_global_shift_error": 0.0,
+    "current_conservation": 8.815729014870053e-16,
+    "gauge": 1.790234627208065e-14,
+    "effective_conservation": 1.304512053934559e-15,
+    "effective_gauge": 1.790234627208065e-14,
+    "occupation_partition": 9.103828801926284e-15,
+    "virtual_probe_residual": 2.636779683484747e-16,
+    "zero_bias_current": 1.790234627208065e-14,
+    "injectivity_partition": 1.3322676295501878e-15,
+    "reciprocity": 1.7319479184152442e-14,
+    "virtual_probe_block_condition": 296.28367821272354
+  },
+  "representative_validation": {
+    "clean": {
+      "kH": -0.22771915983120636,
+      "derivative_step_error": 1.0820760953933473e-11,
+      "kernel_absolute_error": 1.508340889688764e-09,
+      "trs_h_error": 0.0,
+      "equilibrium": {
+        "current_conservation": 1.5959455978986625e-16,
+        "gauge": 1.2108369862318114e-14,
+        "effective_conservation": 1.5959455978986625e-16,
+        "effective_gauge": 1.2108369862318114e-14,
+        "occupation_partition": 0.0,
+        "virtual_probe_residual": 0.0,
+        "zero_bias_current": 1.2101430968414206e-14,
+        "injectivity_partition": 0.0,
+        "reciprocity": 1.1546319456101628e-14
+      },
+      "virtual_spin_channels": 0,
+      "zero_voltage_current": 0.0,
+      "finite_bias_kH": -0.22771916025330177,
+      "finite_bias_error": 4.220954141764821e-10,
+      "probe_current_error": 4.8840814644708163e-23,
+      "finite_bias_current_sum_error": 1.6258024107502478e-19,
+      "bias_amplitude": 5e-05,
+      "terminal_voltages": [
+        [
+          5e-05,
+          -5e-05,
+          1.9826175238705037e-10,
+          7.675596530163303e-10
+        ],
+        [
+          -5e-05,
+          5e-05,
+          1.9826175242749637e-10,
+          7.675596530647253e-10
+        ]
+      ],
+      "runtime_seconds": 11.43698779999977
+    },
+    "strong_disorder": {
+      "kH": -0.22218280610106986,
+      "derivative_step_error": 4.1858153054796787e-10,
+      "kernel_absolute_error": 8.284600462246661e-10,
+      "trs_h_error": 0.0,
+      "equilibrium": {
+        "current_conservation": 3.469446951953614e-17,
+        "gauge": 1.6375789613221059e-15,
+        "effective_conservation": 3.469446951953614e-17,
+        "effective_gauge": 1.6375789613221059e-15,
+        "occupation_partition": 0.0,
+        "virtual_probe_residual": 0.0,
+        "zero_bias_current": 1.6375789613221059e-15,
+        "injectivity_partition": 0.0,
+        "reciprocity": 1.7763568394002505e-15
+      },
+      "virtual_spin_channels": 0,
+      "zero_voltage_current": 0.0,
+      "finite_bias_kH": -0.22218280662103798,
+      "finite_bias_error": 5.199681241130349e-10,
+      "probe_current_error": 3.227539196734006e-24,
+      "finite_bias_current_sum_error": 1.0841859671694465e-19,
+      "bias_amplitude": 5e-05,
+      "terminal_voltages": [
+        [
+          5e-05,
+          -5e-05,
+          4.094093203420759e-11,
+          5.928211864215995e-10
+        ],
+        [
+          -5e-05,
+          5e-05,
+          1.8818989077548416e-11,
+          5.778527677953466e-10
+        ]
+      ],
+      "runtime_seconds": 14.699288500007242
+    },
+    "strong_elastic_probes": {
+      "kH": -0.23882775531096329,
+      "derivative_step_error": 4.4450410019436504e-10,
+      "kernel_absolute_error": 2.0628296640290422e-10,
+      "trs_h_error": 0.0,
+      "equilibrium": {
+        "current_conservation": 3.3306690738754696e-16,
+        "gauge": 6.39324975825545e-15,
+        "effective_conservation": 9.020562075079397e-16,
+        "effective_gauge": 7.181755190543981e-15,
+        "occupation_partition": 7.105427357601002e-15,
+        "virtual_probe_residual": 2.636779683484747e-16,
+        "zero_bias_current": 7.188694084447889e-15,
+        "injectivity_partition": 1.3322676295501878e-15,
+        "reciprocity": 5.218048215738236e-15
+      },
+      "virtual_spin_channels": 32,
+      "zero_voltage_current": 0.0,
+      "finite_bias_kH": -0.23882775593077005,
+      "finite_bias_error": 6.198067614704428e-10,
+      "probe_current_error": 6.902596029556271e-25,
+      "finite_bias_current_sum_error": 1.0842027969746108e-19,
+      "bias_amplitude": 5e-05,
+      "terminal_voltages": [
+        [
+          5e-05,
+          -5e-05,
+          1.8637345818482197e-10,
+          7.834428480011073e-10
+        ],
+        [
+          -5e-05,
+          5e-05,
+          1.8637345821094658e-10,
+          7.834428480485115e-10
+        ]
+      ],
+      "runtime_seconds": 30.783478199969977
+    }
+  },
+  "raw_disorder_records": [
+    {
+      "kH": -0.22771915983120636,
+      "alpha_H": 2.1054355082979843e-15,
+      "alpha": [
+        1.0,
+        -1.0,
+        -1.01366633413854e-15,
+        -3.119101842436524e-15
+      ],
+      "beta": [
+        0.0,
+        0.0,
+        0.07930470084279959,
+        0.30702386067400594
+      ],
+      "kH_internal": -2.1876487060082714e-09,
+      "kH_electrodes": -2.4498773292370066e-10,
+      "kH_frozen": -0.2277191573985699,
+      "Gxx": 1.950500734811763,
+      "Gxx_bias_amplitude": 3.901001469623526,
+      "cpp_condition": 1.2249494964502032,
+      "probe_linear_error": 4.930380657631324e-32,
+      "probe_quadratic_error": 8.673617379884035e-19,
+      "current_sum_error": 3.645390413142824e-12,
+      "current_linear": [
+        3.901001469623526,
+        -3.9010014696235262,
+        0.0,
+        -4.930380657631324e-32
+      ],
+      "current_quadratic": [
+        2.957838141082192e-11,
+        -2.5932991865040833e-11,
+        8.673617379884035e-19,
+        0.0
+      ],
+      "energy": 0.5,
+      "temperature": 0.0,
+      "checks": {
+        "current_conservation": 1.5959455978986625e-16,
+        "gauge": 1.2108369862318114e-14,
+        "effective_conservation": 1.5959455978986625e-16,
+        "effective_gauge": 1.2108369862318114e-14,
+        "occupation_partition": 0.0,
+        "virtual_probe_residual": 0.0,
+        "zero_bias_current": 1.2101430968414206e-14,
+        "injectivity_partition": 0.0,
+        "reciprocity": 1.1546319456101628e-14
+      },
+      "trs_h_error": 0.0,
+      "disorder": 0.0,
+      "seed": 0
+    },
+    {
+      "kH": -0.2149518723933565,
+      "alpha_H": -1.0245107637530997e-09,
+      "alpha": [
+        1.0,
+        -1.0,
+        1.2559303736247586e-09,
+        2.2804411373778583e-09
+      ],
+      "beta": [
+        0.0,
+        0.0,
+        0.06810765680104536,
+        0.28305952919440186
+      ],
+      "kH_internal": -6.987431121251765e-10,
+      "kH_electrodes": 1.808720427614775e-09,
+      "kH_frozen": -0.21495187350333383,
+      "Gxx": 1.9509642572935681,
+      "Gxx_bias_amplitude": 3.9019285145871363,
+      "cpp_condition": 1.237078934300737,
+      "probe_linear_error": 0.0,
+      "probe_quadratic_error": 3.469446951953614e-18,
+      "current_sum_error": 1.707427602082312e-13,
+      "current_linear": [
+        3.9019285145871363,
+        -3.9019285145871363,
+        0.0,
+        0.0
+      ],
+      "current_quadratic": [
+        -0.00011699048737532497,
+        0.00011699048754607033,
+        8.673617379884035e-19,
+        -3.469446951953614e-18
+      ],
+      "energy": 0.5,
+      "temperature": 0.0,
+      "checks": {
+        "current_conservation": 1.1796119636642288e-16,
+        "gauge": 6.2450045135165055e-15,
+        "effective_conservation": 1.1796119636642288e-16,
+        "effective_gauge": 6.2450045135165055e-15,
+        "occupation_partition": 0.0,
+        "virtual_probe_residual": 0.0,
+        "zero_bias_current": 6.2450045135165055e-15,
+        "injectivity_partition": 0.0,
+        "reciprocity": 5.773159728050814e-15
+      },
+      "trs_h_error": 0.0,
+      "disorder": 0.2,
+      "seed": 1700
+    },
+    {
+      "kH": -0.2201046267735866,
+      "alpha_H": -7.151517420015338e-10,
+      "alpha": [
+        1.0,
+        -1.0,
+        9.738529417141759e-11,
+        8.125370361729514e-10
+      ],
+      "beta": [
+        0.0,
+        0.0,
+        0.0685515879591508,
+        0.2886562147327374
+      ],
+      "kH_internal": -1.4143265083643446e-09,
+      "kH_electrodes": -6.943528374848038e-09,
+      "kH_frozen": -0.22010461841573176,
+      "Gxx": 1.9508363433322677,
+      "Gxx_bias_amplitude": 3.9016726866645355,
+      "cpp_condition": 1.2187490632880618,
+      "probe_linear_error": 1.2924697071141057e-26,
+      "probe_quadratic_error": 0.0,
+      "current_sum_error": 6.591210216511101e-12,
+      "current_linear": [
+        3.9016726866645355,
+        -3.901672686664535,
+        0.0,
+        1.2924697071141057e-26
+      ],
+      "current_quadratic": [
+        -1.7598610174134055e-05,
+        1.759861676534427e-05,
+        0.0,
+        0.0
+      ],
+      "energy": 0.5,
+      "temperature": 0.0,
+      "checks": {
+        "current_conservation": 6.245004513516506e-17,
+        "gauge": 1.1102230246251565e-15,
+        "effective_conservation": 6.245004513516506e-17,
+        "effective_gauge": 1.1102230246251565e-15,
+        "occupation_partition": 0.0,
+        "virtual_probe_residual": 0.0,
+        "zero_bias_current": 1.1102230246251565e-15,
+        "injectivity_partition": 0.0,
+        "reciprocity": 8.881784197001252e-16
+      },
+      "trs_h_error": 0.0,
+      "disorder": 0.2,
+      "seed": 1701
+    },
+    {
+      "kH": -0.23198437577229464,
+      "alpha_H": 6.533535305121248e-10,
+      "alpha": [
+        1.0,
+        -1.0,
+        7.661689378747303e-10,
+        1.1281540736260547e-10
+      ],
+      "beta": [
+        0.0,
+        0.0,
+        0.08400011662545333,
+        0.31598449239774795
+      ],
+      "kH_internal": -3.441919016565215e-09,
+      "kH_electrodes": -2.819514802071232e-09,
+      "kH_frozen": -0.23198436951086088,
+      "Gxx": 1.9497842299350006,
+      "Gxx_bias_amplitude": 3.899568459870001,
+      "cpp_condition": 1.2427698777848903,
+      "probe_linear_error": 1.6155871338926322e-27,
+      "probe_quadratic_error": 6.938893903907228e-18,
+      "current_sum_error": 5.900230824751329e-12,
+      "current_linear": [
+        3.899568459870001,
+        -3.8995684598700016,
+        0.0,
+        1.6155871338926322e-27
+      ],
+      "current_quadratic": [
+        5.034866947463412e-05,
+        -5.034866357439549e-05,
+        -8.673617379884035e-19,
+        -6.938893903907228e-18
+      ],
+      "energy": 0.5,
+      "temperature": 0.0,
+      "checks": {
+        "current_conservation": 8.326672684688674e-17,
+        "gauge": 1.790234627208065e-15,
+        "effective_conservation": 8.326672684688674e-17,
+        "effective_gauge": 1.790234627208065e-15,
+        "occupation_partition": 0.0,
+        "virtual_probe_residual": 0.0,
+        "zero_bias_current": 1.790234627208065e-15,
+        "injectivity_partition": 0.0,
+        "reciprocity": 1.5543122344752192e-15
+      },
+      "trs_h_error": 0.0,
+      "disorder": 0.2,
+      "seed": 1702
+    },
+    {
+      "kH": -0.2471711327896189,
+      "alpha_H": 1.4140086085250571e-09,
+      "alpha": [
+        1.0,
+        -1.0,
+        5.04158829225865e-10,
+        -9.098497792991921e-10
+      ],
+      "beta": [
+        0.0,
+        0.0,
+        0.08470330282235503,
+        0.33187443561197394
+      ],
+      "kH_internal": -4.75375341471561e-09,
+      "kH_electrodes": -4.0892605205354e-09,
+      "kH_frozen": -0.247171123946605,
+      "Gxx": 1.950237644908973,
+      "Gxx_bias_amplitude": 3.900475289817946,
+      "cpp_condition": 1.2442341785191218,
+      "probe_linear_error": 0.0,
+      "probe_quadratic_error": 0.0,
+      "current_sum_error": 1.0928587895753239e-11,
+      "current_linear": [
+        3.900475289817946,
+        -3.900475289817946,
+        0.0,
+        0.0
+      ],
+      "current_quadratic": [
+        9.911773160219128e-05,
+        -9.911772067360339e-05,
+        0.0,
+        0.0
+      ],
+      "energy": 0.5,
+      "temperature": 0.0,
+      "checks": {
+        "current_conservation": 2.0816681711721685e-17,
+        "gauge": 1.0554057627842894e-14,
+        "effective_conservation": 2.0816681711721685e-17,
+        "effective_gauge": 1.0554057627842894e-14,
+        "occupation_partition": 0.0,
+        "virtual_probe_residual": 0.0,
+        "zero_bias_current": 1.0547118733938987e-14,
+        "injectivity_partition": 0.0,
+        "reciprocity": 1.021405182655144e-14
+      },
+      "trs_h_error": 0.0,
+      "disorder": 0.2,
+      "seed": 1703
+    },
+    {
+      "kH": -0.23539167917178822,
+      "alpha_H": -5.204879436400214e-09,
+      "alpha": [
+        1.0,
+        -1.0,
+        -2.808336788948704e-09,
+        2.39654264745151e-09
+      ],
+      "beta": [
+        0.0,
+        0.0,
+        0.09110864632662874,
+        0.32650032549841695
+      ],
+      "kH_internal": -2.028518973385485e-09,
+      "kH_electrodes": 3.9539065080331895e-09,
+      "kH_frozen": -0.23539168109717573,
+      "Gxx": 1.9504264415499777,
+      "Gxx_bias_amplitude": 3.9008528830999554,
+      "cpp_condition": 1.1963851570754984,
+      "probe_linear_error": 5.169878828456423e-26,
+      "probe_quadratic_error": 6.938893903907228e-18,
+      "current_sum_error": 5.031759731100038e-12,
+      "current_linear": [
+        3.9008528830999554,
+        -3.9008528830999554,
+        0.0,
+        5.169878828456423e-26
+      ],
+      "current_quadratic": [
+        7.228392748397788e-06,
+        -7.228397780164458e-06,
+        0.0,
+        6.938893903907228e-18
+      ],
+      "energy": 0.5,
+      "temperature": 0.0,
+      "checks": {
+        "current_conservation": 1.1796119636642288e-16,
+        "gauge": 1.0200174038743626e-14,
+        "effective_conservation": 1.1796119636642288e-16,
+        "effective_gauge": 1.0200174038743626e-14,
+        "occupation_partition": 0.0,
+        "virtual_probe_residual": 0.0,
+        "zero_bias_current": 1.0200174038743626e-14,
+        "injectivity_partition": 0.0,
+        "reciprocity": 9.769962616701378e-15
+      },
+      "trs_h_error": 0.0,
+      "disorder": 0.2,
+      "seed": 1704
+    },
+    {
+      "kH": -0.22424661633963128,
+      "alpha_H": 1.4685073059618942e-09,
+      "alpha": [
+        1.0,
+        -1.0,
+        -4.083691133879682e-10,
+        -1.8768764193498625e-09
+      ],
+      "beta": [
+        0.0,
+        0.0,
+        0.07705722409444322,
+        0.3013038404340745
+      ],
+      "kH_internal": -1.8440391148230481e-09,
+      "kH_electrodes": -5.41428544553509e-09,
+      "kH_frozen": -0.22424660908130672,
+      "Gxx": 1.9506306033604905,
+      "Gxx_bias_amplitude": 3.901261206720981,
+      "cpp_condition": 1.2169640162286672,
+      "probe_linear_error": 5.169878828456423e-26,
+      "probe_quadratic_error": 6.938893903907228e-18,
+      "current_sum_error": 9.022498893840325e-12,
+      "current_linear": [
+        3.901261206720981,
+        -3.9012612067209806,
+        0.0,
+        -5.169878828456423e-26
+      ],
+      "current_quadratic": [
+        0.00012180962560836076,
+        -0.00012180963463086572,
+        -8.673617379884035e-19,
+        6.938893903907228e-18
+      ],
+      "energy": 0.5,
+      "temperature": 0.0,
+      "checks": {
+        "current_conservation": 9.71445146547012e-17,
+        "gauge": 1.2545520178264269e-14,
+        "effective_conservation": 9.71445146547012e-17,
+        "effective_gauge": 1.2545520178264269e-14,
+        "occupation_partition": 0.0,
+        "virtual_probe_residual": 0.0,
+        "zero_bias_current": 1.2545520178264269e-14,
+        "injectivity_partition": 0.0,
+        "reciprocity": 1.2212453270876722e-14
+      },
+      "trs_h_error": 0.0,
+      "disorder": 0.2,
+      "seed": 1705
+    },
+    {
+      "kH": -0.16429496687876008,
+      "alpha_H": 3.857664517565436e-09,
+      "alpha": [
+        1.0,
+        -1.0,
+        1.3869477539044992e-09,
+        -2.470716763660937e-09
+      ],
+      "beta": [
+        0.0,
+        0.0,
+        0.0871166630529844,
+        0.2514116299317445
+      ],
+      "kH_internal": -6.147749463925872e-09,
+      "kH_electrodes": 2.589546594750698e-08,
+      "kH_frozen": -0.1642949866264765,
+      "Gxx": 1.9505886225471738,
+      "Gxx_bias_amplitude": 3.9011772450943476,
+      "cpp_condition": 1.1792927422460764,
+      "probe_linear_error": 0.0,
+      "probe_quadratic_error": 3.469446951953614e-18,
+      "current_sum_error": 1.5611113096669627e-11,
+      "current_linear": [
+        3.9011772450943476,
+        -3.901177245094347,
+        0.0,
+        0.0
+      ],
+      "current_quadratic": [
+        4.3496890296545326e-05,
+        -4.349690590766189e-05,
+        0.0,
+        3.469446951953614e-18
+      ],
+      "energy": 0.5,
+      "temperature": 0.0,
+      "checks": {
+        "current_conservation": 1.249000902703301e-16,
+        "gauge": 5.814793091474257e-15,
+        "effective_conservation": 1.249000902703301e-16,
+        "effective_gauge": 5.814793091474257e-15,
+        "occupation_partition": 0.0,
+        "virtual_probe_residual": 0.0,
+        "zero_bias_current": 5.814793091474257e-15,
+        "injectivity_partition": 0.0,
+        "reciprocity": 5.329070518200751e-15
+      },
+      "trs_h_error": 0.0,
+      "disorder": 0.2,
+      "seed": 1706
+    },
+    {
+      "kH": -0.2522586618715723,
+      "alpha_H": 1.2750210327895726e-09,
+      "alpha": [
+        1.0,
+        -1.0,
+        -8.747478577012405e-10,
+        -2.149768890490813e-09
+      ],
+      "beta": [
+        0.0,
+        0.0,
+        0.08909758286589109,
+        0.3413562447374634
+      ],
+      "kH_internal": -2.571004473286026e-09,
+      "kH_electrodes": 6.682414858868588e-09,
+      "kH_frozen": -0.25225866598298263,
+      "Gxx": 1.9495315208423043,
+      "Gxx_bias_amplitude": 3.8990630416846086,
+      "cpp_condition": 1.231610164563414,
+      "probe_linear_error": 0.0,
+      "probe_quadratic_error": 0.0,
+      "current_sum_error": 2.983747623974686e-11,
+      "current_linear": [
+        3.8990630416846086,
+        -3.899063041684608,
+        0.0,
+        0.0
+      ],
+      "current_quadratic": [
+        1.62527932843666e-05,
+        -1.625282312184284e-05,
+        0.0,
+        0.0
+      ],
+      "energy": 0.5,
+      "temperature": 0.0,
+      "checks": {
+        "current_conservation": 1.3183898417423734e-16,
+        "gauge": 1.2746748101477579e-14,
+        "effective_conservation": 1.3183898417423734e-16,
+        "effective_gauge": 1.2746748101477579e-14,
+        "occupation_partition": 0.0,
+        "virtual_probe_residual": 0.0,
+        "zero_bias_current": 1.2739809207573671e-14,
+        "injectivity_partition": 0.0,
+        "reciprocity": 1.2212453270876722e-14
+      },
+      "trs_h_error": 0.0,
+      "disorder": 0.2,
+      "seed": 1707
+    },
+    {
+      "kH": -0.20676081812049868,
+      "alpha_H": 1.3176384524863324e-08,
+      "alpha": [
+        1.0,
+        -1.0,
+        2.6941845618912844e-08,
+        1.376546109404952e-08
+      ],
+      "beta": [
+        0.0,
+        0.0,
+        0.05188567480215084,
+        0.2586464929226495
+      ],
+      "kH_internal": 3.6917157175779607e-09,
+      "kH_electrodes": 2.0011395743334512e-08,
+      "kH_frozen": -0.20676084182361013,
+      "Gxx": 1.951561378425733,
+      "Gxx_bias_amplitude": 3.903122756851466,
+      "cpp_condition": 1.2571264165806535,
+      "probe_linear_error": 0.0,
+      "probe_quadratic_error": 3.469446951953614e-18,
+      "current_sum_error": 2.773052620863581e-12,
+      "current_linear": [
+        3.903122756851466,
+        -3.903122756851466,
+        0.0,
+        0.0
+      ],
+      "current_quadratic": [
+        -0.000227047373283093,
+        0.0002270473705100369,
+        0.0,
+        3.469446951953614e-18
+      ],
+      "energy": 0.5,
+      "temperature": 0.0,
+      "checks": {
+        "current_conservation": 1.3183898417423734e-16,
+        "gauge": 1.1296519275560968e-14,
+        "effective_conservation": 1.3183898417423734e-16,
+        "effective_gauge": 1.1296519275560968e-14,
+        "occupation_partition": 0.0,
+        "virtual_probe_residual": 0.0,
+        "zero_bias_current": 1.1296519275560968e-14,
+        "injectivity_partition": 0.0,
+        "reciprocity": 1.1102230246251565e-14
+      },
+      "trs_h_error": 0.0,
+      "disorder": 0.5,
+      "seed": 1700
+    },
+    {
+      "kH": -0.21643643803036788,
+      "alpha_H": 7.412302227748879e-09,
+      "alpha": [
+        1.0,
+        -1.0,
+        1.2789374594614913e-08,
+        5.377072366866035e-09
+      ],
+      "beta": [
+        0.0,
+        0.0,
+        0.05210169254279417,
+        0.26853813057316206
+      ],
+      "kH_internal": 4.829196493124243e-09,
+      "kH_electrodes": -3.9906253991054844e-08,
+      "kH_frozen": -0.21643640295331038,
+      "Gxx": 1.9513320412265136,
+      "Gxx_bias_amplitude": 3.902664082453027,
+      "cpp_condition": 1.20827285048402,
+      "probe_linear_error": 1.0339757656912846e-25,
+      "probe_quadratic_error": 6.938893903907228e-18,
+      "current_sum_error": 1.006197902775341e-11,
+      "current_linear": [
+        3.902664082453027,
+        -3.902664082453027,
+        0.0,
+        1.0339757656912846e-25
+      ],
+      "current_quadratic": [
+        -3.24469868679747e-05,
+        3.2446976805988736e-05,
+        0.0,
+        6.938893903907228e-18
+      ],
+      "energy": 0.5,
+      "temperature": 0.0,
+      "checks": {
+        "current_conservation": 6.938893903907228e-17,
+        "gauge": 8.416878305439468e-15,
+        "effective_conservation": 6.938893903907228e-17,
+        "effective_gauge": 8.416878305439468e-15,
+        "occupation_partition": 0.0,
+        "virtual_probe_residual": 0.0,
+        "zero_bias_current": 8.409939411535561e-15,
+        "injectivity_partition": 0.0,
+        "reciprocity": 7.993605777301127e-15
+      },
+      "trs_h_error": 0.0,
+      "disorder": 0.5,
+      "seed": 1701
+    },
+    {
+      "kH": -0.2523870043861074,
+      "alpha_H": 1.5942033816846935e-08,
+      "alpha": [
+        1.0,
+        -1.0,
+        1.3667458671328648e-08,
+        -2.274575145518287e-09
+      ],
+      "beta": [
+        0.0,
+        0.0,
+        0.08910170124757726,
+        0.34148870563368466
+      ],
+      "kH_internal": -2.2054536100636003e-08,
+      "kH_electrodes": -2.8336674596758243e-09,
+      "kH_frozen": -0.25238697949790384,
+      "Gxx": 1.9486371468053068,
+      "Gxx_bias_amplitude": 3.8972742936106135,
+      "cpp_condition": 1.2793132749900133,
+      "probe_linear_error": 0.0,
+      "probe_quadratic_error": 0.0,
+      "current_sum_error": 6.418410941622099e-12,
+      "current_linear": [
+        3.8972742936106135,
+        -3.8972742936106135,
+        0.0,
+        0.0
+      ],
+      "current_quadratic": [
+        0.0001756543152859058,
+        -0.00017565430886749486,
+        0.0,
+        0.0
+      ],
+      "energy": 0.5,
+      "temperature": 0.0,
+      "checks": {
+        "current_conservation": 1.457167719820518e-16,
+        "gauge": 1.790234627208065e-14,
+        "effective_conservation": 1.457167719820518e-16,
+        "effective_gauge": 1.790234627208065e-14,
+        "occupation_partition": 0.0,
+        "virtual_probe_residual": 0.0,
+        "zero_bias_current": 1.790234627208065e-14,
+        "injectivity_partition": 0.0,
+        "reciprocity": 1.7319479184152442e-14
+      },
+      "trs_h_error": 0.0,
+      "disorder": 0.5,
+      "seed": 1702
+    },
+    {
+      "kH": -0.2834100189522377,
+      "alpha_H": 1.3314081751094232e-08,
+      "alpha": [
+        1.0,
+        -1.0,
+        -1.0562102297120928e-08,
+        -2.387618404821516e-08
+      ],
+      "beta": [
+        0.0,
+        0.0,
+        0.09734123934031076,
+        0.38075125829254847
+      ],
+      "kH_internal": -2.7018359839615476e-08,
+      "kH_electrodes": -1.3474844086955466e-08,
+      "kH_frozen": -0.2834099784590337,
+      "Gxx": 1.949773275223458,
+      "Gxx_bias_amplitude": 3.899546550446916,
+      "cpp_condition": 1.2719385780430779,
+      "probe_linear_error": 4.1359030627651384e-25,
+      "probe_quadratic_error": 6.938893903907228e-18,
+      "current_sum_error": 9.194218303365531e-12,
+      "current_linear": [
+        3.899546550446916,
+        -3.899546550446916,
+        0.0,
+        -4.1359030627651384e-25
+      ],
+      "current_quadratic": [
+        0.00030284154729577975,
+        -0.000302841556490005,
+        0.0,
+        6.938893903907228e-18
+      ],
+      "energy": 0.5,
+      "temperature": 0.0,
+      "checks": {
+        "current_conservation": 9.71445146547012e-17,
+        "gauge": 1.2156942119645464e-14,
+        "effective_conservation": 9.71445146547012e-17,
+        "effective_gauge": 1.2156942119645464e-14,
+        "occupation_partition": 0.0,
+        "virtual_probe_residual": 0.0,
+        "zero_bias_current": 1.2156942119645464e-14,
+        "injectivity_partition": 0.0,
+        "reciprocity": 1.176836406102666e-14
+      },
+      "trs_h_error": 0.0,
+      "disorder": 0.5,
+      "seed": 1703
+    },
+    {
+      "kH": -0.2357103363401523,
+      "alpha_H": -6.18601991321455e-08,
+      "alpha": [
+        1.0,
+        -1.0,
+        -4.04153187132739e-08,
+        2.1444880418871592e-08
+      ],
+      "beta": [
+        0.0,
+        0.0,
+        0.1116808603663719,
+        0.3473911967065242
+      ],
+      "kH_internal": 7.945435154632646e-10,
+      "kH_electrodes": 5.532807734196482e-08,
+      "kH_frozen": -0.2357103924627732,
+      "Gxx": 1.9505197965334902,
+      "Gxx_bias_amplitude": 3.9010395930669803,
+      "cpp_condition": 1.1457999856800758,
+      "probe_linear_error": 0.0,
+      "probe_quadratic_error": 6.938893903907228e-18,
+      "current_sum_error": 2.9496786957405874e-12,
+      "current_linear": [
+        3.9010395930669803,
+        -3.9010395930669803,
+        0.0,
+        0.0
+      ],
+      "current_quadratic": [
+        -1.7190698122299813e-05,
+        1.7190695172628057e-05,
+        0.0,
+        -6.938893903907228e-18
+      ],
+      "energy": 0.5,
+      "temperature": 0.0,
+      "checks": {
+        "current_conservation": 1.1796119636642288e-16,
+        "gauge": 5.349887199912473e-15,
+        "effective_conservation": 1.1796119636642288e-16,
+        "effective_gauge": 5.349887199912473e-15,
+        "occupation_partition": 0.0,
+        "virtual_probe_residual": 0.0,
+        "zero_bias_current": 5.35682609381638e-15,
+        "injectivity_partition": 0.0,
+        "reciprocity": 5.10702591327572e-15
+      },
+      "trs_h_error": 0.0,
+      "disorder": 0.5,
+      "seed": 1704
+    },
+    {
+      "kH": -0.2245207120877527,
+      "alpha_H": -3.5043401226875462e-09,
+      "alpha": [
+        1.0,
+        -1.0,
+        -3.331405723937072e-08,
+        -2.9809717116683175e-08
+      ],
+      "beta": [
+        0.0,
+        0.0,
+        0.0736822295677806,
+        0.2982029416555333
+      ],
+      "kH_internal": -8.024633805428096e-09,
+      "kH_electrodes": 1.5899462395763238e-08,
+      "kH_frozen": -0.22452071996258127,
+      "Gxx": 1.9507821806696777,
+      "Gxx_bias_amplitude": 3.9015643613393554,
+      "cpp_condition": 1.2077964508931511,
+      "probe_linear_error": 0.0,
+      "probe_quadratic_error": 0.0,
+      "current_sum_error": 1.526629170300886e-11,
+      "current_linear": [
+        3.9015643613393554,
+        -3.901564361339355,
+        0.0,
+        0.0
+      ],
+      "current_quadratic": [
+        0.00026925772340254464,
+        -0.00026925770813625294,
+        0.0,
+        0.0
+      ],
+      "energy": 0.5,
+      "temperature": 0.0,
+      "checks": {
+        "current_conservation": 7.632783294297951e-17,
+        "gauge": 5.35682609381638e-15,
+        "effective_conservation": 7.632783294297951e-17,
+        "effective_gauge": 5.35682609381638e-15,
+        "occupation_partition": 0.0,
+        "virtual_probe_residual": 0.0,
+        "zero_bias_current": 5.35682609381638e-15,
+        "injectivity_partition": 0.0,
+        "reciprocity": 5.10702591327572e-15
+      },
+      "trs_h_error": 0.0,
+      "disorder": 0.5,
+      "seed": 1705
+    },
+    {
+      "kH": -0.08852105203602886,
+      "alpha_H": 4.602606413881214e-09,
+      "alpha": [
+        1.0,
+        -1.0,
+        -2.3711491344185906e-08,
+        -2.831409775806712e-08
+      ],
+      "beta": [
+        0.0,
+        0.0,
+        0.10929488546973376,
+        0.19781593750576262
+      ],
+      "kH_internal": -3.611263046425429e-08,
+      "kH_electrodes": 2.8733246773866066e-07,
+      "kH_frozen": -0.0885213032558661,
+      "Gxx": 1.9503918186815326,
+      "Gxx_bias_amplitude": 3.900783637363065,
+      "cpp_condition": 1.11492395522674,
+      "probe_linear_error": 0.0,
+      "probe_quadratic_error": 3.469446951953614e-18,
+      "current_sum_error": 2.2538446803332945e-12,
+      "current_linear": [
+        3.900783637363065,
+        -3.9007836373630647,
+        0.0,
+        0.0
+      ],
+      "current_quadratic": [
+        5.138214001687742e-05,
+        -5.138213776303621e-05,
+        0.0,
+        3.469446951953614e-18
+      ],
+      "energy": 0.5,
+      "temperature": 0.0,
+      "checks": {
+        "current_conservation": 1.0408340855860843e-16,
+        "gauge": 1.1095291352347658e-14,
+        "effective_conservation": 1.0408340855860843e-16,
+        "effective_gauge": 1.1095291352347658e-14,
+        "occupation_partition": 0.0,
+        "virtual_probe_residual": 0.0,
+        "zero_bias_current": 1.1102230246251565e-14,
+        "injectivity_partition": 0.0,
+        "reciprocity": 1.0880185641326534e-14
+      },
+      "trs_h_error": 0.0,
+      "disorder": 0.5,
+      "seed": 1706
+    },
+    {
+      "kH": -0.2898045625506788,
+      "alpha_H": -6.149803656462957e-09,
+      "alpha": [
+        1.0,
+        -1.0,
+        -3.546986855548482e-08,
+        -2.9320064899021862e-08
+      ],
+      "beta": [
+        0.0,
+        0.0,
+        0.11050102505420922,
+        0.40030558760488805
+      ],
+      "kH_internal": -6.801550213158719e-10,
+      "kH_electrodes": 4.686613269090272e-08,
+      "kH_frozen": -0.2898046087366564,
+      "Gxx": 1.9479903581637676,
+      "Gxx_bias_amplitude": 3.8959807163275353,
+      "cpp_condition": 1.2407458370798148,
+      "probe_linear_error": 4.1359030627651384e-25,
+      "probe_quadratic_error": 0.0,
+      "current_sum_error": 2.602518894834205e-12,
+      "current_linear": [
+        3.8959807163275353,
+        -3.8959807163275357,
+        4.1359030627651384e-25,
+        0.0
+      ],
+      "current_quadratic": [
+        1.324589806081175e-05,
+        -1.3245900663330645e-05,
+        0.0,
+        0.0
+      ],
+      "energy": 0.5,
+      "temperature": 0.0,
+      "checks": {
+        "current_conservation": 1.6653345369377348e-16,
+        "gauge": 8.194833700514437e-15,
+        "effective_conservation": 1.6653345369377348e-16,
+        "effective_gauge": 8.194833700514437e-15,
+        "occupation_partition": 0.0,
+        "virtual_probe_residual": 0.0,
+        "zero_bias_current": 8.18789480661053e-15,
+        "injectivity_partition": 0.0,
+        "reciprocity": 7.771561172376096e-15
+      },
+      "trs_h_error": 0.0,
+      "disorder": 0.5,
+      "seed": 1707
+    },
+    {
+      "kH": -0.22218280610106986,
+      "alpha_H": 7.159947471389359e-08,
+      "alpha": [
+        1.0,
+        -1.0,
+        2.2122248424630702e-07,
+        1.4962300953241343e-07
+      ],
+      "beta": [
+        0.0,
+        0.0,
+        0.011951984459707889,
+        0.23413479056077774
+      ],
+      "kH_internal": -1.2842136360475582e-07,
+      "kH_electrodes": 1.2689166530825106e-07,
+      "kH_frozen": -0.22218280457137157,
+      "Gxx": 1.9524592409396746,
+      "Gxx_bias_amplitude": 3.904918481879349,
+      "cpp_condition": 1.297123877292741,
+      "probe_linear_error": 0.0,
+      "probe_quadratic_error": 0.0,
+      "current_sum_error": 1.387832557209201e-12,
+      "current_linear": [
+        3.904918481879349,
+        -3.904918481879349,
+        0.0,
+        0.0
+      ],
+      "current_quadratic": [
+        -0.0002956432865904631,
+        0.00029564328520263056,
+        0.0,
+        0.0
+      ],
+      "energy": 0.5,
+      "temperature": 0.0,
+      "checks": {
+        "current_conservation": 3.469446951953614e-17,
+        "gauge": 1.6375789613221059e-15,
+        "effective_conservation": 3.469446951953614e-17,
+        "effective_gauge": 1.6375789613221059e-15,
+        "occupation_partition": 0.0,
+        "virtual_probe_residual": 0.0,
+        "zero_bias_current": 1.6375789613221059e-15,
+        "injectivity_partition": 0.0,
+        "reciprocity": 1.7763568394002505e-15
+      },
+      "trs_h_error": 0.0,
+      "disorder": 1.0,
+      "seed": 1700
+    },
+    {
+      "kH": -0.22515137801802623,
+      "alpha_H": 1.0801804706176921e-07,
+      "alpha": [
+        1.0,
+        -1.0,
+        1.8117142027788927e-07,
+        7.315337321612006e-08
+      ],
+      "beta": [
+        0.0,
+        0.0,
+        0.022414139951918967,
+        0.2475655179699452
+      ],
+      "kH_internal": 6.033237555741066e-08,
+      "kH_electrodes": -8.552962042808927e-08,
+      "kH_frozen": -0.22515135282078136,
+      "Gxx": 1.952115930194209,
+      "Gxx_bias_amplitude": 3.904231860388418,
+      "cpp_condition": 1.1900126905701853,
+      "probe_linear_error": 1.6543612251060553e-24,
+      "probe_quadratic_error": 0.0,
+      "current_sum_error": 6.9391801332807646e-12,
+      "current_linear": [
+        3.904231860388418,
+        -3.904231860388419,
+        0.0,
+        -1.6543612251060553e-24
+      ],
+      "current_quadratic": [
+        -4.578610685038696e-05,
+        4.5786113789567096e-05,
+        0.0,
+        0.0
+      ],
+      "energy": 0.5,
+      "temperature": 0.0,
+      "checks": {
+        "current_conservation": 1.942890293094024e-16,
+        "gauge": 8.132383655379272e-15,
+        "effective_conservation": 1.942890293094024e-16,
+        "effective_gauge": 8.132383655379272e-15,
+        "occupation_partition": 0.0,
+        "virtual_probe_residual": 0.0,
+        "zero_bias_current": 8.132383655379272e-15,
+        "injectivity_partition": 0.0,
+        "reciprocity": 7.549516567451064e-15
+      },
+      "trs_h_error": 0.0,
+      "disorder": 1.0,
+      "seed": 1701
+    },
+    {
+      "kH": -0.38530864613299226,
+      "alpha_H": 2.1813944900540379e-07,
+      "alpha": [
+        1.0,
+        -1.0,
+        -8.46934861234927e-09,
+        -2.2660879761775306e-07
+      ],
+      "beta": [
+        0.0,
+        0.0,
+        0.0958947125161332,
+        0.48120335864912545
+      ],
+      "kH_internal": -1.1952675997894733e-07,
+      "kH_electrodes": 1.5478381043982264e-07,
+      "kH_frozen": -0.38530868139004265,
+      "Gxx": 1.9459720954754702,
+      "Gxx_bias_amplitude": 3.8919441909509405,
+      "cpp_condition": 1.3841653669518823,
+      "probe_linear_error": 0.0,
+      "probe_quadratic_error": 6.938893903907228e-18,
+      "current_sum_error": 3.4685171401704906e-12,
+      "current_linear": [
+        3.8919441909509405,
+        -3.8919441909509405,
+        0.0,
+        0.0
+      ],
+      "current_quadratic": [
+        0.0006368063784020425,
+        -0.0006368063749335323,
+        0.0,
+        6.938893903907228e-18
+      ],
+      "energy": 0.5,
+      "temperature": 0.0,
+      "checks": {
+        "current_conservation": 8.326672684688674e-17,
+        "gauge": 5.162537064506978e-15,
+        "effective_conservation": 8.326672684688674e-17,
+        "effective_gauge": 5.162537064506978e-15,
+        "occupation_partition": 0.0,
+        "virtual_probe_residual": 0.0,
+        "zero_bias_current": 5.162537064506978e-15,
+        "injectivity_partition": 0.0,
+        "reciprocity": 4.884981308350689e-15
+      },
+      "trs_h_error": 0.0,
+      "disorder": 1.0,
+      "seed": 1702
+    },
+    {
+      "kH": -0.4884717000513972,
+      "alpha_H": 2.109333293394212e-07,
+      "alpha": [
+        1.0,
+        -1.0,
+        -1.6933113060481512e-06,
+        -1.9042446353875724e-06
+      ],
+      "beta": [
+        0.0,
+        0.0,
+        0.1300677889456016,
+        0.6185394889969987
+      ],
+      "kH_internal": -2.9765220369129733e-07,
+      "kH_electrodes": -1.4925638620115674e-08,
+      "kH_frozen": -0.4884713874735549,
+      "Gxx": 1.9485219409134522,
+      "Gxx_bias_amplitude": 3.8970438818269044,
+      "cpp_condition": 1.3272397082980953,
+      "probe_linear_error": 2.6469779601696886e-23,
+      "probe_quadratic_error": 0.0,
+      "current_sum_error": 5.725371565734605e-12,
+      "current_linear": [
+        3.8970438818269044,
+        -3.8970438818269044,
+        0.0,
+        -2.6469779601696886e-23
+      ],
+      "current_quadratic": [
+        0.0013584464835831866,
+        -0.001358446477857815,
+        0.0,
+        0.0
+      ],
+      "energy": 0.5,
+      "temperature": 0.0,
+      "checks": {
+        "current_conservation": 4.163336342344337e-17,
+        "gauge": 1.0672018824209317e-14,
+        "effective_conservation": 4.163336342344337e-17,
+        "effective_gauge": 1.0672018824209317e-14,
+        "occupation_partition": 0.0,
+        "virtual_probe_residual": 0.0,
+        "zero_bias_current": 1.0672018824209317e-14,
+        "injectivity_partition": 0.0,
+        "reciprocity": 1.021405182655144e-14
+      },
+      "trs_h_error": 0.0,
+      "disorder": 1.0,
+      "seed": 1703
+    },
+    {
+      "kH": -0.16137782229722356,
+      "alpha_H": -6.139511989382146e-07,
+      "alpha": [
+        1.0,
+        -1.0,
+        -6.044532006870761e-07,
+        9.497998251138462e-09
+      ],
+      "beta": [
+        0.0,
+        0.0,
+        0.15644783294028772,
+        0.3178256552375113
+      ],
+      "kH_internal": -2.8148576054982755e-07,
+      "kH_electrodes": 6.408975777054078e-07,
+      "kH_frozen": -0.16137818170904072,
+      "Gxx": 1.951426766239132,
+      "Gxx_bias_amplitude": 3.902853532478264,
+      "cpp_condition": 1.033274460825149,
+      "probe_linear_error": 2.0679515313825692e-25,
+      "probe_quadratic_error": 1.734723475976807e-18,
+      "current_sum_error": 2.9488184463688505e-11,
+      "current_linear": [
+        3.902853532478264,
+        -3.902853532478264,
+        0.0,
+        2.0679515313825692e-25
+      ],
+      "current_quadratic": [
+        -0.0001400581810224906,
+        0.0001400581515343044,
+        1.734723475976807e-18,
+        0.0
+      ],
+      "energy": 0.5,
+      "temperature": 0.0,
+      "checks": {
+        "current_conservation": 1.249000902703301e-16,
+        "gauge": 7.0013439490423934e-15,
+        "effective_conservation": 1.249000902703301e-16,
+        "effective_gauge": 7.0013439490423934e-15,
+        "occupation_partition": 0.0,
+        "virtual_probe_residual": 0.0,
+        "zero_bias_current": 6.994405055138486e-15,
+        "injectivity_partition": 0.0,
+        "reciprocity": 6.661338147750939e-15
+      },
+      "trs_h_error": 0.0,
+      "disorder": 1.0,
+      "seed": 1704
+    },
+    {
+      "kH": -0.22519784658763536,
+      "alpha_H": -2.8718178337277842e-08,
+      "alpha": [
+        1.0,
+        -1.0,
+        -1.2918825413691551e-06,
+        -1.2631643630318773e-06
+      ],
+      "beta": [
+        0.0,
+        0.0,
+        0.06605902877704047,
+        0.2912568753646758
+      ],
+      "kH_internal": -9.331202683625172e-08,
+      "kH_electrodes": 1.1477350618086734e-08,
+      "kH_frozen": -0.2251977647529591,
+      "Gxx": 1.9510433280101676,
+      "Gxx_bias_amplitude": 3.902086656020335,
+      "cpp_condition": 1.1945012654119183,
+      "probe_linear_error": 2.6469779601696886e-23,
+      "probe_quadratic_error": 3.469446951953614e-18,
+      "current_sum_error": 5.727834873070492e-12,
+      "current_linear": [
+        3.902086656020335,
+        -3.902086656020335,
+        1.3234889800848443e-23,
+        -2.6469779601696886e-23
+      ],
+      "current_quadratic": [
+        0.0003543557040046816,
+        -0.0003543557097325199,
+        0.0,
+        3.469446951953614e-18
+      ],
+      "energy": 0.5,
+      "temperature": 0.0,
+      "checks": {
+        "current_conservation": 1.942890293094024e-16,
+        "gauge": 1.3752887717544127e-14,
+        "effective_conservation": 1.942890293094024e-16,
+        "effective_gauge": 1.3752887717544127e-14,
+        "occupation_partition": 0.0,
+        "virtual_probe_residual": 0.0,
+        "zero_bias_current": 1.3752887717544127e-14,
+        "injectivity_partition": 0.0,
+        "reciprocity": 1.354472090042691e-14
+      },
+      "trs_h_error": 0.0,
+      "disorder": 1.0,
+      "seed": 1705
+    },
+    {
+      "kH": 0.017369684880452207,
+      "alpha_H": 2.4427639667562976e-07,
+      "alpha": [
+        1.0,
+        -1.0,
+        -2.8624446020368655e-06,
+        -3.1067209987124953e-06
+      ],
+      "beta": [
+        0.0,
+        0.0,
+        0.18158387098059112,
+        0.1642141861001389
+      ],
+      "kH_internal": -6.891206612503018e-07,
+      "kH_electrodes": -2.9446083534941995e-07,
+      "kH_frozen": 0.017370668461948763,
+      "Gxx": 1.9493471016092623,
+      "Gxx_bias_amplitude": 3.8986942032185246,
+      "cpp_condition": 1.018538452037518,
+      "probe_linear_error": 0.0,
+      "probe_quadratic_error": 0.0,
+      "current_sum_error": 2.2535411037249986e-12,
+      "current_linear": [
+        3.8986942032185246,
+        -3.8986942032185246,
+        0.0,
+        0.0
+      ],
+      "current_quadratic": [
+        2.2322082993190412e-05,
+        -2.2322080739649308e-05,
+        0.0,
+        0.0
+      ],
+      "energy": 0.5,
+      "temperature": 0.0,
+      "checks": {
+        "current_conservation": 1.1796119636642288e-16,
+        "gauge": 1.5383527784962325e-14,
+        "effective_conservation": 1.1796119636642288e-16,
+        "effective_gauge": 1.5383527784962325e-14,
+        "occupation_partition": 0.0,
+        "virtual_probe_residual": 0.0,
+        "zero_bias_current": 1.5376588891058418e-14,
+        "injectivity_partition": 0.0,
+        "reciprocity": 1.4876988529977098e-14
+      },
+      "trs_h_error": 0.0,
+      "disorder": 1.0,
+      "seed": 1706
+    },
+    {
+      "kH": -0.3638391005844225,
+      "alpha_H": -1.3183607195380922e-07,
+      "alpha": [
+        1.0,
+        -1.0,
+        -7.158177688666653e-07,
+        -5.839816969128561e-07
+      ],
+      "beta": [
+        0.0,
+        0.0,
+        0.162886307732099,
+        0.5267254083165215
+      ],
+      "kH_internal": 4.874165548509457e-08,
+      "kH_electrodes": 1.742977513525976e-07,
+      "kH_frozen": -0.36383932362382926,
+      "Gxx": 1.9453710463984142,
+      "Gxx_bias_amplitude": 3.8907420927968284,
+      "cpp_condition": 1.2485699123915368,
+      "probe_linear_error": 0.0,
+      "probe_quadratic_error": 0.0,
+      "current_sum_error": 1.2665403448242074e-11,
+      "current_linear": [
+        3.8907420927968284,
+        -3.8907420927968284,
+        0.0,
+        0.0
+      ],
+      "current_quadratic": [
+        -0.00014155316518314753,
+        0.00014155315251774409,
+        0.0,
+        0.0
+      ],
+      "energy": 0.5,
+      "temperature": 0.0,
+      "checks": {
+        "current_conservation": 1.1102230246251565e-16,
+        "gauge": 1.6077417175353048e-14,
+        "effective_conservation": 1.1102230246251565e-16,
+        "effective_gauge": 1.6077417175353048e-14,
+        "occupation_partition": 0.0,
+        "virtual_probe_residual": 0.0,
+        "zero_bias_current": 1.607047828144914e-14,
+        "injectivity_partition": 0.0,
+        "reciprocity": 1.554312234475219e-14
+      },
+      "trs_h_error": 0.0,
+      "disorder": 1.0,
+      "seed": 1707
+    }
+  ],
+  "raw_dephasing_records": [
+    {
+      "kH": -0.22771915983120636,
+      "alpha_H": 2.1054355082979843e-15,
+      "alpha": [
+        1.0,
+        -1.0,
+        -1.01366633413854e-15,
+        -3.119101842436524e-15
+      ],
+      "beta": [
+        0.0,
+        0.0,
+        0.07930470084279959,
+        0.30702386067400594
+      ],
+      "kH_internal": -2.1876487060082714e-09,
+      "kH_electrodes": -2.4498773292370066e-10,
+      "kH_frozen": -0.2277191573985699,
+      "Gxx": 1.950500734811763,
+      "Gxx_bias_amplitude": 3.901001469623526,
+      "cpp_condition": 1.2249494964502032,
+      "probe_linear_error": 4.930380657631324e-32,
+      "probe_quadratic_error": 8.673617379884035e-19,
+      "current_sum_error": 3.645390413142824e-12,
+      "current_linear": [
+        3.901001469623526,
+        -3.9010014696235262,
+        0.0,
+        -4.930380657631324e-32
+      ],
+      "current_quadratic": [
+        2.957838141082192e-11,
+        -2.5932991865040833e-11,
+        8.673617379884035e-19,
+        0.0
+      ],
+      "energy": 0.5,
+      "temperature": 0.0,
+      "checks": {
+        "current_conservation": 1.5959455978986625e-16,
+        "gauge": 1.2108369862318114e-14,
+        "effective_conservation": 1.5959455978986625e-16,
+        "effective_gauge": 1.2108369862318114e-14,
+        "occupation_partition": 0.0,
+        "virtual_probe_residual": 0.0,
+        "zero_bias_current": 1.2101430968414206e-14,
+        "injectivity_partition": 0.0,
+        "reciprocity": 1.1546319456101628e-14
+      },
+      "trs_h_error": 0.0,
+      "gamma_phi": 0.0,
+      "virtual_spin_channels": 0,
+      "probe_positions": []
+    },
+    {
+      "kH": -0.22782976090039786,
+      "alpha_H": 3.4565754999318454e-15,
+      "alpha": [
+        1.0,
+        -1.0,
+        -9.357012148638357e-16,
+        -4.392276714795681e-15
+      ],
+      "beta": [
+        0.0,
+        0.0,
+        0.0792548236345401,
+        0.307084584534938
+      ],
+      "kH_internal": -2.222795029057981e-09,
+      "kH_electrodes": -2.3353582749290525e-10,
+      "kH_frozen": -0.22782975844406697,
+      "Gxx": 1.95050139764628,
+      "Gxx_bias_amplitude": 3.90100279529256,
+      "cpp_condition": 1.2249414360443185,
+      "probe_linear_error": 9.860761315262648e-32,
+      "probe_quadratic_error": 0.0,
+      "current_sum_error": 5.7417199467169056e-11,
+      "current_linear": [
+        3.90100279529256,
+        -3.901002795292559,
+        0.0,
+        -9.860761315262648e-32
+      ],
+      "current_quadratic": [
+        7.398726770135866e-11,
+        -1.3140446716852772e-10,
+        0.0,
+        0.0
+      ],
+      "energy": 0.5,
+      "temperature": 0.0,
+      "checks": {
+        "current_conservation": 8.815729014870053e-16,
+        "gauge": 7.694307735859226e-15,
+        "effective_conservation": 1.304512053934559e-15,
+        "effective_gauge": 8.396061623727746e-15,
+        "occupation_partition": 9.103828801926284e-15,
+        "virtual_probe_residual": 5.204170427930421e-18,
+        "zero_bias_current": 8.396061623727746e-15,
+        "injectivity_partition": 2.220446049250313e-16,
+        "reciprocity": 7.105427357601002e-15
+      },
+      "trs_h_error": 0.0,
+      "gamma_phi": 0.01,
+      "virtual_spin_channels": 32,
+      "probe_positions": [
+        [
+          5,
+          0
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          5,
+          10
+        ],
+        [
+          5,
+          11
+        ],
+        [
+          10,
+          0
+        ],
+        [
+          10,
+          1
+        ],
+        [
+          10,
+          10
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          20,
+          0
+        ],
+        [
+          20,
+          1
+        ],
+        [
+          20,
+          10
+        ],
+        [
+          20,
+          11
+        ],
+        [
+          25,
+          0
+        ],
+        [
+          25,
+          1
+        ],
+        [
+          25,
+          10
+        ],
+        [
+          25,
+          11
+        ]
+      ]
+    },
+    {
+      "kH": -0.22805193364575949,
+      "alpha_H": 2.5271759910312937e-15,
+      "alpha": [
+        1.0,
+        -1.0,
+        9.357197146171285e-16,
+        -1.5914562764141652e-15
+      ],
+      "beta": [
+        0.0,
+        0.0,
+        0.07915504486638829,
+        0.3072069785121478
+      ],
+      "kH_internal": -2.3267319506469455e-09,
+      "kH_electrodes": -9.405553679301371e-11,
+      "kH_frozen": -0.22805193122497208,
+      "Gxx": 1.9505026989777208,
+      "Gxx_bias_amplitude": 3.9010053979554415,
+      "cpp_condition": 1.224925953180242,
+      "probe_linear_error": 0.0,
+      "probe_quadratic_error": 8.673617379884035e-19,
+      "current_sum_error": 1.1622544680151004e-10,
+      "current_linear": [
+        3.9010053979554415,
+        -3.9010053979554415,
+        0.0,
+        0.0
+      ],
+      "current_quadratic": [
+        -2.832816585474074e-10,
+        3.995071044815557e-10,
+        8.673617379884035e-19,
+        0.0
+      ],
+      "energy": 0.5,
+      "temperature": 0.0,
+      "checks": {
+        "current_conservation": 4.936921002731296e-16,
+        "gauge": 3.344546861683284e-15,
+        "effective_conservation": 1.457167719820518e-16,
+        "effective_gauge": 2.9629076969683865e-15,
+        "occupation_partition": 8.104628079763643e-15,
+        "virtual_probe_residual": 6.938893903907228e-18,
+        "zero_bias_current": 2.9698465908722937e-15,
+        "injectivity_partition": 4.440892098500626e-16,
+        "reciprocity": 1.7763568394002505e-15
+      },
+      "trs_h_error": 0.0,
+      "gamma_phi": 0.03,
+      "virtual_spin_channels": 32,
+      "probe_positions": [
+        [
+          5,
+          0
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          5,
+          10
+        ],
+        [
+          5,
+          11
+        ],
+        [
+          10,
+          0
+        ],
+        [
+          10,
+          1
+        ],
+        [
+          10,
+          10
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          20,
+          0
+        ],
+        [
+          20,
+          1
+        ],
+        [
+          20,
+          10
+        ],
+        [
+          20,
+          11
+        ],
+        [
+          25,
+          0
+        ],
+        [
+          25,
+          1
+        ],
+        [
+          25,
+          10
+        ],
+        [
+          25,
+          11
+        ]
+      ]
+    },
+    {
+      "kH": -0.2288385140904199,
+      "alpha_H": 5.04387261142424e-15,
+      "alpha": [
+        1.0,
+        -1.0,
+        7.798212377595171e-17,
+        -4.965890487648289e-15
+      ],
+      "beta": [
+        0.0,
+        0.0,
+        0.07880584897748215,
+        0.30764436306790205
+      ],
+      "kH_internal": -2.8483751572943398e-09,
+      "kH_electrodes": -1.1560218392022648e-10,
+      "kH_frozen": -0.2288385111264426,
+      "Gxx": 1.9505070057903324,
+      "Gxx_bias_amplitude": 3.901014011580665,
+      "cpp_condition": 1.2248782244578327,
+      "probe_linear_error": 7.703719777548943e-34,
+      "probe_quadratic_error": 6.938893903907228e-18,
+      "current_sum_error": 1.275014122059659e-10,
+      "current_linear": [
+        3.901014011580665,
+        -3.9010140115806653,
+        -7.703719777548943e-34,
+        0.0
+      ],
+      "current_quadratic": [
+        -2.663663074831124e-10,
+        1.3886490221604042e-10,
+        0.0,
+        -6.938893903907228e-18
+      ],
+      "energy": 0.5,
+      "temperature": 0.0,
+      "checks": {
+        "current_conservation": 4.718447854656915e-16,
+        "gauge": 1.2596355203279154e-14,
+        "effective_conservation": 6.938893903907228e-16,
+        "effective_gauge": 1.3281042932078435e-14,
+        "occupation_partition": 8.548717289613705e-15,
+        "virtual_probe_residual": 3.7454786172202696e-17,
+        "zero_bias_current": 1.3281042932078435e-14,
+        "injectivity_partition": 4.996003610813204e-16,
+        "reciprocity": 8.215650382226158e-15
+      },
+      "trs_h_error": 0.0,
+      "gamma_phi": 0.1,
+      "virtual_spin_channels": 32,
+      "probe_positions": [
+        [
+          5,
+          0
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          5,
+          10
+        ],
+        [
+          5,
+          11
+        ],
+        [
+          10,
+          0
+        ],
+        [
+          10,
+          1
+        ],
+        [
+          10,
+          10
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          20,
+          0
+        ],
+        [
+          20,
+          1
+        ],
+        [
+          20,
+          10
+        ],
+        [
+          20,
+          11
+        ],
+        [
+          25,
+          0
+        ],
+        [
+          25,
+          1
+        ],
+        [
+          25,
+          10
+        ],
+        [
+          25,
+          11
+        ]
+      ]
+    },
+    {
+      "kH": -0.23113575687447807,
+      "alpha_H": 9.330441113690666e-16,
+      "alpha": [
+        1.0,
+        -1.0,
+        -4.679950364587046e-16,
+        -1.4010391478277713e-15
+      ],
+      "beta": [
+        0.0,
+        0.0,
+        0.07781262164634449,
+        0.3089483785208226
+      ],
+      "kH_internal": -5.614278628472787e-09,
+      "kH_electrodes": -2.0930504736543724e-10,
+      "kH_frozen": -0.2311357510508944,
+      "Gxx": 1.9505173995783944,
+      "Gxx_bias_amplitude": 3.901034799156789,
+      "cpp_condition": 1.224792029469393,
+      "probe_linear_error": 0.0,
+      "probe_quadratic_error": 6.938893903907228e-18,
+      "current_sum_error": 3.6255325130962746e-11,
+      "current_linear": [
+        3.901034799156789,
+        -3.901034799156789,
+        0.0,
+        0.0
+      ],
+      "current_quadratic": [
+        2.3462113502015214e-10,
+        -1.983658029502955e-10,
+        0.0,
+        -6.938893903907228e-18
+      ],
+      "energy": 0.5,
+      "temperature": 0.0,
+      "checks": {
+        "current_conservation": 2.220446049250313e-16,
+        "gauge": 8.965050923848139e-15,
+        "effective_conservation": 9.020562075079397e-16,
+        "effective_gauge": 7.556455461354972e-15,
+        "occupation_partition": 5.773159728050814e-15,
+        "virtual_probe_residual": 1.3877787807814457e-16,
+        "zero_bias_current": 7.549516567451064e-15,
+        "injectivity_partition": 5.551115123125783e-16,
+        "reciprocity": 2.7200464103316335e-15
+      },
+      "trs_h_error": 0.0,
+      "gamma_phi": 0.3,
+      "virtual_spin_channels": 32,
+      "probe_positions": [
+        [
+          5,
+          0
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          5,
+          10
+        ],
+        [
+          5,
+          11
+        ],
+        [
+          10,
+          0
+        ],
+        [
+          10,
+          1
+        ],
+        [
+          10,
+          10
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          20,
+          0
+        ],
+        [
+          20,
+          1
+        ],
+        [
+          20,
+          10
+        ],
+        [
+          20,
+          11
+        ],
+        [
+          25,
+          0
+        ],
+        [
+          25,
+          1
+        ],
+        [
+          25,
+          10
+        ],
+        [
+          25,
+          11
+        ]
+      ]
+    },
+    {
+      "kH": -0.23882775531096329,
+      "alpha_H": 4.1092870246147526e-15,
+      "alpha": [
+        1.0,
+        -1.0,
+        8.587523246015005e-16,
+        -3.2505347000132524e-15
+      ],
+      "beta": [
+        0.0,
+        0.0,
+        0.07454938317923265,
+        0.31337713849019594
+      ],
+      "kH_internal": -3.078427811443894e-08,
+      "kH_electrodes": -1.1534242370787118e-10,
+      "kH_frozen": -0.23882772441134276,
+      "Gxx": 1.9505397954005246,
+      "Gxx_bias_amplitude": 3.901079590801049,
+      "cpp_condition": 1.2248731709251328,
+      "probe_linear_error": 4.930380657631324e-32,
+      "probe_quadratic_error": 8.673617379884035e-19,
+      "current_sum_error": 4.682616273898876e-12,
+      "current_linear": [
+        3.901079590801049,
+        -3.9010795908010496,
+        0.0,
+        -4.930380657631324e-32
+      ],
+      "current_quadratic": [
+        1.3444620416969144e-11,
+        -8.762005010432006e-12,
+        8.673617379884035e-19,
+        0.0
+      ],
+      "energy": 0.5,
+      "temperature": 0.0,
+      "checks": {
+        "current_conservation": 3.3306690738754696e-16,
+        "gauge": 6.39324975825545e-15,
+        "effective_conservation": 9.020562075079397e-16,
+        "effective_gauge": 7.181755190543981e-15,
+        "occupation_partition": 7.105427357601002e-15,
+        "virtual_probe_residual": 2.636779683484747e-16,
+        "zero_bias_current": 7.188694084447889e-15,
+        "injectivity_partition": 1.3322676295501878e-15,
+        "reciprocity": 5.218048215738236e-15
+      },
+      "trs_h_error": 0.0,
+      "gamma_phi": 1.0,
+      "virtual_spin_channels": 32,
+      "probe_positions": [
+        [
+          5,
+          0
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          5,
+          10
+        ],
+        [
+          5,
+          11
+        ],
+        [
+          10,
+          0
+        ],
+        [
+          10,
+          1
+        ],
+        [
+          10,
+          10
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          20,
+          0
+        ],
+        [
+          20,
+          1
+        ],
+        [
+          20,
+          10
+        ],
+        [
+          20,
+          11
+        ],
+        [
+          25,
+          0
+        ],
+        [
+          25,
+          1
+        ],
+        [
+          25,
+          10
+        ],
+        [
+          25,
+          11
+        ]
+      ]
+    }
+  ],
+  "disorder_counts": [
+    1,
+    8,
+    8,
+    8
+  ],
+  "disorder_SEM": "sample standard deviation ddof=1 divided by sqrt(n); zero for the one clean point",
+  "derivative_step": 1e-05,
+  "blas_threads": 1,
+  "artificial_eta": 0.0,
+  "original_production_data_and_modules_unchanged": true,
+  "protected_sha256": {
+    "data/raw/figure3_environment/environment_data.npz": "7e739422c42845383bc8a16a95991d1441483dd5c245e6863ce0d5fc69835c9a",
+    "data/raw/figure3_environment/metadata.json": "a4c181d605a14de281043cab408d0b0d985eb9879b099aec84514cfbd5654abb",
+    "code/qsh_environment_response.py": "21046db0d7b463c1db764cdf5f0de09d81cef8fcc07a2e1dceaa61c6035c9f22",
+    "historical_sources/code/compute_qsh_figure3.py": "9eec65bbefb739bc013226ea636334fe5bb49b712e2f635d42b249b7ba3296ae",
+    "code/compute_letter_preview.py": "a159ab6d8659746b5c545f3e8de17ce4fd053dbf4280627a68c56609f0ccd080"
+  },
+  "raw_array_sha256": {
+    "raw\\disorder_W0_seed0_E0.5.npz": "83897f6f4d0f642ebb0ee16424311ecd7e6bd21a1debc819c88183e4e5d4cdc7",
+    "raw\\disorder_W0.2_seed1700_E0.5.npz": "4e2b94d57ab01c420669d7779d9762b5d81ccc7aa69e1f4ec4dc6a5121cfd970",
+    "raw\\disorder_W0.2_seed1701_E0.5.npz": "306d0d4a4980d0a0fd1b00b8619d5441974b6b118ea94b54d0268ba1c21f8c9b",
+    "raw\\disorder_W0.2_seed1702_E0.5.npz": "a8feeee18aeec792c0cca895cb38d84d436a74e975bdc8ea54a4b9daa7bf8495",
+    "raw\\disorder_W0.2_seed1703_E0.5.npz": "a5417e19d6171957b57278e690acf0cfe31d6c09b674fb7fa6c1e48b554f8842",
+    "raw\\disorder_W0.2_seed1704_E0.5.npz": "fe5edd3f371e0c36f737adcc93eb3fdcc7a100bef1f2d38168b67ee4aea73192",
+    "raw\\disorder_W0.2_seed1705_E0.5.npz": "902374f265338c2336144122294365a6b596a349d850014efc85d50829ae1892",
+    "raw\\disorder_W0.2_seed1706_E0.5.npz": "f40d0dc1f5b5a4b9c1655bb192ccc721190d0a8a45193243e640ab4d257f8ba1",
+    "raw\\disorder_W0.2_seed1707_E0.5.npz": "e2f9b9d9ac2ec82d3c125cd21f95bbf4dee5c6db4583f0e4f7933c813076c015",
+    "raw\\disorder_W0.5_seed1700_E0.5.npz": "39a2de6252ef13c0f11564755fc1d5d35b77e1bf30ca564eb66ae447cc06e890",
+    "raw\\disorder_W0.5_seed1701_E0.5.npz": "359702d354f18c559eef78d659259b703a9f24e2992079d250b6872c603f83d4",
+    "raw\\disorder_W0.5_seed1702_E0.5.npz": "2f89d0d51517549815e38b6ea7a14ab7cc3688b35998e59d5cfff53a173c0709",
+    "raw\\disorder_W0.5_seed1703_E0.5.npz": "3c6bc089db2ea2a33835044727365c57f0f91a3c79f994aaf308368427b9ba4d",
+    "raw\\disorder_W0.5_seed1704_E0.5.npz": "048050e71ed9ff98bbd0b6f5772d0b736c068562905918b47cc3e5a288815f50",
+    "raw\\disorder_W0.5_seed1705_E0.5.npz": "4dc1393e1857601c8458543fe7d7fc05fc69796ed44e8697c8ca8044b33ef0a0",
+    "raw\\disorder_W0.5_seed1706_E0.5.npz": "f42b79b47d7bb16d98345c5190f235f3e0981e22af535ee2a750303c8746b3aa",
+    "raw\\disorder_W0.5_seed1707_E0.5.npz": "8415273696801b9e0b88957627b0e0ff7d14389b2797f9c1fde8a9dac186e062",
+    "raw\\disorder_W1_seed1700_E0.5.npz": "ff4f49a887a1e18ef6a79cb3ad08d66146fff86d7e31eb4ab4018b9ab39941d3",
+    "raw\\disorder_W1_seed1701_E0.5.npz": "6573726d1736fca67b08b9d6158c7e1508bb79bf327e47b56bc773b5024b0405",
+    "raw\\disorder_W1_seed1702_E0.5.npz": "5b1a705a8814c70d560c4bbb990bdcef39022f7fb86778382112fe96ee40970e",
+    "raw\\disorder_W1_seed1703_E0.5.npz": "8913750a895248c8b61411edc0490d95a530601acc5c37604f7acbc9ab1bd129",
+    "raw\\disorder_W1_seed1704_E0.5.npz": "e7943b93c9a3eab3befb10c9118fdd19b8d2516a7b694c1861866ee204ff5c99",
+    "raw\\disorder_W1_seed1705_E0.5.npz": "5d006cadc8560f67d4f95d0a859fc762e8ceb1bba05b0b7a60a462ecf92db5c8",
+    "raw\\disorder_W1_seed1706_E0.5.npz": "589fd2ae19e72b3fb8a487f4b2abd06d099c99f9f00ec77e87d7410e992c4e7a",
+    "raw\\disorder_W1_seed1707_E0.5.npz": "f6f51ac7ac2b724e014bed40f1c5472506efe84250552963b0554c2744d5ad9f",
+    "raw\\dephasing_gamma0_E0.5.npz": "83897f6f4d0f642ebb0ee16424311ecd7e6bd21a1debc819c88183e4e5d4cdc7",
+    "raw\\dephasing_gamma0.01_E0.5.npz": "4a801654782a6ceae821dc2000671c27d9703d3f11838c77f106afcfcd1d46b9",
+    "raw\\dephasing_gamma0.03_E0.5.npz": "70ccf8bcbdb796fd86b1e63daa830a20d78c6a6e89da46ecd82053bf420f7b33",
+    "raw\\dephasing_gamma0.1_E0.5.npz": "1d9a1ba5c576fb34f63f76557739d20fd9b150b369d219f6f1753a0cea7c3aa5",
+    "raw\\dephasing_gamma0.3_E0.5.npz": "cdf3d714f2b0fda7c0408ca0187f8dc2511581007f319e361e556df0073172d5",
+    "raw\\dephasing_gamma1_E0.5.npz": "fceda6bdfd26569c1983642be329e551853b00f373c1c194b432cf5c03ad9697"
+  },
+  "output_sha256": "2ce07336675d6e9f4cb5bf0068dba7e03c471bad84dcc8039c7fd68504ef71a1",
+  "kwant_version": "1.5.0",
+  "numpy_version": "2.1.3",
+  "runtime_seconds": 65.3150019000168,
+  "release_portability": {
+    "original_sidecar_sha256": "ea70c36bfdd9507571d2a03f32b6043d30b3d3c904d1b97ade286bcdacb81fdb",
+    "note": "File paths relocated for the public package. Numeric datasets and historical numerical/source hashes are unchanged. historical_sources entries document unavailable prior generators, not runtime dependencies.",
+    "original_output_sha256": "7690c7b31803a4ba906e982d51bfb11265754bd5411574fe8afd68468e9880e1",
+    "embedded_metadata_paths_relocated": true
+  }
+}

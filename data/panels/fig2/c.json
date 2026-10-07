@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "figure": "fig2",
+  "panel": "c",
+  "arrays": {
+    "rho1_cell": {
+      "shape": [
+        30,
+        31
+      ],
+      "dtype": "float64"
+    },
+    "rho1_atomic": {
+      "shape": [
+        60,
+        31
+      ],
+      "dtype": "float64"
+    },
+    "x": {
+      "shape": [
+        31
+      ],
+      "dtype": "int64"
+    },
+    "y_cell": {
+      "shape": [
+        30
+      ],
+      "dtype": "float64"
+    },
+    "cells": {
+      "shape": [],
+      "dtype": "int64"
+    },
+    "length": {
+      "shape": [],
+      "dtype": "int64"
+    },
+    "atomic_rows": {
+      "shape": [],
+      "dtype": "int64"
+    },
+    "N": {
+      "shape": [],
+      "dtype": "int64"
+    },
+    "L": {
+      "shape": [],
+      "dtype": "int64"
+    },
+    "EF": {
+      "shape": [],
+      "dtype": "float64"
+    },
+    "tx": {
+      "shape": [],
+      "dtype": "float64"
+    },
+    "t1": {
+      "shape": [],
+      "dtype": "float64"
+    },
+    "t2": {
+      "shape": [],
+      "dtype": "float64"
+    },
+    "delta": {
+      "shape": [],
+      "dtype": "float64"
+    },
+    "tc": {
+      "shape": [],
+      "dtype": "float64"
+    }
+  },
+  "data_mode": "verified_cache_extraction",
+  "model": "stacked Rice-Mele",
+  "magnetic_field": 0.0,
+  "parameters": {
+    "tx": 0.25,
+    "t1": 0.3,
+    "t2": 1.0,
+    "delta": 0.2,
+    "tc": 0.15,
+    "EF": 0.1,
+    "N": 30,
+    "L": 31,
+    "kstar": 2.0,
+    "eta": 0.02,
+    "nk": 801
+  },
+  "units": "energies in t2, lengths in lattice cells",
+  "source_path": "data/raw/figure2_width30/lpdos_data.npz",
+  "source_sha256": "1dc07019ac4e275181a01fb61432b53f1e5342559480733c913ca2b81b3eefe3",
+  "sources": [
+    {
+      "path": "data/raw/figure2_width30/lpdos_data.npz",
+      "sha256": "1dc07019ac4e275181a01fb61432b53f1e5342559480733c913ca2b81b3eefe3"
+    }
+  ],
+  "helpers": [
+    {
+      "path": "code/panels/fig2/_data.py",
+      "sha256": "e4eddb0cb67667a0257f73977626e039ac3337172a332d32cb3993667ea04512"
+    }
+  ],
+  "input_sources_modified": false,
+  "observable": "rho1=sum_incoming_left |psi|^2/(2*pi)",
+  "normalization": "unit-flux incoming states; A/B cell sum; no interpolation or edgewise rescaling",
+  "density_units": "t2^-1",
+  "validation": {},
+  "shared_model_core": "code/compute_initial_study.py",
+  "calculation_helpers": [
+    {
+      "path": "code/compute_initial_study.py",
+      "sha256": "0748ad99c78ab6d0748e6fde9bd072021d15b3a81a1a0768338db7a7ba55cbd3"
+    }
+  ],
+  "contact_geometry": "identical scalar metallic probes, tc=.15 at x=L//2",
+  "calculation_mode": "reuse",
+  "calculation_script": {
+    "path": "code/panels/fig2/calc_c.py",
+    "sha256": "c7de93eb7c5b47db384eba68d4eeeb0a225f9c16c7f407cd900fbae5ce2ed37c"
+  },
+  "data_sha256": "1c2803aac2e398d94d0eeeb7f2dde83844445e5f27340d5dbe1ea2c91743e5c0"
+}

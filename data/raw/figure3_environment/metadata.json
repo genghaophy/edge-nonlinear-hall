@@ -1,0 +1,427 @@
+{
+  "model": "H=sin(kx) tau_x s_z + sin(ky) tau_y + [m+cos(kx)+cos(ky)] tau_z + delta tau_x",
+  "basis": [
+    "orbital1_up",
+    "orbital1_down",
+    "orbital2_up",
+    "orbital2_down"
+  ],
+  "parameters": {
+    "length": 31,
+    "width": 12,
+    "A": 1.0,
+    "t": 1.0,
+    "m": -1.0,
+    "delta": 0.2,
+    "tc": 0.15,
+    "magnetic_field": 0.0
+  },
+  "protocol": "VL=+V, VR=-V; physical IT=IB=0 after energy integration; VH=VT-VB; VSD=2V",
+  "units": {
+    "energy": "t",
+    "temperature": "kBT/t",
+    "voltage": "v=eV/t",
+    "current": "i=hI/(e*t)",
+    "kH": "eVH/t=kH*v^2; physical chiH=(e/t)*kH",
+    "Gxx": "I_L derivative with respect to VSD, in e^2/h"
+  },
+  "electrostatics": "Thermal injectivities averaged before local-neutrality ratio; U^(1) only; no full Poisson",
+  "disorder": "iid scalar onsite in [-W/2,W/2] times I4; clean electrodes; Mx generally broken",
+  "dephasing": "Paired spin-resolved WBA elastic reservoirs; separate Ip_up(E)=Ip_down(E)=0; no spin relaxation",
+  "dephasing_placement": "x=5,10,20,25; y=0,1,10,11 (Mx paired, outermost and adjacent edge rows)",
+  "gamma_phi": "energy linewidth of phenomenological probe coupling, not calibrated hbar/tau_phi",
+  "scope": "Initial fixed 31x12 size and fixed tc; finite sample ensemble; no large-size or disorder-ensemble convergence claim",
+  "python": "historical_runtime/python.exe",
+  "contacts": {
+    "source": "matched full QSH strip",
+    "transverse": "spinful four-orbital 1D metal",
+    "metal_onsite": 0.0,
+    "metal_hopping": -1.0,
+    "tc": 0.15,
+    "contact_x": 15,
+    "source_order": [
+      "L",
+      "R",
+      "T",
+      "B"
+    ]
+  },
+  "probe_configuration": {
+    "model": "spin-resolved elastic WBA",
+    "linewidth": "Sigma=-i gamma_phi/2",
+    "occupation": "Ip_up(E)=Ip_down(E)=0 separately",
+    "spin_orbitals": [
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        3
+      ]
+    ],
+    "positions": [
+      [
+        5,
+        0
+      ],
+      [
+        5,
+        1
+      ],
+      [
+        5,
+        10
+      ],
+      [
+        5,
+        11
+      ],
+      [
+        10,
+        0
+      ],
+      [
+        10,
+        1
+      ],
+      [
+        10,
+        10
+      ],
+      [
+        10,
+        11
+      ],
+      [
+        20,
+        0
+      ],
+      [
+        20,
+        1
+      ],
+      [
+        20,
+        10
+      ],
+      [
+        20,
+        11
+      ],
+      [
+        25,
+        0
+      ],
+      [
+        25,
+        1
+      ],
+      [
+        25,
+        10
+      ],
+      [
+        25,
+        11
+      ]
+    ],
+    "zero_coupling": "virtual terminals removed exactly"
+  },
+  "numerics": {
+    "dtype": "complex128/float64",
+    "artificial_eta": 0.0,
+    "derivative_step": 1e-05,
+    "rank_threshold": 1e-10,
+    "blas_threads": 1,
+    "integration": {
+      "lo": -0.15,
+      "hi": 0.79,
+      "panel_width": 0.025,
+      "orders": [
+        4,
+        8,
+        16
+      ]
+    },
+    "thermal_acceptance": {
+      "absolute": 0.0002,
+      "fraction_of_peak": 0.003,
+      "thermal_mass_error": 2e-05
+    }
+  },
+  "scan": {
+    "energies": [
+      0.25,
+      0.275,
+      0.3,
+      0.325,
+      0.35000000000000003,
+      0.375,
+      0.4,
+      0.42500000000000004,
+      0.45000000000000007,
+      0.47500000000000003,
+      0.5,
+      0.5250000000000001,
+      0.55
+    ],
+    "temperatures": [
+      0.0,
+      0.005,
+      0.01,
+      0.02
+    ],
+    "selected_energies": [
+      0.3,
+      0.4
+    ],
+    "disorder_strengths": [
+      0.0,
+      0.2,
+      0.5,
+      1.0
+    ],
+    "disorder_seeds": [
+      1700,
+      1701,
+      1702,
+      1703,
+      1704,
+      1705,
+      1706,
+      1707
+    ],
+    "gamma_phi": [
+      0.0,
+      0.01,
+      0.03,
+      0.1,
+      0.3,
+      1.0
+    ]
+  },
+  "libraries": {
+    "python": "3.13.5",
+    "numpy": "2.1.3",
+    "scipy": "1.15.3",
+    "kwant": "1.5.0"
+  },
+  "cache_schema": "qsh_figure3_manifest_v2",
+  "code_sha256": {
+    "qsh_environment_response.py": "21046db0d7b463c1db764cdf5f0de09d81cef8fcc07a2e1dceaa61c6035c9f22",
+    "compute_qsh_figure3.py": "9eec65bbefb739bc013226ea636334fe5bb49b712e2f635d42b249b7ba3296ae",
+    "compute_letter_preview.py": "a159ab6d8659746b5c545f3e8de17ce4fd053dbf4280627a68c56609f0ccd080"
+  },
+  "cache_audit": [
+    {
+      "file": "spectra\\clean_o4.npz",
+      "status": "invalid",
+      "manifest_sha256": "a54cad98327b629d76bde36f739fb604e2c8a527c1cd2547607b093fe07d2256",
+      "reason": "input manifest absent or different"
+    },
+    {
+      "file": "spectra\\clean_o8.npz",
+      "status": "invalid",
+      "manifest_sha256": "ac3dcc65928dfdefd1978f1d2bd4fc8826c575aa6ce2c5f1862f90925e4399fc",
+      "reason": "input manifest absent or different"
+    },
+    {
+      "file": "spectra\\clean_o16.npz",
+      "status": "invalid",
+      "manifest_sha256": "46d2a50738906398eaef187d92b7a9f691b0a41bd1e80567a71f5caabc66f2f3",
+      "reason": "input manifest absent or different"
+    },
+    {
+      "file": "raw\\disorder_W0_seed0.json",
+      "status": "invalid",
+      "manifest_sha256": "7ec5d9646e01e491de51af9fb71191c98dac8cc48b32f981b30f1e8d2ed523ba",
+      "reason": "input manifest absent or different"
+    },
+    {
+      "file": "raw\\disorder_W0.2_seed1700.json",
+      "status": "invalid",
+      "manifest_sha256": "928b48ad719db0db5e0d6f931c19b593796ab4077c78e2dd45a9f3afeba76f9e",
+      "reason": "input manifest absent or different"
+    },
+    {
+      "file": "raw\\disorder_W0.2_seed1701.json",
+      "status": "invalid",
+      "manifest_sha256": "087ff8184dd0df4996b7913e3360e8d97ff59d248773dc0e0e97fc4e72d20118",
+      "reason": "input manifest absent or different"
+    },
+    {
+      "file": "raw\\disorder_W0.2_seed1702.json",
+      "status": "invalid",
+      "manifest_sha256": "39d243e66c2bd3e8840d629fa13feef7de17b02a04948b4e2c25d9d92118b13a",
+      "reason": "input manifest absent or different"
+    },
+    {
+      "file": "raw\\disorder_W0.2_seed1703.json",
+      "status": "invalid",
+      "manifest_sha256": "49c5ad150e28b09c05d9f8ac4c185ddd912b3a4caeefb772db0d20e4ffb1c7b9",
+      "reason": "input manifest absent or different"
+    },
+    {
+      "file": "raw\\disorder_W0.2_seed1704.json",
+      "status": "invalid",
+      "manifest_sha256": "3dfa3dd2c9c17c2bcb1faccfa40d2f6e76948a85e25ba8c002e89dffebaccdb9",
+      "reason": "input manifest absent or different"
+    },
+    {
+      "file": "raw\\disorder_W0.2_seed1705.json",
+      "status": "invalid",
+      "manifest_sha256": "9ebad0bc6cd5678a807b8d6425069fce8adc19c09d51f56271251126e87b23b3",
+      "reason": "input manifest absent or different"
+    },
+    {
+      "file": "raw\\disorder_W0.2_seed1706.json",
+      "status": "invalid",
+      "manifest_sha256": "59196262676672321fcb6b1d0b6f533ea51cb413cd7c7173502a2e3613eb8f86",
+      "reason": "input manifest absent or different"
+    },
+    {
+      "file": "raw\\disorder_W0.2_seed1707.json",
+      "status": "invalid",
+      "manifest_sha256": "7188ae9e7282eddb832429981fdc236f780f4b15c1ea3c2707c043385f3e8fc3",
+      "reason": "input manifest absent or different"
+    },
+    {
+      "file": "raw\\disorder_W0.5_seed1700.json",
+      "status": "invalid",
+      "manifest_sha256": "ca0251dd75b44a12e5c33cad11c1fe8b8ae18cfe356b3409439ff2773d38892c",
+      "reason": "input manifest absent or different"
+    },
+    {
+      "file": "raw\\disorder_W0.5_seed1701.json",
+      "status": "invalid",
+      "manifest_sha256": "fc869c2ef96584fd2e36872a36ad9e457b61993d534e89792f68827f4490f453",
+      "reason": "input manifest absent or different"
+    },
+    {
+      "file": "raw\\disorder_W0.5_seed1702.json",
+      "status": "invalid",
+      "manifest_sha256": "91f85af44c71ee1397ba6dc4bfc8fd53fe5b65e9341693226d05bc5c70b761b9",
+      "reason": "input manifest absent or different"
+    },
+    {
+      "file": "raw\\disorder_W0.5_seed1703.json",
+      "status": "invalid",
+      "manifest_sha256": "c04385570d024263457753c63bdd72257ee36f3f246ca1b2a1bdc5c752bb98f8",
+      "reason": "input manifest absent or different"
+    },
+    {
+      "file": "raw\\disorder_W0.5_seed1704.json",
+      "status": "invalid",
+      "manifest_sha256": "1e58734b872de1c38e900b881b8629389993e2383cfb80749a637a60a52b35ed",
+      "reason": "input manifest absent or different"
+    },
+    {
+      "file": "raw\\disorder_W0.5_seed1705.json",
+      "status": "invalid",
+      "manifest_sha256": "f91c5623d08f7063faf2a8101262459ce345c04ea619b474ef05c6081c8247a7",
+      "reason": "input manifest absent or different"
+    },
+    {
+      "file": "raw\\disorder_W0.5_seed1706.json",
+      "status": "invalid",
+      "manifest_sha256": "bad2c2b7649392df218addda0087b1b14432cb05f231333b9dad34f85a1fcd93",
+      "reason": "input manifest absent or different"
+    },
+    {
+      "file": "raw\\disorder_W0.5_seed1707.json",
+      "status": "invalid",
+      "manifest_sha256": "88ea2c5456c364aa188b2dc709f55894a6f32c69fbed49b04e9af09ead21ea39",
+      "reason": "input manifest absent or different"
+    },
+    {
+      "file": "raw\\disorder_W1_seed1700.json",
+      "status": "invalid",
+      "manifest_sha256": "a291399119a3c2190ffd0daa7932c8c43ca47d1bd032605f6804f31b04fa0a16",
+      "reason": "input manifest absent or different"
+    },
+    {
+      "file": "raw\\disorder_W1_seed1701.json",
+      "status": "invalid",
+      "manifest_sha256": "dbe90f6fde10ea75b76469605cf00d35a50f58add58cd1c451dd381658f7cc6c",
+      "reason": "input manifest absent or different"
+    },
+    {
+      "file": "raw\\disorder_W1_seed1702.json",
+      "status": "invalid",
+      "manifest_sha256": "c3cf446aca6fe4047d7ac9c74cc975f6f8f7a488bcea5a92e214f9e164cd6c54",
+      "reason": "input manifest absent or different"
+    },
+    {
+      "file": "raw\\disorder_W1_seed1703.json",
+      "status": "invalid",
+      "manifest_sha256": "4bce0d46280e1a4f6ec2ca8def341d809e2257815509f792d2fe0ddd6a468b04",
+      "reason": "input manifest absent or different"
+    },
+    {
+      "file": "raw\\disorder_W1_seed1704.json",
+      "status": "invalid",
+      "manifest_sha256": "f5590a0553e06d18d99bd2a648e57725d71b30528eb9397aff6275d6103b7343",
+      "reason": "input manifest absent or different"
+    },
+    {
+      "file": "raw\\disorder_W1_seed1705.json",
+      "status": "invalid",
+      "manifest_sha256": "ce4abd40105530cd66293fa8b863fea5de409e2675ab3f885f1bfc7100f57dd6",
+      "reason": "input manifest absent or different"
+    },
+    {
+      "file": "raw\\disorder_W1_seed1706.json",
+      "status": "invalid",
+      "manifest_sha256": "4fb75ac4462a98b72ecf34fb55a376724e97a458ad35bb8b0a7599c3618e8d3c",
+      "reason": "input manifest absent or different"
+    },
+    {
+      "file": "raw\\disorder_W1_seed1707.json",
+      "status": "invalid",
+      "manifest_sha256": "8e7c942a17a4b7c4cbff2f356b119a505bca0711b23cd9d1c3c6f60b4236eb30",
+      "reason": "input manifest absent or different"
+    },
+    {
+      "file": "raw\\dephasing_gamma0.json",
+      "status": "invalid",
+      "manifest_sha256": "80ca740ed5b2160753ab7deafa5b18f4f6395396f68417cb29be2937ff359c55",
+      "reason": "input manifest absent or different"
+    },
+    {
+      "file": "raw\\dephasing_gamma0.01.json",
+      "status": "invalid",
+      "manifest_sha256": "35eb75b16b046e8936b27bcd90b18bbe5735109150767d52c7946b5a8e0207f5",
+      "reason": "input manifest absent or different"
+    },
+    {
+      "file": "raw\\dephasing_gamma0.03.json",
+      "status": "invalid",
+      "manifest_sha256": "1e2673cbac3461a2012feffae969bd651302f2f7dd444f0faed99ad0a0a7981f",
+      "reason": "input manifest absent or different"
+    },
+    {
+      "file": "raw\\dephasing_gamma0.1.json",
+      "status": "invalid",
+      "manifest_sha256": "b65ffa5372c32268ff3542ce887f0bbcabc01d7715bec636abbf2778bc41c3f7",
+      "reason": "input manifest absent or different"
+    },
+    {
+      "file": "raw\\dephasing_gamma0.3.json",
+      "status": "invalid",
+      "manifest_sha256": "e600fc7c9d0ec271a743c9428ac8fd2cf9400a10db9f4f2e60adfc5c73e6c538",
+      "reason": "input manifest absent or different"
+    },
+    {
+      "file": "raw\\dephasing_gamma1.json",
+      "status": "invalid",
+      "manifest_sha256": "9e8531dd9dc998e177e37af1848669011bb7431c4954fe72a972c8f084db296b",
+      "reason": "input manifest absent or different"
+    }
+  ],
+  "production_data_sha256": "7e739422c42845383bc8a16a95991d1441483dd5c245e6863ce0d5fc69835c9a",
+  "release_portability": {
+    "original_sidecar_sha256": "a4c181d605a14de281043cab408d0b0d985eb9879b099aec84514cfbd5654abb",
+    "note": "File paths relocated for the public package. Numeric datasets and historical numerical/source hashes are unchanged. historical_sources entries document unavailable prior generators, not runtime dependencies."
+  }
+}
