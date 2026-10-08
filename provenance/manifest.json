@@ -17,8 +17,8 @@
     },
     {
       "path": "CITATION.cff",
-      "bytes": 1457,
-      "sha256": "e4d0f63ac26180089240d225e3c6bdb133cc714fb4a9302cad2425ea726a747d"
+      "bytes": 1494,
+      "sha256": "73f0bae0715254b8e8e58e033aca8bf75d6f971054c6175407d37cad88ae9b13"
     },
     {
       "path": "code/audit_thermal_window.py",
