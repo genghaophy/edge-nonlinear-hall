@@ -2,6 +2,7 @@ cff-version: 1.2.0
 message: "If you use this code or the accompanying datasets, please cite this software using the author information below."
 type: software
 title: "Edge nonlinear Hall transport: code and data"
+url: "https://github.com/genghaophy/edge-nonlinear-hall"
 authors:
   - family-names: Geng
     given-names: "H."

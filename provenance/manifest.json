@@ -17,8 +17,8 @@
     },
     {
       "path": "CITATION.cff",
-      "bytes": 1400,
-      "sha256": "317735fd072bce542e12cd9789fac02c16f433322b651eced6577e7087c802a1"
+      "bytes": 1457,
+      "sha256": "e4d0f63ac26180089240d225e3c6bdb133cc714fb4a9302cad2425ea726a747d"
     },
     {
       "path": "code/audit_thermal_window.py",
@@ -687,13 +687,13 @@
     },
     {
       "path": "README.md",
-      "bytes": 6600,
-      "sha256": "2200c4e0f5c06facd8496e8870a3a564a3aedac7af980a516761f184b4a3bc29"
+      "bytes": 6646,
+      "sha256": "56de5d84bf9d575689166acddb962662e00b68b2e80e2015b62d6efb5ff31c84"
     },
     {
       "path": "README.zh-CN.md",
-      "bytes": 5547,
-      "sha256": "5071e8eb394e64d0b3122c98499ca829f6962dd090a18ceef2a6929284553e96"
+      "bytes": 5597,
+      "sha256": "21695cc692ee06a6aa71c19967af4031e1616cbd43f4ff0d05ce1eff3a181d5e"
     },
     {
       "path": "requirements-compute.txt",

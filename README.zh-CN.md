@@ -89,4 +89,4 @@ python scripts/verify_release.py --relocate --plot
 
 原始代码采用 [MIT 许可证](LICENSE)，版权为 2026 H. Geng and contributors。依赖另行安装并遵循各自许可证，本仓库不内置依赖库源码。
 
-[CITATION.cff](CITATION.cff) 使用用户提供的四位作者姓名缩写。此包未填写尚未确定的仓库地址、软件 DOI 或文章发表信息。
+[CITATION.cff](CITATION.cff) 使用用户提供的四位作者姓名缩写，并记录[公开仓库地址](https://github.com/genghaophy/edge-nonlinear-hall)。软件 DOI 和文章发表信息尚未确定。

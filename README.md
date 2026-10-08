@@ -96,4 +96,4 @@ The first checks packaged data and release records. The second also copies the r
 
 The original code is available under the [MIT License](LICENSE), copyright 2026 H. Geng and contributors. Dependencies are installed separately and retain their own licenses; none are vendored here.
 
-Use [CITATION.cff](CITATION.cff) for software attribution. It records the four authors using their supplied initials. No repository URL, software DOI, or article publication identifier has been assigned in this package.
+Use [CITATION.cff](CITATION.cff) for software attribution. It records the four authors using their supplied initials and the [public repository](https://github.com/genghaophy/edge-nonlinear-hall). No software DOI or article publication identifier has been assigned.
